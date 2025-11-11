@@ -1,0 +1,167 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.21 of 2022/01/12
+%
+\documentclass[runningheads]{llncs}
+%
+\usepackage[T1]{fontenc}
+% T1 fonts will be used to generate the final print and online PDFs,
+% so please use T1 fonts in your manuscript whenever possible.
+% Other font encondings may result in incorrect characters.
+%
+\usepackage{graphicx}
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+\usepackage{float}
+\usepackage{subcaption}
+% If you use the hyperref package, please uncomment the following two lines
+% to display URLs in blue roman font according to Springer's eBook style:
+%\usepackage{color}
+%\renewcommand\UrlFont{\color{blue}\rmfamily}
+%\urlstyle{rm}
+%
+\usepackage{soul}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[commandnameprefix=always,todonotes={textsize=footnotesize}]{changes} % Add 'final' for submission
+\sethighlightmarkup{\IfIsColored{{\sethlcolor{authorcolor!30}\hl{#1}}}{#1}}
+\definechangesauthor[name={Upal Bhattachara}, color=Violet]{UB}
+
+\usepackage[numbers,sort&compress]{natbib}
+\bibliographystyle{splncs04nat}
+
+\begin{document}
+%
+\title{Ontology Population Using LLMs: Which Factors Matter?}
+%
+%\titlerunning{Abbreviated paper title}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+\author{Upal Bhattacharya\inst{1}\orcidID{0000-0002-0877-7063}\and
+        Maaike de Boer\inst{2}\orcidID{0000-0002-2775-8351} \and
+        Sergey Sosnovsky\inst{1}\orcidID{0000-0001-8023-1770}}
+
+\authorrunning{U. Bhattacharya et al.}
+% % First names are abbreviated in the running head.
+% % If there are more than two authors, 'et al.' is used.
+% %
+\institute{
+    Department of Information and Computing Sciences, Utrecht Univerisity, Princetonplein 5, 3584 CC, Utrecht, The Netherlands \\
+    \email{u.bhattacharya@uu.nl, s.a.sosnovsky@uu.nl} \and
+    Department Data Science, TNO, Anna van Buerenplein 1, 2595 DA, Den Haag, The Netherlands \\ 
+    \email{maaike.deboer@tno.nl}
+    }
+\maketitle              % typeset the header of the contribution
+%
+\begin{abstract}
+The abstract should briefly summarize the contents of the paper in
+150--250 words.
+
+\keywords{First keyword  \and Second keyword \and Another keyword.}
+\end{abstract}
+%
+%
+%
+\section{Introduction}
+\label{sec:introduction}
+
+\section{Related Work}
+\label{sec:related-work}
+
+\section{Factors of Influence}
+% \chcomment[id=UB]{\textit{Might need to change Section Title.}}
+\label{sec:factors}
+
+The factors governing LLM-supported ontology population can be categorized
+into two groups: Ontology factors and LLM factors. Here, we discuss the
+relevant factors for each group and those we investigate through our
+experimentation. Figure \ref{fig:variation-overview} provides an overview of
+the factors of each group.
+
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{assets/factor-overview.drawio.pdf}
+\caption{Overview of Ontology and LLM factors influencing LLM-supported
+Ontology Population. Dashed boxes are not investigated in the present
+study} \label{fig:variation-overview}
+\end{figure}
+
+\subsection{Ontology Factors}
+\label{subsec:ontology-factors}
+
+Ontologies vary greatly depending on the complexities of the modeled domain
+and the design choices taken by ontology engineers and domain experts. Our
+categorization of ontology factors draws inspiration from the Ontology Layer
+Cake \citep{gangemi2005OntologyEvaluationValidation} with additional factors
+that are not captured by it. 
+
+\subsubsection{Scope:}
+\label{subsubsec:ont-factor-scope}
+
+\citep{noy2001OntologyDevelopment101}
+
+\subsubsection{Metrics:}
+\label{subsubsec:ont-factor-metrics}
+
+% Overall
+
+\citet{hlomani2014ApproachesMethodsMetrics} highlight several metrics for
+evaluating ontologies. Their categorization of ontology metrics as structural
+and functional (semantics of the ontology) facilitates
+
+% Structure
+
+% Functional
+
+\subsubsection{Entity Labels}
+\label{subsubsec:ont-factor-entity-labels}
+
+\subsubsection{Taxonomy}
+\label{subsubsec:ont-factor-taxonomy}
+
+\subsubsection{Non-hierarchical Relations}
+\label{subsubsec:ont-factor-other-relations}
+
+\subsubsection{Attributes}
+\label{subsubsec:ont-factor-attributes}
+
+\subsubsection{Axioms}
+\label{subsubsec:ont-factor-axioms}
+
+\begin{itemize}
+    \item \textbf{Structure}: Ontologies vary greatly in structure depending
+on the complexity and requirements of the domain they model. Variation over
+structural measures \cite{gangemi2005OntologyEvaluationValidation} such as
+depth, breadth, dispersion, and tangledness enables understanding the
+influence of each on LLM-supported ontology population. Analysis of the
+relation between increasing complexity in terms of size, depth and breadth
+with performance on ontology population will reveal whether LLMs struggle with
+identifying individuals for more complex ontologies.
+    
+    \item \textbf{Entity Label Semantics and Lexical Similarity}: LLMs develop
+a semantic sense of words and tokens as embeddings based on the number of
+documents in their pre-training corpus
+\cite{kandpal2023LargeLanguageModels}. This facilitates their ability to
+provide sensible next-word predictions when generating responses. Ontology
+population requires an LLM to correctly identify the asserted concept of an
+individual using their labels' semantics. However, depending on the domain and
+design decisions, ontologies can comprise of unrelated entities bearing
+lexically similar labels. Therefore, LLM-supported ontology population
+requires LLMs to distinguish between lexical and semantic similarity and
+utilize semantic similarity to identify correctly asserted concepts. Assessing
+the ability of LLMs to resort to semantic similarity versus lexical matching
+highlights the reliability of LLMs to perform ontology
+population. \chcomment[id=UB]{Rewrite paragraph}
+
+    \item \textbf{Attributes}
+
+    \item \textbf{Non-hierarchical Relations}
+
+    \item \textbf{Rules, Axioms and Restrictions}
+
+\end{itemize}
+
+\subsection{LLM Factors}
+\label{subsec:llm-factors}
+
+\bibliography{bibliography}
+\end{document}
