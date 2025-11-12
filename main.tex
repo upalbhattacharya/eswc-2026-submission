@@ -31,6 +31,20 @@
 \bibliographystyle{splncs04nat}
 
 \usepackage{amsmath}
+\newcommand*{\hcalignbf}[1]{\multicolumn{1}{|c|}{\textbf{#1}}}
+\newcommand*{\hlcyan}[1]{{\sethlcolor{Cyan}\hl{#1}}}
+\newcommand*{\hlgreen}[1]{{\sethlcolor{YellowGreen}\hl{#1}}}
+\newcommand*{\hlorange}[1]{{\sethlcolor{Apricot}\hl{#1}}}
+
+\usepackage{listings} % For better verbatim and code highlighting
+\lstset{
+  basicstyle=\ttfamily,
+  escapeinside=||,
+  breaklines=true,
+  breakautoindent=false,
+  breakindent=0pt,
+  numbers=none
+}
 
 \begin{document}
 %
