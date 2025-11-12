@@ -63,10 +63,51 @@ The abstract should briefly summarize the contents of the paper in
 \keywords{First keyword  \and Second keyword \and Another keyword.}
 \end{abstract}
 %
-%
-%
 \section{Introduction}
 \label{sec:introduction}
+Manual population of ontologies is a time and effort-intensive process
+requiring significant expertise in a target domain and knowledge engineering.
+Automated ontology learning aims to expedite this process by extracting
+knowledge components (terms, concepts, relations between them) from
+unstructured and semi-structured data.  The wealth of topical information that
+Large Language Models (LLMs) can produce on demand has led to the growing
+interest in the Semantic Web Community to adopt LLMs for various ontology
+enhancement
+\cite{dong2024LanguageModelBased,mateiu2023OntologyEngineeringWith,he2023ExploringLargeLanguage,liu2020ConceptPlacementUsing,
+  funk2023TowardsOntologyConstruction} and ontology learning
+\cite{he2022BertmapBertBased,chen2023ContextualSemanticEmbeddings,
+  he2023LanguageModelAnalysis,babaei2025Llms4omMatchingOntologies} tasks.
+However, recent studies highlight that such affordance of information does not
+automatically translate into strong performance of LLMs on all ontology
+learning tasks \cite{bombieri2024DoLlmsDream,wang2024CanLargeLanguage}.
+
+Understanding the specific conditions under which an LLM performs well on an
+ontology learning task is vital to obtain the most reliable performance from
+these models.  Ontology population is one such task that requires LLMs to
+exhibit their understanding of individual-to-concept assertions and concept
+hierarchies.  To provide a better understanding of the underlying factors, we
+investigate the effect of several ontology-specific and LLM-specific variables
+on ontology population.  In particular, we explore the ability of LLMs to
+perform ontology population \chadded[id=UB, comment={Adding natural language
+  definition of the task here and removing it from Formulation}]{: the task of
+  adding new individuals to an ontology through concept assertions; } over
+three ontologies characterized by \chreplaced[id=UB, comment={Adding lexical
+  similarity as well}]{different structural complexity, entity label semantics
+  and, label lexical similarity}{different structural complexity and varying
+  entity label semantics} employing different LLMs, zero and few-shot
+prompting, prompt domain contextualization, LLM temperature variation and
+measure statistical reliability of LLM responses..
+
+The rest of the paper is structured as follows. In the next section, we
+highlight related work on ontology population and ontology evaluation.  In
+Section \ref{sec:framework} we provide an overview of the different variables
+we investigate through our experimentation.  Section \ref{sec:method} outlines
+the exact settings for each of the variables we consider along with the
+experiments conducted. Section \ref{sec:results} discusses the observed
+results and Section \ref{sec:conclusion} concludes the paper.  We provide all
+the necessary materials required to reproduce our work in an
+\href{https://anonymous.4open.science/r/llm_ontology_awareness-91C4/}{Anonymous
+  GitHub Repo}
 
 \section{Related Work}
 \label{sec:related-work}
