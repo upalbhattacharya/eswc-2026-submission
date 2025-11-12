@@ -232,7 +232,9 @@ factors:
 \begin{itemize}
   \item The emergent abilities of LLMs grows with \textbf{model size}
     \cite{chalmers2023CouldLargeLanguage}. Thus, it may be often desirable to
-    use larger LLMs for ontology population. However, larger LLMs can be
+    use larger LLMs for ontology population. However, for domains in the
+    long-tail of the pre-training corpus, such performance may be inadequate
+    \cite{kandpal2023LargeLanguageModels}. Resorting to  larger LLMs can be
     difficult to fine-tune due to computational resource restrictions. As a
     consequence, larger LLMs are often used `as-is' using approaches such as
     zero-shot, few-shot and Chain-of-Thought prompting. In contrast, smaller
