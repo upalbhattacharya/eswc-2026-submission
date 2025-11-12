@@ -109,6 +109,78 @@ GitHub Repo}.
 \section{Related Work}
 \label{sec:related-work}
 
+The field of ontology learning has primarily focused on (semi-)automatically creating (part of) ontologies.
+Ontology enrichment and ontology population can also be viewed as part of the ontology learning process \cite{petasis2011OntologyPopulationEnrichment} with many overview and survey papers being published
+\cite{buitelaar2005OntologyLearningText,zhou2007OntologyLearningState,wong2012OntologyLearningText,asim2018SurveyOntologyLearning,khadir2021OntologyLearningGrand,du2024ShortReviewOntology} on the topic.
+Whereas earlier approaches combine traditional linguistic and statistical approaches, LLMs are often used today  \cite{du2024ShortReviewOntology}. One of the latest developments is the LLMs4OL paradigm \cite{giglou2024Llms4ol2024Overview} and the accompanying challenge launched in 2023.
+In works related to the challenge, different LLM model families are tested on several ontology learning tasks such as term typing, taxonomy discovery, and extraction of non-taxonomic relations \cite{babaei2023Llms4olLargeLanguage}.
+
+\subsection{Ontology Population}
+
+Ontology population is the task of adding new instances to an ontology
+\cite{petasis2011OntologyPopulationEnrichment}.  State-of-the-art approaches
+often involve applying natural language processing algorithms like name entity
+recognition to extract concepts and related instances from a provided set of
+documents and an ontology
+\cite{petasis2011OntologyPopulationEnrichment,lubani2019OntologyPopulationApproaches}.
+Redundancy and entity disambiguation pose several challenges for ontology
+population.  LLM-based approaches include SPIRES
+\cite{caufield2024StructuredPromptInterrogation} where a zero-shot method is
+used for knowledge base population, and a preliminary work using a combination
+of text summarization, retrieval-augmented-generation and prompt engineering
+\cite{norouzi2024OntologyPopulationUsing}.
+
+\citet{sahbi2025semantic} compare a traditionally semantic approach and an
+LLM-based approach for ontology population in French. The results show that
+the semantic approach is consistent and logically coherent, but creates
+redundancy, while the LLM creates no redundancies but is not always
+consistent.
+
+\subsection{Ontology Evaluation}
+
+Ontologies themselves can be evaluated in many different ways and on many
+different levels \cite{ wilson2022OntologyQualityEvaluation}.  As described in
+\citet{brank2005SurveyOntologyEvaluation}, evaluation of ontology learning,
+enrichment and population can be categorized into four main types:
+data-driven, human-based, golden standard-based and, application-based
+(sometimes described as a `black box' approach
+\cite{mcdaniel2019EvaluatingDomainOntologies,hlomani2014ApproachesMethodsMetrics}).
+Metrics include the calculation of the 1) syntactic quality on the formal
+properties of the knowledge graph such as the inheritance relationships, rules
+and richness of the ontology, 2) semantic quality on the information about the
+domain such as the interpretability, completeness and consistency, 3)
+pragmatic quality about the usage of the ontology such as the
+comprehensiveness, ease of use and adaptability and 4) social quality in terms
+of authority, history and recognition
+\cite{mcdaniel2019EvaluatingDomainOntologies}.  An extension / modification of
+these metrics can be found in \citet{wilson2023ConceptualModelOntology} and
+\citet{bakker2024DynamicKnowledgeGraph}.
+
+% Ontology Evaluation
+The variability introduced by LLM-based approaches requires exploring
+additional evaluation metrics.  There has been considerable interest in
+developing reliable and robust evaluation setups to evaluate language models
+for ontology-based tasks
+\cite{bombieri2024DoLlmsDream,he2023ExploringLargeLanguage}.For example,
+\citet{babaei2023Llms4olLargeLanguage} evaluate LLM performance on term
+typing, taxonomy discovery and relation extraction in a zero-shot
+setting. Testing on nine different datasets, it provides a wide gamut of
+information about the effects of size and complexity of ontologies on such
+tasks. In their work on gauging how well LLMs actually learn reasoning through
+concept relations, \citet{mai2024DoLlmsReally} note inconsistencies suggesting
+that LLMs tend to fall back to their pre-learnt lexical senses as opposed to
+using the provided semantic meanings of concepts in ontologies.
+
+% End
+Despite growing interest in such methods of evaluation, insufficient attention
+is paid to the underlying LLM-specific and ontology-specific variables. The
+interplay of these variables is significant as highlighted by variation in
+reported performance across the domain.  In the next section, we outline the
+relevant LLM-based and ontology-based variables that may contribute to
+performance variation on ontology learning and enrichment tasks. The influence
+of these underlying factors can provide strong evidence about the competency
+of LLMs on various ontology learning and enrichment tasks.
+
 \section{Factors}
 \label{sec:factors}
 
