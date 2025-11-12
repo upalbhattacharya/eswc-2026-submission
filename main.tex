@@ -235,9 +235,35 @@ reasoning for ontology population with ontology axioms.
 \section{Experimentation}
 \label{sec:experimentation}
 
-\subsection{Task Formulation}
-\label{subsec:task-formulation}
+\subsection{Formulation}
+\label{subsec:formulation}
 
+{\parindent0pt % disable indentation for formulation
+Following \citet{hlomani2014ApproachesMethodsMetrics}, we consider the task
+of ontology population as part of the ontology learning pipeline.  We define
+an ontology $O$ as a 4-tuple:
+\begin{align}
+  O = \langle C, H, R, A \rangle
+\end{align}
+
+where, \newline $C$ is the set of Concepts $\{c\}$; \newline $H$ is the set of
+taxonomical/hierarchical (`is a') relations over $C$; \newline $R$ is the set
+of non-taxonomical relations over $C$ and; \newline $A$ is a set of axioms
+\newline
+
+Let $t$ be a term to be mapped as an individual to a concept in $C$ \newline
+Then the task of ontology population is:
+\begin{equation}
+  f(t;O)^{Ontology}_{Population} =\ \{c_i \mid c_i \in C\ ;\ c_i \subseteq c_{i+1}\ ;\ t \in \Sigma_{c_1}\ ;\ 1 \leq i \leq d \}
+\end{equation}
+where, \newline $d$ is an integer value equal to the depth of the concept
+$c_1$ in $O$ \newline $\subseteq$ denotes the `subclass of' or `is a' relation
+(taxonomical relations of $O$ i.e. $H$); \newline $c_1$ is the directly
+asserted concept of the term $t$ and,\newline $\Sigma_{c_1}$ is the extension
+\chadded[id=UB, comment={\textbf{ISWC 2}: Added citation to clarify ISWC '25
+  reviewer confusion about what and `extension`
+  is.}]{\cite{etzioni2004WebScaleInformation}} of $c_1$ (i.e. set of asserted
+individuals)
 \section{Results and Discussion}
 \label{sec:results}
 
