@@ -84,20 +84,16 @@ learning tasks \cite{bombieri2024DoLlmsDream,wang2024CanLargeLanguage}.
 
 Understanding the specific conditions under which an LLM performs well on an
 ontology learning task is vital to obtain the most reliable performance from
-these models.  Ontology population is one such task that requires LLMs to
+these models. Ontology population is one such task that requires LLMs to
 exhibit their understanding of individual-to-concept assertions and concept
-hierarchies.  To provide a better understanding of the underlying factors, we
-investigate the effect of several ontology-specific and LLM-specific variables
-on ontology population.  In particular, we explore the ability of LLMs to
-perform ontology population \chadded[id=UB, comment={Adding natural language
-  definition of the task here and removing it from Formulation}]{: the task of
-  adding new individuals to an ontology through concept assertions; } over
-three ontologies characterized by \chreplaced[id=UB, comment={Adding lexical
-  similarity as well}]{different structural complexity, entity label semantics
-  and, label lexical similarity}{different structural complexity and varying
-  entity label semantics} employing different LLMs, zero and few-shot
-prompting, prompt domain contextualization, LLM temperature variation and
-measure statistical reliability of LLM responses..
+hierarchies. To provide a better understanding of the underlying factors, we
+investigate the effect of several ontology and LLM factors on ontology
+population: the task of adding new individuals to an ontology through concept
+assertions.
+We investigate the effect of the ontology factors: structure, taxonomy and
+entity labels and the LLM factors: LLM choice, prompting approach, domain
+contextualization and response variation over 3 ontologies using 4
+state-of-the-art LLMs
 
 The rest of the paper is structured as follows. In the next section, we
 highlight related work on ontology population and ontology evaluation.  In
