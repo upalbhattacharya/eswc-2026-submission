@@ -234,16 +234,24 @@ factors:
   \cite{chalmers2023CouldLargeLanguage}. Thus, it may be often desirable to
   use larger LLMs for ontology population. However, the choice of an LLM based
   on model size is closely related to other LLM factors. For domains in the
-  long-tail of the pre-training corpus, such performance may be inadequate
-  \cite{kandpal2023LargeLanguageModels}. In such situatResorting to larger
-  LLMs can be difficult to fine-tune due to computational resource
-  restrictions. As a consequence, larger LLMs are often used `as-is' using
-  approaches such as zero-shot, few-shot and Chain-of-Thought prompting. In
-  contrast, smaller LLMs offer the ability to accurately fine-tune on specific
-  tasks which has been shown to perform better than in-context learning
-  strategies \cite{liu2022FewShotParameter}. The choice of an LLM for ontology
-  population depending on model size is closely tied with the ability of
-  available models to perform ontology population.
+  long-tail of the pre-training corpus, LLMs may struggle with proper ontology
+  population \cite{kandpal2023LargeLanguageModels}. In such situations,
+  fine-tuning is known to outperform in-context learning
+  \cite{liu2022FewShotParameter}. Owing to their size, larger LLMs may be
+  difficult to fine-tune due to computational resource limitations. In such
+  cases, smaller LLMs offer performant alternatives for
+  fine-tuning.
+\item The \textbf{availability} of model weights enables task-specific
+  fine-tuning and further analysis of performance. However, commercially
+  available state-of-the-art LLMs operate as `black-boxes' that prevents
+  further analysis of performance. In contrast, open-source and open-weight
+  models provide model alternatives that can be fine-tuned for long-tail
+  domain-specific ontology population. While commercially-available LLMs are
+  known to perform better \cite{bommasani2023HolisticEvaluationLanguage},
+  comparing performance of open models against commercial LLMs fosters
+  research to bridge the gap in performance across all natural language
+  processing (NLP) tasks.
+
 \end{itemize}
 
 \subsubsection{Task:}
