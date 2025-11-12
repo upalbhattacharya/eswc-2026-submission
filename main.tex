@@ -73,7 +73,7 @@ unstructured and semi-structured data.  The wealth of topical information that
 Large Language Models (LLMs) can produce on demand has led to the growing
 interest in the Semantic Web Community to adopt LLMs for various ontology
 enhancement
-\cite{dong2024LanguageModelBased,mateiu2023OntologyEngineeringWith, 
+\cite{dong2024LanguageModelBased,mateiu2023OntologyEngineeringWith,
   he2023ExploringLargeLanguage,liu2020ConceptPlacementUsing,
   funk2023TowardsOntologyConstruction} and ontology learning
 \cite{he2022BertmapBertBased,chen2023ContextualSemanticEmbeddings,
@@ -89,11 +89,10 @@ exhibit their understanding of individual-to-concept assertions and concept
 hierarchies. To provide a better understanding of the underlying factors, we
 investigate the effect of several ontology and LLM factors on ontology
 population: the task of adding new individuals to an ontology through concept
-assertions.
-We investigate the effect of the ontology factors: structure, taxonomy and
-entity labels and the LLM factors: LLM choice, prompting approach, domain
-contextualization and response variation over 3 ontologies using 4
-state-of-the-art LLMs.
+assertions.  We investigate the effect of the ontology factors: structure,
+taxonomy and entity labels and the LLM factors: LLM choice, prompting
+approach, domain contextualization and response variation over 3 ontologies
+using 4 state-of-the-art LLMs.
 
 The rest of the paper is structured as follows. In the next section, we
 highlight related work on ontology population and ontology evaluation.  In
@@ -104,7 +103,7 @@ factors we investigate in the present work and our experimental setup. Section
 \ref{sec:conclusion} concludes the paper.  We provide all the necessary
 materials required to reproduce our work in an
 \href{https://anonymous.4open.science/r/llm_ontology_awareness-91C4/}{Anonymous
-GitHub Repo}.
+  GitHub Repo}.
 
 \section{Related Work}
 \label{sec:related-work}
@@ -116,14 +115,14 @@ can also be viewed as part of the ontology learning process
 papers being published
 \cite{buitelaar2005OntologyLearningText,zhou2007OntologyLearningState,
   wong2012OntologyLearningText,asim2018SurveyOntologyLearning,
-  khadir2021OntologyLearningGrand,du2024ShortReviewOntology}
-on the topic.  Whereas earlier approaches combine traditional linguistic and
-statistical approaches, LLMs are often used today
-\cite{du2024ShortReviewOntology}. One of the latest developments is the
-LLMs4OL paradigm \cite{giglou2024Llms4ol2024Overview} and the accompanying
-challenge launched in 2023.  In works related to the challenge, different LLM
-model families are tested on several ontology learning tasks such as term
-typing, taxonomy discovery, and extraction of non-taxonomic relation
+  khadir2021OntologyLearningGrand,du2024ShortReviewOntology} on the topic.
+Whereas earlier approaches combine traditional linguistic and statistical
+approaches, LLMs are often used today \cite{du2024ShortReviewOntology}. One of
+the latest developments is the LLMs4OL paradigm
+\cite{giglou2024Llms4ol2024Overview} and the accompanying challenge launched
+in 2023.  In works related to the challenge, different LLM model families are
+tested on several ontology learning tasks such as term typing, taxonomy
+discovery, and extraction of non-taxonomic relation
 \cite{giglou2023Llms4olLargeLanguage}.
 
 \subsection{Ontology Population}
@@ -202,10 +201,10 @@ LLM-supported ontology population. Figure \ref{fig:variation-overview}
 provides an overview of the factors of each group.
 
 \begin{figure}[H]
-\includegraphics[width=\textwidth]{assets/factor-overview.drawio.pdf}
-\caption{Overview of Ontology and LLM factors influencing LLM-supported
-Ontology Population. Dashed boxes are not investigated in the present
-study} \label{fig:variation-overview}
+  \includegraphics[width=\textwidth]{assets/factor-overview.drawio.pdf}
+  \caption{Overview of Ontology and LLM factors influencing LLM-supported
+    Ontology Population. Dashed boxes are not investigated in the present
+    study} \label{fig:variation-overview}
 \end{figure}
 
 \subsection{Ontology Factors}
@@ -242,8 +241,7 @@ patterns based on the content itself.
 % Overall
 
 \citet{hlomani2014ApproachesMethodsMetrics} highlight several
-\textbf{structural} and \textbf{functional} metrics for evaluating
-ontologies.
+\textbf{structural} and \textbf{functional} metrics for evaluating ontologies.
 \begin{itemize}
 \item Structural metrics evaluate the structural complexity of an ontology in
   terms of its size, breadth, depth and dispersion
@@ -326,13 +324,13 @@ the domain.
 
 Axioms are the fundamental underlying principles that define the theory and
 capabilities of an ontology. Axioms of logic, classes, individuals, properties
-and classes define what is true in an ontology. They are logical
-abstractions of the behaviour exhibited by the entities of an ontology in the
-other layers of the Ontology Learning Layer Cake. While ontology population
-itself does not strongly concern itself with the axioms of an ontology,
-behaviour observed over the other factors observed for LLM-supported
-ontology population provide indicators of the compliance of LLM-based
-reasoning for ontology population with ontology axioms.
+and classes define what is true in an ontology. They are logical abstractions
+of the behaviour exhibited by the entities of an ontology in the other layers
+of the Ontology Learning Layer Cake. While ontology population itself does not
+strongly concern itself with the axioms of an ontology, behaviour observed
+over the other factors observed for LLM-supported ontology population provide
+indicators of the compliance of LLM-based reasoning for ontology population
+with ontology axioms.
 
 \subsection{LLM Factors}
 \label{subsec:llm-factors}
@@ -360,8 +358,7 @@ factors:
   fine-tuning is known to outperform in-context learning
   \cite{liu2022FewShotParameter}. Owing to their size, larger LLMs may be
   difficult to fine-tune due to computational resource limitations. In such
-  cases, smaller LLMs offer performant alternatives for
-  fine-tuning.
+  cases, smaller LLMs offer performant alternatives for fine-tuning.
 \item The \textbf{availability} of model weights enables task-specific
   fine-tuning and further analysis of performance. However, commercially
   available state-of-the-art LLMs operate as `black-boxes' that prevents
@@ -425,7 +422,7 @@ adaptation and data grounding is required by LLMs for ontology population.
   performance when in-context learning is unable to yield improvements
   \cite{liu2022FewShotParameter}.
 \item LLMs are probabilistic language models and are known to hallucinate
-  \cite{huang2025SurveyHallucinationIn} facts. 
+  \cite{huang2025SurveyHallucinationIn} facts.
   
   \cite{lewis2020RetrievalAugmentedGeneration})
 \end{itemize}
@@ -446,350 +443,586 @@ adaptation and data grounding is required by LLMs for ontology population.
 \label{subsec:formulation}
 
 {\parindent0pt % disable indentation for formulation
-Following \citet{hlomani2014ApproachesMethodsMetrics}, we consider the task
-of ontology population as part of the ontology learning pipeline.  We define
-an ontology $O$ as a 4-tuple:
-\begin{align}
-  O = \langle C, H, R, A \rangle
-\end{align}
+  Following \citet{hlomani2014ApproachesMethodsMetrics}, we consider the task
+  of ontology population as part of the ontology learning pipeline.  We define
+  an ontology $O$ as a 4-tuple:
+  \begin{align}
+    O = \langle C, H, R, A \rangle
+  \end{align}
 
-where, \newline $C$ is the set of Concepts $\{c\}$; \newline $H$ is the set of
-taxonomical/hierarchical (`is a') relations over $C$; \newline $R$ is the set
-of non-taxonomical relations over $C$ and; \newline $A$ is a set of axioms
-\newline
+  where, \newline $C$ is the set of Concepts $\{c\}$; \newline $H$ is the set
+  of taxonomical/hierarchical (`is a') relations over $C$; \newline $R$ is the
+  set of non-taxonomical relations over $C$ and; \newline $A$ is a set of
+  axioms \newline
 
-Let $t$ be a term to be mapped as an individual to a concept in $C$ \newline
-Then the task of ontology population is:
-\begin{equation}
-  f(t;O)^{Ontology}_{Population} =\ \{c_i \mid c_i \in C\ ;\ c_i \subseteq c_{i+1}\ ;\ t \in \Sigma_{c_1}\ ;\ 1 \leq i \leq d \}
-\end{equation}
-where, \newline $d$ is an integer value equal to the depth of the concept
-$c_1$ in $O$ \newline $\subseteq$ denotes the `subclass of' or `is a' relation
-(taxonomical relations of $O$ i.e. $H$); \newline $c_1$ is the directly
-asserted concept of the term $t$ and,\newline $\Sigma_{c_1}$ is the extension
-\cite{hlomani2014ApproachesMethodsMetrics} of $c_1$ (i.e. set of
-asserted individuals)
+  Let $t$ be a term to be mapped as an individual to a concept in $C$ \newline
+  Then the task of ontology population is:
+  \begin{equation}
+    f(t;O)^{Ontology}_{Population} =\ \{c_i \mid c_i \in C\ ;\ c_i \subseteq c_{i+1}\ ;\ t \in \Sigma_{c_1}\ ;\ 1 \leq i \leq d \}
+  \end{equation}
+  where, \newline $d$ is an integer value equal to the depth of the concept
+  $c_1$ in $O$ \newline $\subseteq$ denotes the `subclass of' or `is a'
+  relation (taxonomical relations of $O$ i.e. $H$); \newline $c_1$ is the
+  directly asserted concept of the term $t$ and,\newline $\Sigma_{c_1}$ is the
+  extension \cite{hlomani2014ApproachesMethodsMetrics} of $c_1$ (i.e. set of
+  asserted individuals)
 
-\subsection{}
-\label{subsec:method-ontology-variability}
-% Dataset Choice
-We conduct experiments over three ontologies of varying size and complexity.
-The Wines Ontology \cite{noy2001OntologyDevelopment101} is a well-known
-ontology; it is small, structurally simple, and represents a relatively
-popular domain. The CASE Ontology \cite{casey2017AdvancingCoordinatedCyber} is
-a larger, more complex and newer ontology focused on accurately capturing the
-life-cycle of digital evidence. We have added individuals to its concepts
-using the Owl Trafficking example provided on the CASE Ontology
-website\footnote{\url{https://caseontology.org/examples/}} and also include in
-it all concepts from the closely related UCO Ontology
-\cite{casey2017AdvancingCoordinatedCyber}. Hereafter, we refer to this
-composite constructed ontology as the CASE Ontology. The Astronomy Ontology
-\cite{shaya2012AstronomyOntology} is the largest of the three; it has fewer
-individuals but higher depth and breadth. All three
-ontologies comprise of hierarchies where every concept (except the top
-concept) has at most a single parent. We wish to expand the considered set of
-ontologies to include larger ontologies like DBPedia
-\cite{auer2007DbpediaNucleusWeb} with more complicated relationships and
-hierarchies in future works.  Table \ref{tab:ontology-metrics} outlines
-relevant structural metrics of the ontologies to highlight their differences.
+  \subsection{}
+  \label{subsec:method-ontology-variability}
+  % Dataset Choice
+  We conduct experiments over three ontologies of varying size and complexity.
+  The Wines Ontology \cite{noy2001OntologyDevelopment101} is a well-known
+  ontology; it is small, structurally simple, and represents a relatively
+  popular domain. The CASE Ontology \cite{casey2017AdvancingCoordinatedCyber}
+  is a larger, more complex and newer ontology focused on accurately capturing
+  the life-cycle of digital evidence. We have added individuals to its
+  concepts using the Owl Trafficking example provided on the CASE Ontology
+  website\footnote{\url{https://caseontology.org/examples/}} and also include
+  in it all concepts from the closely related UCO Ontology
+  \cite{casey2017AdvancingCoordinatedCyber}. Hereafter, we refer to this
+  composite constructed ontology as the CASE Ontology. The Astronomy Ontology
+  \cite{shaya2012AstronomyOntology} is the largest of the three; it has fewer
+  individuals but higher depth and breadth. All three ontologies comprise of
+  hierarchies where every concept (except the top concept) has at most a
+  single parent. We wish to expand the considered set of ontologies to include
+  larger ontologies like DBPedia \cite{auer2007DbpediaNucleusWeb} with more
+  complicated relationships and hierarchies in future works.  Table
+  \ref{tab:ontology-metrics} outlines relevant structural metrics of the
+  ontologies to highlight their differences.
 
 \begin{table}[H]
-\centering
-\caption{Ontology Structure Metrics for Wines, CASE and Astronomy ontologies}
-\label{tab:ontology-metrics}
-\begin{tabular}{|l|r|r|r|}
-\hline
-\textbf{Metric}                                                                & \textbf{Wines} & \textbf{CASE} & \textbf{Astronomy} \\
-\hline
-\textbf{Classes}                                                          & 76                      & 434                    & 1663                        \\
-\textbf{Individuals}                                                      & 161                     & 131                    & 68                          \\
-\textbf{Depth} \cite{gangemi2005OntologyEvaluationValidation}             & 4                       & 8                      & 10                          \\
-\textbf{Breadth} \cite{gangemi2005OntologyEvaluationValidation}           & 62                      & 228                    & 989                         \\
-\textbf{Dispersion (max.)} \cite{gangemi2005OntologyEvaluationValidation} & 3                       & 118                    & 44                          \\
-\hline
-\end{tabular}
+  \centering
+  \caption{Ontology Structure Metrics for Wines, CASE and Astronomy
+    ontologies}
+  \label{tab:ontology-metrics}
+  \begin{tabular}{|l|r|r|r|}
+    \hline
+    \textbf{Metric}                                                                & \textbf{Wines} & \textbf{CASE} & \textbf{Astronomy} \\
+    \hline
+    \textbf{Classes}                                                          & 76                      & 434                    & 1663                        \\
+    \textbf{Individuals}                                                      & 161                     & 131                    & 68                          \\
+    \textbf{Depth} \cite{gangemi2005OntologyEvaluationValidation}             & 4                       & 8                      & 10                          \\
+    \textbf{Breadth} \cite{gangemi2005OntologyEvaluationValidation}           & 62                      & 228                    & 989                         \\
+    \textbf{Dispersion (max.)} \cite{gangemi2005OntologyEvaluationValidation} & 3                       & 118                    & 44                          \\
+    \hline
+  \end{tabular}
 \end{table}
 
-The choice of the three ontologies is additionally driven by the differences in corresponding semantics of labels of their individuals and concepts. As discussed in Section \ref{subsec:framework-data-variability}, semantic similarity between the embeddings of individuals and concepts highlights the compatibility between an LLM's interpretation of the entities with that present in the ontology. We generate 3072-dimensional embeddings of each individual and concept label for all three ontologies using OpenAI's \verb|text-embedding-3-large| \cite{openai2024EmbeddingModels} model. 
-Despite the embeddings being primarily representative of the OpenAI models, the observed performance trends are similar across all tested models (Section \ref{sec:results}), which lead us to believe that the results can be generalized beyond the GPT family.
+The choice of the three ontologies is additionally driven by the differences
+in corresponding semantics of labels of their individuals and concepts. As
+discussed in Section \ref{subsec:framework-data-variability}, semantic
+similarity between the embeddings of individuals and concepts highlights the
+compatibility between an LLM's interpretation of the entities with that
+present in the ontology. We generate 3072-dimensional embeddings of each
+individual and concept label for all three ontologies using OpenAI's
+\verb|text-embedding-3-large| \cite{openai2024EmbeddingModels} model.  Despite
+the embeddings being primarily representative of the OpenAI models, the
+observed performance trends are similar across all tested models (Section
+\ref{sec:results}), which lead us to believe that the results can be
+generalized beyond the GPT family.
 \begin{figure}[H]
-\centering
-    \caption{TSNE projection of concepts and individual label embeddings of ontologies on 2 components}
-    \label{fig:entity-semantic-separation}
-    \includegraphics[scale=0.26]{assets/all_entity_semantic_similarity.pdf}
+  \centering
+  \caption{TSNE projection of concepts and individual label embeddings of
+    ontologies on 2 components}
+  \label{fig:entity-semantic-separation}
+  \includegraphics[scale=0.26]{assets/all_entity_semantic_similarity.pdf}
 \end{figure}
 
-For each ontology, measuring the centroid distance between the embeddings of its concepts and individuals provides the first indication of semantic separation between the two types of entities. Table \ref{tab:ontology-metrics} reports the centroid distances (scaled to $[0, 1]$). We observe the distance between the entity centroids for the CASE ontology to be twice that of the other two ontologies.
-Davies-Bouldin Index (DBI) \cite{davies1979ClusterSeparationMeasure} is an internal clustering evaluation metric to measure how well-separated clusters are. A smaller value indicates better clustering separability with the lowest value being 0. Lower separability between the cluster of concepts and the cluster of individuals for an ontology indicates greater disparity between an LLM's semantic understanding of the entities thereby making them a more difficult scenario for LLMs.
-Table \ref{tab:commands} reports the DBI scores for all three ontologies. Although the DBI values are not very low, the DBI for the CASE ontology is significantly lower than the other two ontologies. Combining the two metrics, the CASE ontology has much larger semantic separability between the two relevant entity types. 
-Figure \ref{fig:entity-semantic-separation} highlights the entities of all three ontologies projected using t-SNE \cite{van2008VisualizingData} to a two-dimensional space. Visual inspection shows the individuals of the CASE ontology are separated from most of its concepts (bottom right of figure). In contrast, the individuals of the other two ontologies are well contained within the bounds of the concepts.
+For each ontology, measuring the centroid distance between the embeddings of
+its concepts and individuals provides the first indication of semantic
+separation between the two types of entities. Table \ref{tab:ontology-metrics}
+reports the centroid distances (scaled to $[0, 1]$). We observe the distance
+between the entity centroids for the CASE ontology to be twice that of the
+other two ontologies.  Davies-Bouldin Index (DBI)
+\cite{davies1979ClusterSeparationMeasure} is an internal clustering evaluation
+metric to measure how well-separated clusters are. A smaller value indicates
+better clustering separability with the lowest value being 0. Lower
+separability between the cluster of concepts and the cluster of individuals
+for an ontology indicates greater disparity between an LLM's semantic
+understanding of the entities thereby making them a more difficult scenario
+for LLMs.  Table \ref{tab:commands} reports the DBI scores for all three
+ontologies. Although the DBI values are not very low, the DBI for the CASE
+ontology is significantly lower than the other two ontologies. Combining the
+two metrics, the CASE ontology has much larger semantic separability between
+the two relevant entity types.  Figure \ref{fig:entity-semantic-separation}
+highlights the entities of all three ontologies projected using t-SNE
+\cite{van2008VisualizingData} to a two-dimensional space. Visual inspection
+shows the individuals of the CASE ontology are separated from most of its
+concepts (bottom right of figure). In contrast, the individuals of the other
+two ontologies are well contained within the bounds of the concepts.
 
-We measure the lexical similarity between individual and concept labels to assess whether LLMs can resort to lexical matching to perform ontology population.
-We compute the Levenshtein distance \cite{levenshtein1965BinaryCodesCapable} between the labels of individuals and two groups: 1) the directly-asserted concept of the individual and, 2) all other ancestor concepts of the individual (averaged).
-Table \ref{tab:semantic-lexical-measures} provides the two scores for the three ontologies. Group 1 disparity is highest for the Wines ontology and lowest for the CASE ontology. LLMs cannot resort to lexical matching to find the directly-asserted concept for the Wines ontology but might be able to do so for the CASE ontology.
-In fact, we find that $83$ out of the $161$ individuals ($51.5\%$) for the Wines Ontology, $94$ of the $131$ individuals ($71.7\%$) in the CASE Ontology and, $17$ out of the $68$ individuals ($25\%$) for the Astronomy Ontology utilize the name of their directly-asserted concept in their labels. Thus, a great deal of lexical matching can be utilized to identify the directly-asserted concept across the ontologies.
-Group 2 disparity clearly highlights that lexical matching is insufficient for LLMs to infer concept hierarchies.
+We measure the lexical similarity between individual and concept labels to
+assess whether LLMs can resort to lexical matching to perform ontology
+population.  We compute the Levenshtein distance
+\cite{levenshtein1965BinaryCodesCapable} between the labels of individuals and
+two groups: 1) the directly-asserted concept of the individual and, 2) all
+other ancestor concepts of the individual (averaged).  Table
+\ref{tab:semantic-lexical-measures} provides the two scores for the three
+ontologies. Group 1 disparity is highest for the Wines ontology and lowest for
+the CASE ontology. LLMs cannot resort to lexical matching to find the
+directly-asserted concept for the Wines ontology but might be able to do so
+for the CASE ontology.  In fact, we find that $83$ out of the $161$
+individuals ($51.5\%$) for the Wines Ontology, $94$ of the $131$ individuals
+($71.7\%$) in the CASE Ontology and, $17$ out of the $68$ individuals ($25\%$)
+for the Astronomy Ontology utilize the name of their directly-asserted concept
+in their labels. Thus, a great deal of lexical matching can be utilized to
+identify the directly-asserted concept across the ontologies.  Group 2
+disparity clearly highlights that lexical matching is insufficient for LLMs to
+infer concept hierarchies.
 The combination of the two disparities highlight that LLMs might be able to infer the directly-asserted concepts from lexical matching but cannot infer hierarchies. This plays a crucial role in our decision to formulate the ontology population task as a retrieval task focusing on hierarchies and not just the directly-asserted concept. \\
 %
-The semantic separation and lexical disparty between the two entity types indicate that the CASE ontology may pose a harder challenge for LLMs. Semantic similarity between the entity types for the other two ontologies suggests they might be easier for LLMs to perform ontology population, even without lexical similarity.
+The semantic separation and lexical disparty between the two entity types
+indicate that the CASE ontology may pose a harder challenge for LLMs. Semantic
+similarity between the entity types for the other two ontologies suggests they
+might be easier for LLMs to perform ontology population, even without lexical
+similarity.
 
 \begin{table}
-\centering
-\caption{Entity label semantic and lexical metrics for Wines, CASE and Astronomy ontologies (Levenshtein shortened to L. for readability)}
-\label{tab:semantic-lexical-measures}
-\begin{tabular}{|l|r|r|r|}
-\hline
-\textbf{Metric}                                                                & \textbf{Wines} & \textbf{CASE} & \textbf{Astronomy} \\
-\hline
-\textbf{DBI} \cite{davies1979ClusterSeparationMeasure}                    & 5.995                   & 2.891                 & 6.362
-                  \\
-\textbf{Centroid Distance}                                                & 0.259                   & 0.540                  & 0.261
-                  \\
-\textbf{Direct L. Distance (1)}                                             & 10.285                  & 4.137                  & 5.167
-                  \\
-\textbf{Ancestor L. Distance (2)}                                   & 12.191                   & 14.092                 & 15.381
-                  \\
-\hline
-\end{tabular}
+  \centering
+  \caption{Entity label semantic and lexical metrics for Wines, CASE and
+    Astronomy ontologies (Levenshtein shortened to L. for readability)}
+  \label{tab:semantic-lexical-measures}
+  \begin{tabular}{|l|r|r|r|}
+    \hline
+    \textbf{Metric}                                                                & \textbf{Wines} & \textbf{CASE} & \textbf{Astronomy} \\
+    \hline
+    \textbf{DBI} \cite{davies1979ClusterSeparationMeasure}                    & 5.995                   & 2.891                 & 6.362
+    \\
+    \textbf{Centroid Distance}                                                & 0.259                   & 0.540                  & 0.261
+    \\
+    \textbf{Direct L. Distance (1)}                                             & 10.285                  & 4.137                  & 5.167
+    \\
+    \textbf{Ancestor L. Distance (2)}                                   & 12.191                   & 14.092                 & 15.381
+    \\
+    \hline
+  \end{tabular}
 \end{table}
 
 \subsection{Experimentation with LLM-based Variability}
 \label{subsec:method-llm-variability}
 % Choice of LLM
-We conduct experiments using four LLMs: OpenAI's GPT-4o \cite{openai2024HelloGpt4o}, OpenAI's o1-preview \cite{openai2024IntroducingOpenaiO1}, Meta's Llama3-8B \cite{grattafiori2024Llama} and DeepSeek's R1-Distil-Llama-8B \cite{guo2025DeepSeek}.
-% Reasoning vs. Conventional LLMs
-% Closed-source vs. Open-source
-Our selection involves two larger closed-source models (GPT-4o and o1-preview) and two smaller open-source models (Llama3-8B and R1-Distil-Llama-8B) with two of the selected models being reasoning LLMs (o1-preview and R1-Distil-Llama-8B).
+We conduct experiments using four LLMs: OpenAI's GPT-4o
+\cite{openai2024HelloGpt4o}, OpenAI's o1-preview
+\cite{openai2024IntroducingOpenaiO1}, Meta's Llama3-8B
+\cite{grattafiori2024Llama} and DeepSeek's R1-Distil-Llama-8B
+\cite{guo2025DeepSeek}.
+% Reasoning vs. Conventional LLMs Closed-source vs. Open-source
+Our selection involves two larger closed-source models (GPT-4o and o1-preview)
+and two smaller open-source models (Llama3-8B and R1-Distil-Llama-8B) with two
+of the selected models being reasoning LLMs (o1-preview and
+R1-Distil-Llama-8B).
 
 % Prompting strategy
-To investigate the effect of different prompting strategies, we perform experiments on all ontologies with zero-shot prompts and few-shot prompts. For few-shot prompts, we experiment with providing different numbers of examples ranging from 1 to 10. The provided examples are selected randomly from the concepts with the highest number of individuals, ensuring each example is taken from a different concept.
-We experiment with four types of domain contextualization:
-1) \textbf{Generic}: The LLM is only asked to perform a generic task e.g. ranked retrieval.
-2) \textbf{Ontology}: The LLM is defined as an expert in ontologies.
-3) \textbf{Topic} of an ontology: The LLM is defined as an expert in the topic of an ontology e.g. \verb|`You are a wine expert'| for the Wines Ontology \cite{noy2001OntologyDevelopment101}
-4) \textbf{Ontology and Topic}: The LLM is defined as an expert in ontologies and an expert in the topic.\footnote{Examples of the prompt templates can be found at our \href{https://anonymous.4open.science/r/llm_ontology_awareness-91C4/}{repository}.}
+To investigate the effect of different prompting strategies, we perform
+experiments on all ontologies with zero-shot prompts and few-shot prompts. For
+few-shot prompts, we experiment with providing different numbers of examples
+ranging from 1 to 10. The provided examples are selected randomly from the
+concepts with the highest number of individuals, ensuring each example is
+taken from a different concept.  We experiment with four types of domain
+contextualization: 1) \textbf{Generic}: The LLM is only asked to perform a
+generic task e.g. ranked retrieval.  2) \textbf{Ontology}: The LLM is defined
+as an expert in ontologies.  3) \textbf{Topic} of an ontology: The LLM is
+defined as an expert in the topic of an ontology
+e.g. \verb|`You are a wine expert'| for the Wines Ontology
+\cite{noy2001OntologyDevelopment101} 4) \textbf{Ontology and Topic}: The LLM
+is defined as an expert in ontologies and an expert in the
+topic.\footnote{Examples of the prompt templates can be found at our
+  \href{https://anonymous.4open.science/r/llm_ontology_awareness-91C4/}{repository}.}
 
 % Temperature variability and response consistency
 
-To evaluate response consistency over temperature variation, we repeat 3-shot, ontology contextualization experiments on the Wines and CASE ontologies with GPT-4o and Llama3-8B 10 times at three temperature values.
-% To evaluate the consistency in responses generated by LLMs, we perform experiments with GPT-4o and Llama3-8B on the Wines and CASE ontologies for 3-shot prompting using double contextualization (ontology and topic) by repeating each experiment 10 times under three different temperature values.
-Due to resource restrictions, we were unable to perform similar experiments with o1-preview and DeepSeek R1-Distil-Llama-8B and leave it for future work. Our choice of the two ontologies is based on the entity label semantics of ontologies that we discuss in Section \ref{subsec:method-ontology-variability}. The choice of 3-shot prompting is based on performance stabilization that we observe from our experiments further discussed in Section \ref{sec:results}. We choose to explore consistency at the default temperature of each LLM, at a high value and at a low value.
-The default value for both LLMs is approximately midway in their respective ranges. The high and low values are selected by scaling both LLMs' ranges to $[0, 1]$ and choosing the equivalent values of $0.2$ (low) and $0.8$ (high).
+To evaluate response consistency over temperature variation, we repeat 3-shot,
+ontology contextualization experiments on the Wines and CASE ontologies with
+GPT-4o and Llama3-8B 10 times at three temperature values.
+% To evaluate the consistency in responses generated by LLMs, we perform
+% experiments with GPT-4o and Llama3-8B on the Wines and CASE ontologies for
+% 3-shot prompting using double contextualization (ontology and topic) by
+% repeating each experiment 10 times under three different temperature values.
+Due to resource restrictions, we were unable to perform similar experiments
+with o1-preview and DeepSeek R1-Distil-Llama-8B and leave it for future
+work. Our choice of the two ontologies is based on the entity label semantics
+of ontologies that we discuss in Section
+\ref{subsec:method-ontology-variability}. The choice of 3-shot prompting is
+based on performance stabilization that we observe from our experiments
+further discussed in Section \ref{sec:results}. We choose to explore
+consistency at the default temperature of each LLM, at a high value and at a
+low value.  The default value for both LLMs is approximately midway in their
+respective ranges. The high and low values are selected by scaling both LLMs'
+ranges to $[0, 1]$ and choosing the equivalent values of $0.2$ (low) and $0.8$
+(high).
 
-% The temperature scales for both the LLMs are different but the default values are approximately midway in their respective ranges. For the high and low values, we scale both temperature ranges to $[0, 1]$ and choose the equivalent values of $0.2$ (low) and $0.8$ (high).
+% The temperature scales for both the LLMs are different but the default
+% values are approximately midway in their respective ranges. For the high and
+% low values, we scale both temperature ranges to $[0, 1]$ and choose the
+% equivalent values of $0.2$ (low) and $0.8$ (high).
 
 \subsection{Evaluation Metrics}
 \label{subsec:evaluation-metrics}
 
-We compute the standard information retrieval metric Mean Average Precision (mAP) \cite{baezayates1999ModernInformationRetrieval} with mAP computed at 1 ($mAP@1$) highlighting the ability of LLMs to identify the directly asserted concept for an individual and at the depth $D$ ($mAP@D$) of each ontology to better understand an LLM's ability to infer the correct concept hierarchies. For each individual, the ground truth is defined as the sequence of concepts, starting at the individual's directly asserted concept, along the path to the top concept of that ontology.
-We provide a mathematical formulation of $\text{mAP@K}$ with $K=1,D$ being applied to obtain $\text{mAP@1}$ and $\text{mAP@D}$ respectively.
+We compute the standard information retrieval metric Mean Average Precision
+(mAP) \cite{baezayates1999ModernInformationRetrieval} with mAP computed at 1
+($mAP@1$) highlighting the ability of LLMs to identify the directly asserted
+concept for an individual and at the depth $D$ ($mAP@D$) of each ontology to
+better understand an LLM's ability to infer the correct concept
+hierarchies. For each individual, the ground truth is defined as the sequence
+of concepts, starting at the individual's directly asserted concept, along the
+path to the top concept of that ontology.  We provide a mathematical
+formulation of $\text{mAP@K}$ with $K=1,D$ being applied to obtain
+$\text{mAP@1}$ and $\text{mAP@D}$ respectively.
 \newline \\
-% {\parindent 0pt 
+% {\parindent 0pt
 Let the ground truth hierarchy for an individual $t$ be given by:
 \begin{equation}
-\label{eq:ground-truth}
-\{c_i \mid c_i \in C\ ;\ c_i \subseteq c_{i+1}\ ;\ t \in \Sigma_{c_1}\ ;\ 1 \leq i \leq d \}
+  \label{eq:ground-truth}
+  \{c_i \mid c_i \in C\ ;\ c_i \subseteq c_{i+1}\ ;\ t \in \Sigma_{c_1}\ ;\ 1 \leq i \leq d \}
 \end{equation}
 where $d$ is the depth of the directly-asserted concept $c_1$ and $d \leq D$ \\
 Let $\{y_i\}_{i=1}^{d}$ be the predicted hierarchy for $t$ \\
 The mAP at a sequence length of $K$ is given by:
 \begin{equation}
-    \label{eq:map}
-    \text{mAP@K} = \frac{1}{\big|T\big|} \sum_{t \in T} \text{AP@K}_t
+  \label{eq:map}
+  \text{mAP@K} = \frac{1}{\big|T\big|} \sum_{t \in T} \text{AP@K}_t
 \end{equation}
 where, \\
 $T$ is the set of individuals; \\
 $| \cdot |$ is set cardinality and; \\
-$\text{AP@K}_t$ is the average precision for $t$ at a sequence length $K$, given by:
+$\text{AP@K}_t$ is the average precision for $t$ at a sequence length $K$,
+given by:
 \begin{equation}
-    \label{eq:ap}
-    \text{AP@K}_t = \frac{1}{K} \sum_{x=1}^{K} \frac{\Big|\{y_i\}_{i=1}^{x} \cap \{c_j\}_{j=1}^{x}\Big|}{\Big|\{y_k\}_{k=1}^{x}\Big|} 
+  \label{eq:ap}
+  \text{AP@K}_t = \frac{1}{K} \sum_{x=1}^{K} \frac{\Big|\{y_i\}_{i=1}^{x} \cap \{c_j\}_{j=1}^{x}\Big|}{\Big|\{y_k\}_{k=1}^{x}\Big|} 
 \end{equation}
-The numerator in Equation \ref{eq:ap} is the cardinality of the set of \textit{true positives} and the denominator is the cardinality of the set of \textit{predictions} for a single indvidual $t$.
+The numerator in Equation \ref{eq:ap} is the cardinality of the set of
+\textit{true positives} and the denominator is the cardinality of the set of
+\textit{predictions} for a single indvidual $t$.
 
 \section{Results and Discussion}
 \label{sec:results}
-This section present the results and observations across the 288 conducted experiments (zero-shot: 4 LLMs $\times$ 3 ontologies $\times$ 4 domain contextualizations $= 48$; few-shot: 2 LLMs $\times$ 3 ontologies $\times$ 4 domain contextualizations $\times$ 10 few-shot variations $= 240$). Due to the space limitations, we are unable to report all the computed scores here. A complete table with all the results and figures can be found \href{https://anonymous.4open.science/r/llm_ontology_awareness-91C4/}{online}
+This section present the results and observations across the 288 conducted
+experiments (zero-shot: 4 LLMs $\times$ 3 ontologies $\times$ 4 domain
+contextualizations $= 48$; few-shot: 2 LLMs $\times$ 3 ontologies $\times$ 4
+domain contextualizations $\times$ 10 few-shot variations $= 240$). Due to the
+space limitations, we are unable to report all the computed scores here. A
+complete table with all the results and figures can be found
+\href{https://anonymous.4open.science/r/llm_ontology_awareness-91C4/}{online}
 \footnote{\href{https://anonymous.4open.science/r/llm_ontology_awareness-91C4/}{https://anonymous.4open.science/r/llm\_ontology\_awareness-91C4/}}.
-Table \ref{tab:results} reports a selection of scores representing the results for all three ontologies, all four models, zero-shot, 1-shot, 3-shot and 10-shot prompting strategies and the ontology-focused domain contextualization. The choice to report scores for the ontology domain contextualization is based on it providing the best results for a larger subset of our experiments (more detail in Section \ref{subsec:results-llm-variability}). Despite Table \ref{tab:results} representing a small portion of the total experiments performed, it still highlights the nature of the observed trends that we observe across all variables.
+Table \ref{tab:results} reports a selection of scores representing the results
+for all three ontologies, all four models, zero-shot, 1-shot, 3-shot and
+10-shot prompting strategies and the ontology-focused domain
+contextualization. The choice to report scores for the ontology domain
+contextualization is based on it providing the best results for a larger
+subset of our experiments (more detail in Section
+\ref{subsec:results-llm-variability}). Despite Table \ref{tab:results}
+representing a small portion of the total experiments performed, it still
+highlights the nature of the observed trends that we observe across all
+variables.
 % and the observed trends across all other variables also being evident.
-However, when analyzing any factor, we do not confine ourselves to a single value for any other variable to be as general as possible. 
+However, when analyzing any factor, we do not confine ourselves to a single
+value for any other variable to be as general as possible.
 
-When analyzing the effect of different variables, we draw our conclusions with an emphasis on $\text{mAP@D}$ rather than $\text{mAP@1}$. $\text{mAP@1}$ focuses only on the ability of an LLM in identifying the directly-asserted concept of an individual. However, as discussed in Section \ref{subsec:method-ontology-variability}, a large portion of the individuals use the label of their directly-asserted concept for their respective labels. Such lexical similarity would inflate $\text{mAP@1}$ scores and provide an inaccurate representation of the understanding LLMs possess of ontologies. $\text{mAP@D}$, in contrast, reduces the emphasis on the directly-asserted concept and, by requiring LLMs to generate hierarchies, provides greater insight into their understanding of concept hierarchies.
+When analyzing the effect of different variables, we draw our conclusions with
+an emphasis on $\text{mAP@D}$ rather than $\text{mAP@1}$. $\text{mAP@1}$
+focuses only on the ability of an LLM in identifying the directly-asserted
+concept of an individual. However, as discussed in Section
+\ref{subsec:method-ontology-variability}, a large portion of the individuals
+use the label of their directly-asserted concept for their respective
+labels. Such lexical similarity would inflate $\text{mAP@1}$ scores and
+provide an inaccurate representation of the understanding LLMs possess of
+ontologies. $\text{mAP@D}$, in contrast, reduces the emphasis on the
+directly-asserted concept and, by requiring LLMs to generate hierarchies,
+provides greater insight into their understanding of concept hierarchies.
 
 \subsection{Ontology-based Variability Results}
 \label{subsec:results-ontology-variability}
 
 %% Observation about ontology population over different ontologies
-All experimental variants perform better on the Wines and Astronomy ontologies compared to the CASE ontology (for mAP@D). This performance disparity is particularly pronounced in our zero-shot experiments and is significantly reduced even with the inclusion of a single illustrative example (Table \ref{tab:results}).
+All experimental variants perform better on the Wines and Astronomy ontologies
+compared to the CASE ontology (for mAP@D). This performance disparity is
+particularly pronounced in our zero-shot experiments and is significantly
+reduced even with the inclusion of a single illustrative example (Table
+\ref{tab:results}).
 
-Except DeepSeek's R1-Distil-Llama-8B, all other LLMs report much higher $mAP@1$ scores than $mAP@D$.
-This reinforces the idea that LLMs are unable to infer the correct concept hierarchies when their semantic understanding of the entities deviates from that of the ontology. $\text{mAP@1}$ scores for the CASE ontology are often higher than the other two ontologies. As discussed in Section \ref{subsec:method-ontology-variability}, a large portion of its individuals ($71.7\%$) utilize the name of their directly-asserted concepts. Lower $\text{mAP@D}$ scores for the CASE ontology reinforce the idea that LLMs resort to lexical matching in identifying directly-asserted concepts but are unable to correctly infer the concept hierarchies. The semantic separability of entity types and lack of lexical parity with ancestor concept labels in conjunction with the poor $\text{mAP@D}$ scores highlight the difficulty of performing ontology population for the CASE ontology. However, performance is significantly improved when examples are provided highlighting the ability of LLMs to quickly grasp the correct taxonomy hierarchy context required of them.
+Except DeepSeek's R1-Distil-Llama-8B, all other LLMs report much higher
+$mAP@1$ scores than $mAP@D$.  This reinforces the idea that LLMs are unable to
+infer the correct concept hierarchies when their semantic understanding of the
+entities deviates from that of the ontology. $\text{mAP@1}$ scores for the
+CASE ontology are often higher than the other two ontologies. As discussed in
+Section \ref{subsec:method-ontology-variability}, a large portion of its
+individuals ($71.7\%$) utilize the name of their directly-asserted
+concepts. Lower $\text{mAP@D}$ scores for the CASE ontology reinforce the idea
+that LLMs resort to lexical matching in identifying directly-asserted concepts
+but are unable to correctly infer the concept hierarchies. The semantic
+separability of entity types and lack of lexical parity with ancestor concept
+labels in conjunction with the poor $\text{mAP@D}$ scores highlight the
+difficulty of performing ontology population for the CASE ontology. However,
+performance is significantly improved when examples are provided highlighting
+the ability of LLMs to quickly grasp the correct taxonomy hierarchy context
+required of them.
 
 \begin{table}
-\centering
-\caption{Ontology domain contextualization prediction results at zero-shot, 1-shot, 3-shot and 10-shot for all ontologies and LLMs (DeepSeek-R1-Distil-Llama-8B abbreviated to DeepSeek-R1* to save space)}\label{tab:results}
-\begin{tabular}{|c|c|c|r|r|}
-\hline
-\hcalignbf{N-Shot} & \hcalignbf{Ontology} & \hcalignbf{LLM} & \hcalignbf{mAP@1}  & \hcalignbf{mAP@D} \\
-\hline
-\multirow{12}{*}{0}
-& \multirow{4}{*}{Wines}
-    & o1-preview & 0.826 & 0.871 \\
+  \centering
+  \caption{Ontology domain contextualization prediction results at zero-shot,
+    1-shot, 3-shot and 10-shot for all ontologies and LLMs
+    (DeepSeek-R1-Distil-Llama-8B abbreviated to DeepSeek-R1* to save
+    space)}\label{tab:results}
+  \begin{tabular}{|c|c|c|r|r|}
+    \hline
+    \hcalignbf{N-Shot} & \hcalignbf{Ontology} & \hcalignbf{LLM} & \hcalignbf{mAP@1}  & \hcalignbf{mAP@D} \\
+    \hline
+    \multirow{12}{*}{0}
+                       & \multirow{4}{*}{Wines}
+                                              & o1-preview & 0.826 & 0.871 \\
     \cline{3-5}
-    & & GPT-4o & 0.733 & 0.785 \\
+                       & & GPT-4o & 0.733 & 0.785 \\
     \cline{3-5}
-    & & Llama3-8B & 0.484 & 0.571 \\
+                       & & Llama3-8B & 0.484 & 0.571 \\
     \cline{3-5}
-    & & DeepSeek-R1* & 0.472 & 0.542 \\
-\cline{2-5}
-& \multirow{4}{*}{CASE}
-    & o1-preview & 0.878 & 0.578 \\
+                       & & DeepSeek-R1* & 0.472 & 0.542 \\
+    \cline{2-5}
+                       & \multirow{4}{*}{CASE}
+                                              & o1-preview & 0.878 & 0.578 \\
     \cline{3-5}
-    & & GPT-4o & 0.779 & 0.316 \\
+                       & & GPT-4o & 0.779 & 0.316 \\
     \cline{3-5}
-    & & Llama3-8B & 0.626 & 0.270 \\
+                       & & Llama3-8B & 0.626 & 0.270 \\
     \cline{3-5}
-    & & DeepSeek-R1* & 0.557 & 0.196 \\
-\cline{2-5}
-& \multirow{4}{*}{Astronomy}
-    & o1-preview & 0.956 & 0.870 \\
+                       & & DeepSeek-R1* & 0.557 & 0.196 \\
+    \cline{2-5}
+                       & \multirow{4}{*}{Astronomy}
+                                              & o1-preview & 0.956 & 0.870 \\
     \cline{3-5}
-    & & GPT-4o & 0.926 & 0.750 \\
+                       & & GPT-4o & 0.926 & 0.750 \\
     \cline{3-5}
-    & & Llama3-8B & 0.544 & 0.420 \\
+                       & & Llama3-8B & 0.544 & 0.420 \\
     \cline{3-5}
-    & & DeepSeek-R1* & 0.618 & 0.387 \\
-\hline
-\multirow{6}{*}{1}
-& \multirow{2}{*}{Wines}
-    & GPT-4o & 0.800 & 0.868 \\
+                       & & DeepSeek-R1* & 0.618 & 0.387 \\
+    \hline
+    \multirow{6}{*}{1}
+                       & \multirow{2}{*}{Wines}
+                                              & GPT-4o & 0.800 & 0.868 \\
     \cline{3-5}
-    & & Llama3-8B & 0.500 &	0.536 \\
-\cline{2-5}
-& \multirow{2}{*}{CASE}
-    & GPT-4o & 0.823 & 0.608 \\
+                       & & Llama3-8B & 0.500 &	0.536 \\
+    \cline{2-5}
+                       & \multirow{2}{*}{CASE}
+                                              & GPT-4o & 0.823 & 0.608 \\
     \cline{3-5}
-    & & Llama3-8B & 0.700 & 0.372 \\
-\cline{2-5}
-& \multirow{2}{*}{Astronomy}
-    & GPT-4o & 0.940 & 0.830 \\
+                       & & Llama3-8B & 0.700 & 0.372 \\
+    \cline{2-5}
+                       & \multirow{2}{*}{Astronomy}
+                                              & GPT-4o & 0.940 & 0.830 \\
     \cline{3-5}
-    & & Llama3-8B & 0.776 & 0.627 \\
-\hline
-\multirow{6}{*}{3}
-& \multirow{2}{*}{Wines}
-    & GPT-4o & 0.873 & 0.889 \\
+                       & & Llama3-8B & 0.776 & 0.627 \\
+    \hline
+    \multirow{6}{*}{3}
+                       & \multirow{2}{*}{Wines}
+                                              & GPT-4o & 0.873 & 0.889 \\
     \cline{3-5}
-    & & Llama3-8B & 0.690 & 0.720 \\
-\cline{2-5}
-& \multirow{2}{*}{CASE}
-    & GPT-4o & 0.836 & 0.772 \\
+                       & & Llama3-8B & 0.690 & 0.720 \\
+    \cline{2-5}
+                       & \multirow{2}{*}{CASE}
+                                              & GPT-4o & 0.836 & 0.772 \\
     \cline{3-5}
-    & & Llama3-8B & 0.711 & 0.552 \\
-\cline{2-5}
-& \multirow{2}{*}{Astronomy}
-    & GPT-4o & 0.954 & 0.807 \\
+                       & & Llama3-8B & 0.711 & 0.552 \\
+    \cline{2-5}
+                       & \multirow{2}{*}{Astronomy}
+                                              & GPT-4o & 0.954 & 0.807 \\
     \cline{3-5}
-    & & Llama3-8B & 0.769 & 0.648 \\
-\hline
-\multirow{6}{*}{10}
-& \multirow{2}{*}{Wines}
-    & GPT-4o & 0.894 & 0.901 \\
+                       & & Llama3-8B & 0.769 & 0.648 \\
+    \hline
+    \multirow{6}{*}{10}
+                       & \multirow{2}{*}{Wines}
+                                              & GPT-4o & 0.894 & 0.901 \\
     \cline{3-5}
-    & & Llama3-8B & 0.603 & 0.630 \\
-\cline{2-5}
-& \multirow{2}{*}{CASE}
-    & GPT-4o & 0.851 & 0.829 \\
+                       & & Llama3-8B & 0.603 & 0.630 \\
+    \cline{2-5}
+                       & \multirow{2}{*}{CASE}
+                                              & GPT-4o & 0.851 & 0.829 \\
     \cline{3-5}
-    & & Llama3-8B & 0.785 & 0.673 \\
-\cline{2-5}
-& \multirow{2}{*}{Astronomy}
-    & GPT-4o & 0.914 & 0.778 \\
+                       & & Llama3-8B & 0.785 & 0.673 \\
+    \cline{2-5}
+                       & \multirow{2}{*}{Astronomy}
+                                              & GPT-4o & 0.914 & 0.778 \\
     \cline{3-5}
-    & & Llama3-8B & 0.810 & 0.670 \\
-\hline
-\end{tabular}
+                       & & Llama3-8B & 0.810 & 0.670 \\
+    \hline
+  \end{tabular}
 \end{table}
 
 %%% The other two ontologies
-LLMs perform much better on the Wines and Astronomy ontologies.
-We observe higher $map@D$ scores compared to $map@1$ for all experiments on the Wines ontology.
-111 of the 161 individuals in the ontology belong to concepts without descendants, thus having no hierarchy to predict. Thus, when an LLM is unable to retrieve the directly asserted concept at the first rank, it is usually able to retrieve it within the top 4 ranks.
-The $map@1$ scores on the Astronomy ontology are much higher than the rest despite $mAP@D$ being mostly similar to that of the Wines ontology. As it is a much larger ontology (Table \ref{tab:ontology-metrics}), we hypothesize that LLMs are able to retrieve the directly asserted concept but the greater depth of the ontology makes it slightly difficult to predict its ancestors. However, the $map@D$ scores still show reasonably accurate results for ontology population and hierarchy inference. Performance improves further when examples are included. The similarity in performance between the Wines and Astronomy ontologies despite their size and structural complexity differences suggests that ontology structure does not play a major role in ontology learning tasks. However, more experimentation is required before any definitive conclusion can be drawn. Agreement between an LLM's semantic interpretation of entity labels and their ontological nature can be the governing factor. Similar centroid distance and DBI scores for the Wines and Astronomy ontologies compared to the CASE ontology support this assumption (Table \ref{tab:ontology-metrics}).
+LLMs perform much better on the Wines and Astronomy ontologies.  We observe
+higher $map@D$ scores compared to $map@1$ for all experiments on the Wines
+ontology.  111 of the 161 individuals in the ontology belong to concepts
+without descendants, thus having no hierarchy to predict. Thus, when an LLM is
+unable to retrieve the directly asserted concept at the first rank, it is
+usually able to retrieve it within the top 4 ranks.  The $map@1$ scores on the
+Astronomy ontology are much higher than the rest despite $mAP@D$ being mostly
+similar to that of the Wines ontology. As it is a much larger ontology (Table
+\ref{tab:ontology-metrics}), we hypothesize that LLMs are able to retrieve the
+directly asserted concept but the greater depth of the ontology makes it
+slightly difficult to predict its ancestors. However, the $map@D$ scores still
+show reasonably accurate results for ontology population and hierarchy
+inference. Performance improves further when examples are included. The
+similarity in performance between the Wines and Astronomy ontologies despite
+their size and structural complexity differences suggests that ontology
+structure does not play a major role in ontology learning tasks. However, more
+experimentation is required before any definitive conclusion can be
+drawn. Agreement between an LLM's semantic interpretation of entity labels and
+their ontological nature can be the governing factor. Similar centroid
+distance and DBI scores for the Wines and Astronomy ontologies compared to the
+CASE ontology support this assumption (Table \ref{tab:ontology-metrics}).
 
 % \subsection{Choice of LLM}
 \subsection{LLM Factors}
 \label{subsec:results-llm-variability}
 
 %% open-source vs. closed-source and large vs. small
-We find that larger (closed-source) LLMs outperform their smaller (open-source) competitors.
+We find that larger (closed-source) LLMs outperform their smaller
+(open-source) competitors.
 % (Tables \ref{tab:zero-shot-results} and \ref{tab:few-shot-results})
- Without further experimentation with larger open-source models, it is difficult to say if other factors beyond the model size are responsible for this performance gap. We hope to explore this in future work. The performance gap between GPT-4o and Llama3-8B is very pronounced in the zero-shot setting, but it strongly reduces in the few-shot experiments. Figures \ref{fig:gpt-4o-few-shot} and \ref{fig:llama3-few-shot} also highlight that both models benefit considerably from providing examples to the CASE ontology.
-% Despite performance differences between GPT-4o and Llama3-8B, similar trends observed across all ontologies in Figure \ref{fig:few-shot} is encouraging. 
-Although much smaller in size, Llama3-8B manages to reduce the gap in  performance compared to GPT-4o when provided with a handful of examples (Figure \ref{fig:few-shot}), indicating that even smaller models have the potential to successfully support ontology population. Similar trends in performance growth for the CASE ontology further strengthen the assumption of ontology entity semantics being the principal consideration for LLMs to perform ontology population.
+Without further experimentation with larger open-source models, it is
+difficult to say if other factors beyond the model size are responsible for
+this performance gap. We hope to explore this in future work. The performance
+gap between GPT-4o and Llama3-8B is very pronounced in the zero-shot setting,
+but it strongly reduces in the few-shot experiments. Figures
+\ref{fig:gpt-4o-few-shot} and \ref{fig:llama3-few-shot} also highlight that
+both models benefit considerably from providing examples to the CASE ontology.
+% Despite performance differences between GPT-4o and Llama3-8B, similar trends
+% observed across all ontologies in Figure \ref{fig:few-shot} is encouraging.
+Although much smaller in size, Llama3-8B manages to reduce the gap in
+performance compared to GPT-4o when provided with a handful of examples
+(Figure \ref{fig:few-shot}), indicating that even smaller models have the
+potential to successfully support ontology population. Similar trends in
+performance growth for the CASE ontology further strengthen the assumption of
+ontology entity semantics being the principal consideration for LLMs to
+perform ontology population.
 
 %% Reasoning vs. Conventional LLMs
-o1-preview outperforms all other models in our zero-shot experiments indicating the potential of reasoning LLMs for ontology-related tasks. Despite DeepSeek's R1-Distil-Llama-8B being a reasoning LLM , it has the worst performance among all 4 models. Further prompt engineering could improve results of the smaller reasoning models, but our experimentation highlights that reasoning LLMs do not always outperform conventional LLMs. For larger models, we observe that GPT-4o, when provided with a few examples (Table \ref{tab:results}), performs as well as o1-preview under zero-shot conditions. Further experimentation with few-shot prompting reasoning models would make it clearer if reasoning models are better at supporting ontology learning; however, recent works \cite{wang2024Advanced,nori2024Medprompt,guo2025DeepSeek} suggest that reasoning models do not benefit significantly from few-shot prompting and may even lead to degradation in performance in some situations.
+o1-preview outperforms all other models in our zero-shot experiments
+indicating the potential of reasoning LLMs for ontology-related tasks. Despite
+DeepSeek's R1-Distil-Llama-8B being a reasoning LLM , it has the worst
+performance among all 4 models. Further prompt engineering could improve
+results of the smaller reasoning models, but our experimentation highlights
+that reasoning LLMs do not always outperform conventional LLMs. For larger
+models, we observe that GPT-4o, when provided with a few examples (Table
+\ref{tab:results}), performs as well as o1-preview under zero-shot
+conditions. Further experimentation with few-shot prompting reasoning models
+would make it clearer if reasoning models are better at supporting ontology
+learning; however, recent works
+\cite{wang2024Advanced,nori2024Medprompt,guo2025DeepSeek} suggest that
+reasoning models do not benefit significantly from few-shot prompting and may
+even lead to degradation in performance in some situations.
 
 \begin{figure}
-\begin{subfigure}{0.5\textwidth}
+  \begin{subfigure}{0.5\textwidth}
     \centering
     \caption{GPT-4o}
     \label{fig:gpt-4o-few-shot}
     \includegraphics[scale=0.30]{assets/gpt-4o-n-shot-variation-ontology-map.pdf}
-    \end{subfigure}
-\hspace{0.2cm}
-\begin{subfigure}{0.5\textwidth}
+  \end{subfigure}
+  \hspace{0.2cm}
+  \begin{subfigure}{0.5\textwidth}
     \centering
     \caption{Llama3-8B}
     \label{fig:llama3-few-shot}
     \includegraphics[scale=0.30]{assets/Llama3-7B-n-shot-variation-ontology-map.pdf}
-    \end{subfigure}
-    \caption{mAP@D variation with number of examples for GPT-4o (a) and Llama3-8B (b) using ontology domain contextualization}\label{fig:few-shot}
+  \end{subfigure}
+  \caption{mAP@D variation with number of examples for GPT-4o (a) and
+    Llama3-8B (b) using ontology domain contextualization}\label{fig:few-shot}
 \end{figure}
 
 %% Zero-shot vs. Few-shot
-Including a single example leads to significant performance improvements, particularly on the CASE ontology. Significant improvements in $mAP@D$ highlight how LLMs can adapt with little context. Improvements in $mAP@1$ are less pronounced in comparison.
-% Thus, the primary benefit of adding examples is in identifying the ontological hierarchy relations that a user is looking for.
-Thus, adding examples primarily improves an LLM's ability to infer the correct ontology concept hierarchy.
-The performance improvements on the Wines and Astronomy ontologies are less pronounced, possibly due to the already compatible semantic understanding the LLMs possess of their entities.
+Including a single example leads to significant performance improvements,
+particularly on the CASE ontology. Significant improvements in $mAP@D$
+highlight how LLMs can adapt with little context. Improvements in $mAP@1$ are
+less pronounced in comparison.
+% Thus, the primary benefit of adding examples is in identifying the
+% ontological hierarchy relations that a user is looking for.
+Thus, adding examples primarily improves an LLM's ability to infer the correct
+ontology concept hierarchy.  The performance improvements on the Wines and
+Astronomy ontologies are less pronounced, possibly due to the already
+compatible semantic understanding the LLMs possess of their entities.
 
 %% Few-shot variation
-Figure \ref{fig:few-shot} highlights that adding more examples yields continued performance improvements that plateaus at 3 - 4 examples.
-Performance gains from adding additional examples is more pronounced for Llama3-8B compared to GPT-4o.
-This suggests that smaller LLMs  benefit more from seeing more examples.
-Experimentation with zero-shot and few-shot strategies highlights that few-shot prompting can provide significant performance improvements for ontology population, particularly when an LLM's entity label semantics differs from the ontological entity properties. Largest performance benefits are observed when using 3 or 4 examples beyond which smaller LLMs may benefit more.
+Figure \ref{fig:few-shot} highlights that adding more examples yields
+continued performance improvements that plateaus at 3 - 4 examples.
+Performance gains from adding additional examples is more pronounced for
+Llama3-8B compared to GPT-4o.  This suggests that smaller LLMs benefit more
+from seeing more examples.  Experimentation with zero-shot and few-shot
+strategies highlights that few-shot prompting can provide significant
+performance improvements for ontology population, particularly when an LLM's
+entity label semantics differs from the ontological entity properties. Largest
+performance benefits are observed when using 3 or 4 examples beyond which
+smaller LLMs may benefit more.
 
-Of the $72$ ($288 / 4$) domain contextualization experimentation groups (each combination of LLM, ontology and prompting strategy, over four types of domain contextualization together comprise one group), ontology contextualization yielded the best performance for 31 groups ($43.1\%$) followed by ontology and topic (double) contextualization for 21 groups ($29.2\%$). From these 52 groups with ontology or double contextualization as the best performer, in 27 groups, the second-best performer was the other contextualization method. Of the remaining 20 groups, ontology or double contextualization was second-best in 12 groups. This clearly highlights the preference for the taxonomical contextualization variants. Topic contextualization provided the best performance in 16 groups ($22.2\%$). 
-Table \ref{tab:results} reports the ontology domain contextualization scores for each ontology and LLM under different prompting strategies.
-We observed the difference between the best and second-best strategies to be marginal ($< 0.017$) in several groups.
+Of the $72$ ($288 / 4$) domain contextualization experimentation groups (each
+combination of LLM, ontology and prompting strategy, over four types of domain
+contextualization together comprise one group), ontology contextualization
+yielded the best performance for 31 groups ($43.1\%$) followed by ontology and
+topic (double) contextualization for 21 groups ($29.2\%$). From these 52
+groups with ontology or double contextualization as the best performer, in 27
+groups, the second-best performer was the other contextualization method. Of
+the remaining 20 groups, ontology or double contextualization was second-best
+in 12 groups. This clearly highlights the preference for the taxonomical
+contextualization variants. Topic contextualization provided the best
+performance in 16 groups ($22.2\%$).  Table \ref{tab:results} reports the
+ontology domain contextualization scores for each ontology and LLM under
+different prompting strategies.  We observed the difference between the best
+and second-best strategies to be marginal ($< 0.017$) in several groups.
 
 \begin{figure}
-\begin{subfigure}{0.5\textwidth}
+  \begin{subfigure}{0.5\textwidth}
     \centering
     \caption{Wines Ontology}
     \label{fig:wines-temp-variation}
     \includegraphics[scale=0.32]{assets/wines-ontology-temp-stat-variation-ontology.pdf}
-\end{subfigure}
-\hspace{0.2cm}
-\begin{subfigure}{0.5\textwidth}
+  \end{subfigure}
+  \hspace{0.2cm}
+  \begin{subfigure}{0.5\textwidth}
     \centering
     \caption{CASE Ontology}
     \label{fig:case-temp-variation}
     \includegraphics[scale=0.32]{assets/case-uco-owl-trafficking-temp-stat-variation-ontology.pdf}
-\end{subfigure}
-\caption{Temperature variation for (a) Wines and (b) CASE ontologies for GPT-4o and Llama3-8B with 3-shot, ontology domain contextualization. Central points are the average value over 10 runs. Lighter shaded regions are approximated densities over the range of values}
-\label{fig:temp-variation}
+  \end{subfigure}
+  \caption{Temperature variation for (a) Wines and (b) CASE ontologies for
+    GPT-4o and Llama3-8B with 3-shot, ontology domain
+    contextualization. Central points are the average value over 10
+    runs. Lighter shaded regions are approximated densities over the range of
+    values}
+  \label{fig:temp-variation}
 \end{figure}
 
-LLMs are inherently non-deterministic tools. The results they produce are not guaranteed to be 100\% replicable even from identical prompts. Hence, when investigating the applicability of LLMs for the task of determining semantic relations between entities, it is important to examine the potential variance in their performance under fixed conditions. A relevant question is whether calibration of the LLM temperature parameter can improve the mean performance or reduce its variance.
+LLMs are inherently non-deterministic tools. The results they produce are not
+guaranteed to be 100\% replicable even from identical prompts. Hence, when
+investigating the applicability of LLMs for the task of determining semantic
+relations between entities, it is important to examine the potential variance
+in their performance under fixed conditions. A relevant question is whether
+calibration of the LLM temperature parameter can improve the mean performance
+or reduce its variance.
 
 % 
-Figure \ref{fig:temp-variation} presents  $mAP@D$ variability exhibited by GPT-4o and Llama3-8B models run 10 times over Wines and CASE ontologies under three different temperature settings and with all other parameters fixed.
+Figure \ref{fig:temp-variation} presents $mAP@D$ variability exhibited by
+GPT-4o and Llama3-8B models run 10 times over Wines and CASE ontologies under
+three different temperature settings and with all other parameters fixed.
 
-GPT-4o's results are fairly consistent across all runs, which is observable as fairly small spreads in $mAP@D$ values for all three temperature settings and both ontologies. In contrast, there is more variability in the $mAP@D$ scores for Llama3-8B. Surprisingly enough, neither higher temperature settings nor ontology differences bring about peaks in variance (although, more exploration of this issue is required). 
-Looking at the average scores and the influence of temperature on them, we observed no difference in performance at the low temperature setting. Results of the four Welch's T-tests carried out to compare the average $mAP@D$ scores produced by the same model over the same ontology at the low and default temperature conditions are non-significant. Raising the temperature seems to have a detrimental effect. For the Wines ontology, GPT-4o produces a significantly higher average $mAP@D$ score under default temperature conditions (M = 0.88, SD = 0.01) than under the high temperature setting (M = 0.85, SD = 0.01), t(18) = 6.6, p < .001. In a similar fashion, for the CASE ontology, the default temperature resulted in a significantly higher average $mAP@D$ score as well (M = 0.76, SD = 0.01) compared to the higher temperature (M = 0.71, SD = 0.01), t(18) = 9.8, p < .001. Although the same trend is observable for Llama3-8B, the much higher variance of the smaller LLM's results renders the test non-significant.
+GPT-4o's results are fairly consistent across all runs, which is observable as
+fairly small spreads in $mAP@D$ values for all three temperature settings and
+both ontologies. In contrast, there is more variability in the $mAP@D$ scores
+for Llama3-8B. Surprisingly enough, neither higher temperature settings nor
+ontology differences bring about peaks in variance (although, more exploration
+of this issue is required).  Looking at the average scores and the influence
+of temperature on them, we observed no difference in performance at the low
+temperature setting. Results of the four Welch's T-tests carried out to
+compare the average $mAP@D$ scores produced by the same model over the same
+ontology at the low and default temperature conditions are
+non-significant. Raising the temperature seems to have a detrimental
+effect. For the Wines ontology, GPT-4o produces a significantly higher average
+$mAP@D$ score under default temperature conditions (M = 0.88, SD = 0.01) than
+under the high temperature setting (M = 0.85, SD = 0.01), t(18) = 6.6, p <
+.001. In a similar fashion, for the CASE ontology, the default temperature
+resulted in a significantly higher average $mAP@D$ score as well (M = 0.76, SD
+= 0.01) compared to the higher temperature (M = 0.71, SD = 0.01), t(18) = 9.8,
+p < .001. Although the same trend is observable for Llama3-8B, the much higher
+variance of the smaller LLM's results renders the test non-significant.
 
 \section{Conclusion}
 \label{sec:conclusion}
