@@ -294,8 +294,11 @@ and demerits.
   prompting methods focus on strategies that require the LLM to perform a task
   without any example (zero-shot), through the provision of providing
   illustrative examples to facilitate better understanding of the task
-  (few-shot) or by providing a data source to use with which to generate
-  substantiated responses (Retrieval-Augmented Generation or, RAG
+  (few-shot) or by sequential prompting by breaking down a task into a
+  sequence of steps allowing LLMs to reason better (Chain-of-Thought
+  \cite{wei2022ChainThoughtPrompting}) 
+\item
+  
   \cite{lewis2020RetrievalAugmentedGeneration})
 \end{itemize}
 
