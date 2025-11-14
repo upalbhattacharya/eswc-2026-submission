@@ -2,11 +2,6 @@
 :ID:       d1334a06-ed7b-4e34-8522-f19b6c94cb2b
 :END:
 
-* TODO Revert Repo to tag
-:PROPERTIES:
-:CREATED:  [2025-11-14 Fri 11:48]
-:ID:       8c66c5c7-af09-4279-9854-70f4a94a0c93
-:END:
 
 * TODO 
 :PROPERTIES:
