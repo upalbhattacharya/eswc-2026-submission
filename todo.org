@@ -2,6 +2,13 @@
 :ID:       d1334a06-ed7b-4e34-8522-f19b6c94cb2b
 :END:
 
+* INPROGRESS LLM Factor: RAG
+:PROPERTIES:
+:CREATED:  [2025-11-14 Fri 13:24]
+:ID:       d50ae0e4-fe53-4203-b79f-676596357d2e
+:END:
+
+
 * TODO LLM Factor: Domain Context
 :PROPERTIES:
 :CREATED:  [2025-11-14 Fri 12:22]
