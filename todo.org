@@ -12,7 +12,7 @@ CLOSED: [2025-11-14 Fri 13:36]
 - State "DONE"       from "INPROGRESS" [2025-11-14 Fri 13:36]
 :END:
 
-* TODO LLM Factor: Domain Context
+* INPROGRESS LLM Factor: Domain Context
 :PROPERTIES:
 :CREATED:  [2025-11-14 Fri 12:22]
 :ID:       cdf445f5-dd58-47bd-b9af-ba54b841fd11
