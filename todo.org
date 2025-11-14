@@ -26,3 +26,9 @@
 :CREATED:  [2025-11-14 Fri 12:30]
 :ID:       d750c277-9dc1-46da-a089-40a061c71b03
 :END:
+
+* TODO Convert Factor Explanations to Ontology Learning, not Ontology Population
+:PROPERTIES:
+:CREATED:  [2025-11-14 Fri 13:32]
+:ID:       a0579105-f16e-4530-88a0-6487c6ae001e
+:END:
