@@ -2,9 +2,14 @@
 :ID:       d1334a06-ed7b-4e34-8522-f19b6c94cb2b
 :END:
 
-
-* TODO 
+* TODO LLM Factor: Domain Context
 :PROPERTIES:
 :CREATED:  [2025-11-14 Fri 12:22]
 :ID:       cdf445f5-dd58-47bd-b9af-ba54b841fd11
+:END:
+
+* TODO LLM Factor: Respose Variation
+:PROPERTIES:
+:CREATED:  [2025-11-14 Fri 12:24]
+:ID:       2f0d1b84-8a48-444b-9aaf-541877f50295
 :END:
