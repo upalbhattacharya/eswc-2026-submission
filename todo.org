@@ -59,7 +59,7 @@ CLOSED: [2025-11-17 Mon 13:27]
 - State "DONE"       from "INPROGRESS" [2025-11-17 Mon 13:27]
 :END:
 
-** TODO LLM Factors
+** INPROGRESS LLM Factors
 :PROPERTIES:
 :CREATED:  [2025-11-17 Mon 13:27]
 :ID:       85543f93-49aa-404e-b884-6c5c4127ad5f
