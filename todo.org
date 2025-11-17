@@ -42,10 +42,13 @@ CLOSED: [2025-11-17 Mon 13:27]
 :ID:       7d1c12da-f309-4f71-b930-b35f55107357
 :END:
 
-**** INPROGRESS Model Size
+**** REVIEW Model Size
 :PROPERTIES:
 :CREATED:  [2025-11-17 Mon 14:23]
 :ID:       14e3edf1-d37e-4315-aa09-c80a43dc1796
+:END:
+:LOGBOOK:
+- State "REVIEW"     from "INPROGRESS" [2025-11-17 Mon 14:33]
 :END:
 
 Shorten paragraph
