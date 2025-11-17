@@ -373,9 +373,12 @@ factors:
   issue. When in-context learning is unable to peform well, fine-tuning is
   known to provide significant performance benefits
   \cite{liu2022FewShotParameter}. Owing to their size, larger LLMs may be
-  difficult to fine-tune due to computational resource limitations. When
-  working with ontologies in the long-tail of LLMs, domain-specific
-  fine-tuning of smaller LLMs provides a performant alternative.
+  difficult to fine-tune due to computational resource limitations. As a
+  result, when working with ontologies in the long-tail of LLMs, fine-tuning
+  smaller LLMs might provide superior performance. Comparison of performance
+  of larger LLMs versus their smaller counterparts with fine-tuning highlights
+  whether larger and costlier models are essential for LLM-supported ontology
+  learning or smaller models fine-tuned for specific tasks are sufficient.
 \item The \textbf{availability} of model weights enables task-specific
   fine-tuning and further analysis of performance. However, commercially
   available state-of-the-art LLMs operate as `black-boxes' that prevents
