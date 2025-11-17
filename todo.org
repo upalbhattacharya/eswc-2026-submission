@@ -98,12 +98,14 @@ CLOSED: [2025-11-17 Mon 15:53]
 :END:
 
 
-*** INPROGRESS Domain Context
+*** DONE Domain Context
+CLOSED: [2025-11-17 Mon 16:05]
 :PROPERTIES:
 :CREATED:  [2025-11-14 Fri 12:22]
 :ID:       cdf445f5-dd58-47bd-b9af-ba54b841fd11
 :END:
 :LOGBOOK:
+- State "DONE"       from "INPROGRESS" [2025-11-17 Mon 16:05]
 - State "TODO"       from "INPROGRESS" [2025-11-17 Mon 13:29]
 :END:
 
