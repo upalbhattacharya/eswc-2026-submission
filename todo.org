@@ -113,6 +113,12 @@ CLOSED: [2025-11-14 Fri 13:36]
 :ID:       e304e8a8-960f-4177-9439-93f31bfe1737
 :END:
 
+** INPROGRESS Add further classification of Ontology Factors as OL Layer Cake, Metrics and Scope
+:PROPERTIES:
+:CREATED:  [2025-11-17 Mon 14:42]
+:ID:       60b369a9-e716-4ea5-9f75-d8e9e583f40f
+:END:
+
 * TODO Experimentation
 :PROPERTIES:
 :CREATED:  [2025-11-17 Mon 13:49]
