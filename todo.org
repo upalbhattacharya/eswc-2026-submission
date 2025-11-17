@@ -47,3 +47,19 @@ CLOSED: [2025-11-14 Fri 13:36]
 :CREATED:  [2025-11-17 Mon 13:26]
 :ID:       aded2629-977b-4920-a731-5f202ad816db
 :END:
+
+* INPROGRESS Update Factors
+:PROPERTIES:
+:CREATED:  [2025-11-17 Mon 13:27]
+:ID:       bf9d0300-05c9-4b1d-a747-ac08ff29d009
+:END:
+
+** DONE Ontology Factors
+CLOSED: [2025-11-17 Mon 13:27]
+:PROPERTIES:
+:CREATED:  [2025-11-17 Mon 13:27]
+:ID:       e4e703f1-15fe-41fd-b348-6682ccb492fb
+:END:
+:LOGBOOK:
+- State "DONE"       from "INPROGRESS" [2025-11-17 Mon 13:27]
+:END:
