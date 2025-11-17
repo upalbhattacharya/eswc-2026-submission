@@ -536,7 +536,11 @@ factors: choice of LLM, prompting approach, domain context and response
 variation.
 
 Ontology learning is the task of mapping new individuals to concepts within an
-ontology \cite{petasis2011OntologyPopulationEnrichment}
+ontology \cite{petasis2011OntologyPopulationEnrichment}. We select ontology
+population as the first learning task to investigate as it is the simplest of
+all ontology learning tasks. However, despite being simple, ontology
+population requires an LLM to ``understand'' concepts and instances in an
+ontology to make new assertions. 
 
 We perform ontology population as a ranked retrieval problem and investigate
 the influence of the ontology factors: structure and entity labels, and the
