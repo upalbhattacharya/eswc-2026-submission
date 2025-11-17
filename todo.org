@@ -158,7 +158,7 @@ Needs a re-write.
 :ID:       b99ace50-d78a-4a6a-87a4-b26f1461dd15
 :END:
 
-* TODO Experimentation
+* INPROGRESS Experimentation
 :PROPERTIES:
 :CREATED:  [2025-11-17 Mon 13:49]
 :ID:       a9fc2f15-2b31-4c1c-9de4-e64530ea245c
