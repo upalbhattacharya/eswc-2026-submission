@@ -36,6 +36,20 @@ CLOSED: [2025-11-17 Mon 13:27]
 :ID:       85543f93-49aa-404e-b884-6c5c4127ad5f
 :END:
 
+*** INPROGRESS  Choice of LLM
+:PROPERTIES:
+:CREATED:  [2025-11-17 Mon 14:22]
+:ID:       7d1c12da-f309-4f71-b930-b35f55107357
+:END:
+
+**** INPROGRESS Model Size
+:PROPERTIES:
+:CREATED:  [2025-11-17 Mon 14:23]
+:ID:       14e3edf1-d37e-4315-aa09-c80a43dc1796
+:END:
+
+Shorten paragraph
+
 *** INPROGRESS Approach
 :PROPERTIES:
 :CREATED:  [2025-11-17 Mon 13:29]
@@ -76,6 +90,7 @@ CLOSED: [2025-11-14 Fri 13:36]
 :CREATED:  [2025-11-14 Fri 12:24]
 :ID:       2f0d1b84-8a48-444b-9aaf-541877f50295
 :END:
+
 
 ** TODO Interplay of Factors
 :PROPERTIES:
