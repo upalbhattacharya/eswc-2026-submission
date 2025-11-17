@@ -117,7 +117,7 @@ CLOSED: [2025-11-17 Mon 16:39]
 :END:
 
 
-** TODO Interplay of Factors
+** INPROGRESS Interplay of Factors
 :PROPERTIES:
 :CREATED:  [2025-11-14 Fri 12:30]
 :ID:       d750c277-9dc1-46da-a089-40a061c71b03
