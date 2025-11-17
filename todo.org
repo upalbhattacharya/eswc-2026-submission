@@ -68,10 +68,14 @@ Shorten paragraph
 CLOCK: [2025-11-17 Mon 14:00]
 :END:
 
-**** INPROGRESS Fine-tuning
+**** DONE Fine-tuning
+CLOSED: [2025-11-17 Mon 15:53]
 :PROPERTIES:
 :CREATED:  [2025-11-17 Mon 15:23]
 :ID:       a7c00fbc-d483-4e45-92fc-2f0a71b964bc
+:END:
+:LOGBOOK:
+- State "DONE"       from "INPROGRESS" [2025-11-17 Mon 15:53]
 :END:
 
 
