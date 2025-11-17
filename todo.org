@@ -123,6 +123,8 @@ CLOSED: [2025-11-17 Mon 16:39]
 :ID:       d750c277-9dc1-46da-a089-40a061c71b03
 :END:
 
+Needs a re-write.
+
 ** TODO Convert Factor Explanations to Ontology Learning, not Ontology Population
 :PROPERTIES:
 :CREATED:  [2025-11-14 Fri 13:32]
