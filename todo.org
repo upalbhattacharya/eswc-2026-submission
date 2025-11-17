@@ -107,6 +107,12 @@ CLOSED: [2025-11-14 Fri 13:36]
 :ID:       a0579105-f16e-4530-88a0-6487c6ae001e
 :END:
 
+** INPROGRESS Change Task to Objective Modelling in Figure 1
+:PROPERTIES:
+:CREATED:  [2025-11-17 Mon 14:42]
+:ID:       e304e8a8-960f-4177-9439-93f31bfe1737
+:END:
+
 * TODO Experimentation
 :PROPERTIES:
 :CREATED:  [2025-11-17 Mon 13:49]
