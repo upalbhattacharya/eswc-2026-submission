@@ -415,24 +415,22 @@ of context, task adaptation and data grounding required by LLMs for ontology
 population.
 
 \begin{itemize}
-\item A significant number of LLM approaches are focused on
-  \textbf{prompting} strategies. Prompt engineering has itself become an area
-  of research \cite{liu2023JailbreakingChatgptVia,mosbach2023FewShotFine,
+\item A significant number of LLM approaches are focused on \textbf{prompting}
+  strategies. Prompt engineering has itself become an area of research
+  \cite{liu2023JailbreakingChatgptVia,mosbach2023FewShotFine,
     qiao2023ReasoningWithLanguage,schulhoff2024PromptReportSystematic,
     white2023PromptPatternCatalog} due to its openness and lack of consensus
   apart from general
-  principles\footnote{\href{https://help.openai.com/en/articles/
-      6654000-best-practices-for-prompt-engineering-with-the-openai-api}{Best
+  principles\footnote{\href{https://help.openai.com/en/articles/ 6654000-best-practices-for-prompt-engineering-with-the-openai-api}{Best
       Practices for Prompt Engineering with OpenAI API}} for structuring
   prompts. Taking advantage of the in-context learning capabilities of LLMs,
   prompting methods focus on strategies that require the LLM to perform a task
-  without any example (zero-shot), by providing
-  illustrative examples to facilitate better understanding of the task
-  (few-shot) or by sequential prompting by breaking down a task into a
-  sequence of steps allowing LLMs to reason better (Chain-of-Thought
-  \cite{wei2022ChainThoughtPrompting}). These strategies indicate the
-  relevance of the pre-learnt knowledge of LLMs for ontologies and their
-  ability to adapt when given additional context.
+  without any example (zero-shot), by providing illustrative examples to
+  facilitate better understanding of the task (few-shot) or by sequential
+  prompting by breaking down a task into a sequence of steps allowing LLMs to
+  reason better (Chain-of-Thought \cite{wei2022ChainThoughtPrompting}). These
+  strategies indicate the relevance of the pre-learnt knowledge of LLMs for
+  ontologies and their ability to adapt when given additional context.
 \item While LLMs are capable of performing several tasks `as-is',
   task-specific \textbf{fine-tuning} provides an effective strategy to improve
   performance when in-context learning is unable to yield improvements
