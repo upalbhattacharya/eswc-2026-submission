@@ -424,6 +424,7 @@ of context, task adaptation and data grounding required by LLMs for ontology
 population.
 
 \begin{itemize}
+% Prompting
 \item A significant number of LLM approaches are focused on \textbf{prompting}
   strategies. Prompt engineering has itself become an area of research
   \cite{liu2023JailbreakingChatgptVia,mosbach2023FewShotFine,
@@ -440,10 +441,13 @@ population.
   (Chain-of-Thought \cite{wei2022ChainThoughtPrompting}). These strategies
   indicate the relevance of the pre-learnt knowledge of LLMs for ontologies
   and their ability to adapt when given additional context.
+% Fine-tuning
 \item While LLMs are capable of performing several tasks `as-is',
   task-specific \textbf{fine-tuning} provides an effective strategy to improve
   performance when in-context learning is unable to yield improvements
   \cite{liu2022FewShotParameter}.
+  As mentioned previously, \textbf{fine-tuning} enabl
+% RAG
 \item \textbf{Retrieval-augmented Generation (RAG)}
   \cite{lewis2020RetrievalAugmentedGeneration} provides LLMs with an external
   knowledge base to utilize as factual grounding for generating responses. It
