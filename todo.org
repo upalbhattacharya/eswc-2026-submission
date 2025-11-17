@@ -2,7 +2,7 @@
 :ID:       d1334a06-ed7b-4e34-8522-f19b6c94cb2b
 :END:
 
-* DONE LLM Factor: RAG
+* DONE RAG
 CLOSED: [2025-11-14 Fri 13:36]
 :PROPERTIES:
 :CREATED:  [2025-11-14 Fri 13:24]
@@ -12,23 +12,18 @@ CLOSED: [2025-11-14 Fri 13:36]
 - State "DONE"       from "INPROGRESS" [2025-11-14 Fri 13:36]
 :END:
 
-* INPROGRESS LLM Factor: Domain Context
+* INPROGRESS Domain Context
 :PROPERTIES:
 :CREATED:  [2025-11-14 Fri 12:22]
 :ID:       cdf445f5-dd58-47bd-b9af-ba54b841fd11
 :END:
 
-* TODO LLM Factor: Respose Variation
+* TODO Respose Variation
 :PROPERTIES:
 :CREATED:  [2025-11-14 Fri 12:24]
 :ID:       2f0d1b84-8a48-444b-9aaf-541877f50295
 :END:
 
-* TODO Interplay of Factors
-:PROPERTIES:
-:CREATED:  [2025-11-14 Fri 12:30]
-:ID:       d750c277-9dc1-46da-a089-40a061c71b03
-:END:
 
 * TODO Convert Factor Explanations to Ontology Learning, not Ontology Population
 :PROPERTIES:
@@ -62,4 +57,16 @@ CLOSED: [2025-11-17 Mon 13:27]
 :END:
 :LOGBOOK:
 - State "DONE"       from "INPROGRESS" [2025-11-17 Mon 13:27]
+:END:
+
+** TODO LLM Factors
+:PROPERTIES:
+:CREATED:  [2025-11-17 Mon 13:27]
+:ID:       85543f93-49aa-404e-b884-6c5c4127ad5f
+:END:
+
+** TODO Interplay of Factors
+:PROPERTIES:
+:CREATED:  [2025-11-14 Fri 12:30]
+:ID:       d750c277-9dc1-46da-a089-40a061c71b03
 :END:
