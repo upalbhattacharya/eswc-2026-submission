@@ -146,6 +146,12 @@ CLOSED: [2025-11-17 Mon 16:05]
 :ID:       629dc625-2c21-4de5-af61-946253ca3237
 :END:
 
+** Response Variation categorization inconsistent
+:PROPERTIES:
+:CREATED:  [2025-11-17 Mon 16:24]
+:ID:       b99ace50-d78a-4a6a-87a4-b26f1461dd15
+:END:
+
 * TODO Experimentation
 :PROPERTIES:
 :CREATED:  [2025-11-17 Mon 13:49]
