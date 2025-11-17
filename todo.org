@@ -2,29 +2,6 @@
 :ID:       d1334a06-ed7b-4e34-8522-f19b6c94cb2b
 :END:
 
-* DONE RAG
-CLOSED: [2025-11-14 Fri 13:36]
-:PROPERTIES:
-:CREATED:  [2025-11-14 Fri 13:24]
-:ID:       d50ae0e4-fe53-4203-b79f-676596357d2e
-:END:
-:LOGBOOK:
-- State "DONE"       from "INPROGRESS" [2025-11-14 Fri 13:36]
-:END:
-
-* INPROGRESS Domain Context
-:PROPERTIES:
-:CREATED:  [2025-11-14 Fri 12:22]
-:ID:       cdf445f5-dd58-47bd-b9af-ba54b841fd11
-:END:
-
-* TODO Respose Variation
-:PROPERTIES:
-:CREATED:  [2025-11-14 Fri 12:24]
-:ID:       2f0d1b84-8a48-444b-9aaf-541877f50295
-:END:
-
-
 * TODO Convert Factor Explanations to Ontology Learning, not Ontology Population
 :PROPERTIES:
 :CREATED:  [2025-11-14 Fri 13:32]
@@ -64,6 +41,35 @@ CLOSED: [2025-11-17 Mon 13:27]
 :CREATED:  [2025-11-17 Mon 13:27]
 :ID:       85543f93-49aa-404e-b884-6c5c4127ad5f
 :END:
+
+*** INPROGRESS Approach
+:PROPERTIES:
+:CREATED:  [2025-11-17 Mon 13:29]
+:ID:       5583d178-4227-4c4c-a312-d7504461fb88
+:END:
+
+**** DONE RAG
+CLOSED: [2025-11-14 Fri 13:36]
+:PROPERTIES:
+:CREATED:  [2025-11-14 Fri 13:24]
+:ID:       d50ae0e4-fe53-4203-b79f-676596357d2e
+:END:
+:LOGBOOK:
+- State "DONE"       from "INPROGRESS" [2025-11-14 Fri 13:36]
+:END:
+
+* INPROGRESS Domain Context
+:PROPERTIES:
+:CREATED:  [2025-11-14 Fri 12:22]
+:ID:       cdf445f5-dd58-47bd-b9af-ba54b841fd11
+:END:
+
+* TODO Respose Variation
+:PROPERTIES:
+:CREATED:  [2025-11-14 Fri 12:24]
+:ID:       2f0d1b84-8a48-444b-9aaf-541877f50295
+:END:
+
 
 ** TODO Interplay of Factors
 :PROPERTIES:
