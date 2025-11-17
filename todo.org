@@ -78,3 +78,9 @@ CLOSED: [2025-11-14 Fri 13:36]
 :CREATED:  [2025-11-14 Fri 13:32]
 :ID:       a0579105-f16e-4530-88a0-6487c6ae001e
 :END:
+
+* TODO Experimentation
+:PROPERTIES:
+:CREATED:  [2025-11-17 Mon 13:49]
+:ID:       a9fc2f15-2b31-4c1c-9de4-e64530ea245c
+:END:
