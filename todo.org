@@ -140,6 +140,12 @@ CLOSED: [2025-11-17 Mon 16:05]
 :ID:       60b369a9-e716-4ea5-9f75-d8e9e583f40f
 :END:
 
+** INPROGRESS Change Temperature to Hyperparameters in Response Variation
+:PROPERTIES:
+:CREATED:  [2025-11-17 Mon 16:22]
+:ID:       629dc625-2c21-4de5-af61-946253ca3237
+:END:
+
 * TODO Experimentation
 :PROPERTIES:
 :CREATED:  [2025-11-17 Mon 13:49]
