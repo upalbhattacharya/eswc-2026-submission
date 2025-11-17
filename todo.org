@@ -59,13 +59,15 @@ Shorten paragraph
 :ID:       5583d178-4227-4c4c-a312-d7504461fb88
 :END:
 
-**** INPROGRESS Prompting 
+**** DONE Prompting 
+CLOSED: [2025-11-17 Mon 15:53]
 :PROPERTIES:
 :CREATED:  [2025-11-17 Mon 13:59]
 :ID:       b621559c-7261-4786-8155-6d29393b2540
 :END:
 :LOGBOOK:
-CLOCK: [2025-11-17 Mon 14:00]
+- State "DONE"       from "INPROGRESS" [2025-11-17 Mon 15:53]
+CLOCK: [2025-11-17 Mon 14:00]--[2025-11-17 Mon 15:53] =>  1:53
 :END:
 
 **** DONE Fine-tuning
