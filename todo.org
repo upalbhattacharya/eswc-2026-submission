@@ -98,7 +98,7 @@ CLOSED: [2025-11-17 Mon 15:53]
 :END:
 
 
-*** TODO Domain Context
+*** INPROGRESS Domain Context
 :PROPERTIES:
 :CREATED:  [2025-11-14 Fri 12:22]
 :ID:       cdf445f5-dd58-47bd-b9af-ba54b841fd11
