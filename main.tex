@@ -547,19 +547,12 @@ ontology to make new assertions. LLM-supported ontology population helps us
 investigate the degree of awareness LLMs posses of ontology assertion
 relations and of the entities themselves.
 
-We perform ontology population as a ranked retrieval problem and investigate
-the influence of the ontology factors: structure and entity labels, and the
-LLM factors: choice of LLM, prompting approach over zero-shot and few-shot
-prompting, domain context and, response variation over temperature variation
-and statistical consistency.
-
 \subsection{Formulation}
 \label{subsec:formulation}
 
 {\parindent0pt % disable indentation for formulation
-  Following \citet{hlomani2014ApproachesMethodsMetrics}, we consider the task
-  of ontology population as part of the ontology learning pipeline.  We define
-  an ontology $O$ as a 4-tuple:
+  Following \citet{hlomani2014ApproachesMethodsMetrics}, we define an ontology
+  $O$ as a 4-tuple:
   \begin{align}
     O = \langle C, H, R, A \rangle
   \end{align}
