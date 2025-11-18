@@ -733,14 +733,14 @@ understanding.
 
 % \subsection{Evaluation Metrics}
 % \label{subsec:evaluation-metrics}
-We compute the standard information retrieval metric Mean Average Precision
-(mAP) \cite{baezayates1999ModernInformationRetrieval} with mAP computed at 1
-($mAP@1$) highlighting the ability of LLMs to identify the directly asserted
-concept for an individual and at the depth $D$ ($mAP@D$) of each ontology to
-better understand an LLM's ability to infer the correct concept
-hierarchies. For each individual, the ground truth is defined as the sequence
-of concepts, starting at the individual's directly asserted concept, along the
-path to the top concept of that ontology.  We provide a mathematical
+We evaluate using the standard information retrieval metric Mean Average
+Precision (mAP) \cite{baezayates1999ModernInformationRetrieval} with mAP
+computed at 1 ($mAP@1$) highlighting the ability of LLMs to identify the
+directly asserted concept for an individual and at the depth $D$ ($mAP@D$) of
+each ontology to better understand an LLM's ability to infer the correct
+concept hierarchies. For each individual, the ground truth is defined as the
+sequence of concepts, starting at the individual's directly asserted concept,
+along the path to the top concept of that ontology.  We provide a mathematical
 formulation of $\text{mAP@K}$ with $K=1,D$ being applied to obtain
 $\text{mAP@1}$ and $\text{mAP@D}$ respectively.
 \newline \\
