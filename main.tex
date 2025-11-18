@@ -699,7 +699,9 @@ employ in order to be robust.
 \subsection{LLM Factors}
 \label{subsec:method-llm-variability}
 
-\subsubsection{Choice of LLM}
+\subsubsection{Modelling Objective:}
+
+\subsubsection{Choice of LLM:}
 % Choice of LLM
 We conduct experiments using four LLMs: OpenAI's GPT-4o
 \cite{openai2024HelloGpt4o}, OpenAI's o1-preview
@@ -713,7 +715,7 @@ of the selected models being reasoning LLMs (o1-preview and
 R1-Distil-Llama-8B).
 
 % Prompting strategy
-\subsubsection{Prompting approach}
+\subsubsection{Prompting approach:}
 To investigate the effect of different prompting strategies, we perform
 experiments on all ontologies with zero-shot prompts and few-shot prompts. For
 few-shot prompts, we experiment with providing different numbers of examples
@@ -721,7 +723,7 @@ ranging from 1 to 10. The provided examples are selected randomly from the
 concepts with the highest number of individuals, ensuring each example is
 taken from a different concept.
 
-\subsubsection{Domain Context}
+\subsubsection{Domain Context:}
 We experiment with four types of domain
 contextualization: 1) \textbf{Generic}: The LLM is only asked to perform a
 generic task e.g. ranked retrieval.  2) \textbf{Ontology}: The LLM is defined
@@ -735,7 +737,7 @@ topic.\footnote{Examples of the prompt templates can be found at our
 
 % Temperature variability and response consistency
 
-\subsection{Response variation}
+\subsubsection{Response variation:}
 To evaluate response consistency over temperature variation, we repeat 3-shot,
 ontology contextualization experiments on the Wines and CASE ontologies with
 GPT-4o and Llama3-8B 10 times at three temperature values.
