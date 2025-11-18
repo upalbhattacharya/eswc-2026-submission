@@ -187,3 +187,9 @@ Needs a re-write.
 :CREATED:  [2025-11-18 Tue 11:12]
 :ID:       9696caef-6e41-4d92-8361-8c239718d97f
 :END:
+
+** TODO Individual vs. Instance
+:PROPERTIES:
+:CREATED:  [2025-11-18 Tue 11:30]
+:ID:       f5f5e1ea-5ab7-41bc-b36c-34176be70418
+:END:
