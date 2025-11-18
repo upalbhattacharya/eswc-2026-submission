@@ -720,15 +720,20 @@ response consistency over temperature variation.
 
 Following a similar investigation of term typing in
 \citet{babaei2025Llms4omMatchingOntologies}, we model the task of ontology
-population as a retrieval problem requiring LLMs to
-generate a ranked list of concepts of length up to the depth
+population as a retrieval problem requiring LLMs to generate a ranked list of
+concepts of length up to the depth
 \cite{gangemi2005OntologyEvaluationValidation} of the ontology. We provide
 minimal context about the ontology from which individuals and concepts are
 taken to force the LLMs to utilize their own knowledge. This choice highlights
 the relevance and utility of an LLM's "world knowledge" for a basic ontology
-learning task.
-Requiring an LLM to retrieve concepts up to the depth of the ontology provides insight into their ability to infer concept hierarchies when only provided with concept labels.
-In addition, as discussed in more detail in Sections \ref{subsec:method-ontology-variability} and \ref{sec:results}, the nature of individual labels across ontologies leads us to believe that evaluating the ability of LLMs on ontology population using only directly-asserted concepts may provide inflated performance indicators due to lexical matching of entity labels.}
+learning task.  Requiring an LLM to retrieve concepts up to the depth of the
+ontology provides insight into their ability to infer concept hierarchies when
+only provided with concept labels.  In addition, as discussed in more detail
+in Sections \ref{subsec:method-ontology-variability} and \ref{sec:results},
+the nature of individual labels across ontologies leads us to believe that
+evaluating the ability of LLMs on ontology population using only
+directly-asserted concepts may provide inflated performance indicators due to
+lexical matching of entity labels.}
 
 \subsubsection{Choice of LLM:}
 % Choice of LLM
