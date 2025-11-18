@@ -814,7 +814,9 @@ different temperature settings under specific values of different factors.
 Our approach involves statistical consistency evaluation of the LLM responses
 in terms of mAP at several temperature values: 0.0, 0.2, 0.4, 0.6, 0.8,
 1.0. Statistical consistency is measured across 10 repetitions at each
-temperature value.
+temperature value. Lower temperature values (< 0.5) highlight performance
+variation at low response variability while higher values illustrate
+performance variation when response variation is encouraged.
 
 
 Due to resource restrictions, we were unable to perform similar experiments
