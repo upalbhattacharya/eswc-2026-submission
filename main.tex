@@ -731,6 +731,46 @@ ontology provides insight into their ability to infer concept hierarchies when
 only provided with concept labels. It illustrates better ontological
 understanding.
 
+% \subsection{Evaluation Metrics}
+% \label{subsec:evaluation-metrics}
+
+We compute the standard information retrieval metric Mean Average Precision
+(mAP) \cite{baezayates1999ModernInformationRetrieval} with mAP computed at 1
+($mAP@1$) highlighting the ability of LLMs to identify the directly asserted
+concept for an individual and at the depth $D$ ($mAP@D$) of each ontology to
+better understand an LLM's ability to infer the correct concept
+hierarchies. For each individual, the ground truth is defined as the sequence
+of concepts, starting at the individual's directly asserted concept, along the
+path to the top concept of that ontology.  We provide a mathematical
+formulation of $\text{mAP@K}$ with $K=1,D$ being applied to obtain
+$\text{mAP@1}$ and $\text{mAP@D}$ respectively.
+\newline \\
+% {\parindent 0pt
+Let the ground truth hierarchy for an individual $t$ be given by:
+\begin{equation}
+  \label{eq:ground-truth}
+  \{c_i \mid c_i \in C\ ;\ c_i \subseteq c_{i+1}\ ;\ t \in \Sigma_{c_1}\ ;\ 1 \leq i \leq d \}
+\end{equation}
+where $d$ is the depth of the directly-asserted concept $c_1$ and $d \leq D$ \\
+Let $\{y_i\}_{i=1}^{d}$ be the predicted hierarchy for $t$ \\
+The mAP at a sequence length of $K$ is given by:
+\begin{equation}
+  \label{eq:map}
+  \text{mAP@K} = \frac{1}{\big|T\big|} \sum_{t \in T} \text{AP@K}_t
+\end{equation}
+where, \\
+$T$ is the set of individuals; \\
+$| \cdot |$ is set cardinality and; \\
+$\text{AP@K}_t$ is the average precision for $t$ at a sequence length $K$,
+given by:
+\begin{equation}
+  \label{eq:ap}
+  \text{AP@K}_t = \frac{1}{K} \sum_{x=1}^{K} \frac{\Big|\{y_i\}_{i=1}^{x} \cap \{c_j\}_{j=1}^{x}\Big|}{\Big|\{y_k\}_{k=1}^{x}\Big|} 
+\end{equation}
+The numerator in Equation \ref{eq:ap} is the cardinality of the set of
+\textit{true positives} and the denominator is the cardinality of the set of
+\textit{predictions} for a single indvidual $t$.
+
 \subsubsection{Choice of LLM:}
 % Choice of LLM
 We conduct experiments using four LLMs: OpenAI's GPT-4o
@@ -793,45 +833,6 @@ ranges to $[0, 1]$ and choosing the equivalent values of $0.2$ (low) and $0.8$
 % low values, we scale both temperature ranges to $[0, 1]$ and choose the
 % equivalent values of $0.2$ (low) and $0.8$ (high).
 
-\subsection{Evaluation Metrics}
-\label{subsec:evaluation-metrics}
-
-We compute the standard information retrieval metric Mean Average Precision
-(mAP) \cite{baezayates1999ModernInformationRetrieval} with mAP computed at 1
-($mAP@1$) highlighting the ability of LLMs to identify the directly asserted
-concept for an individual and at the depth $D$ ($mAP@D$) of each ontology to
-better understand an LLM's ability to infer the correct concept
-hierarchies. For each individual, the ground truth is defined as the sequence
-of concepts, starting at the individual's directly asserted concept, along the
-path to the top concept of that ontology.  We provide a mathematical
-formulation of $\text{mAP@K}$ with $K=1,D$ being applied to obtain
-$\text{mAP@1}$ and $\text{mAP@D}$ respectively.
-\newline \\
-% {\parindent 0pt
-Let the ground truth hierarchy for an individual $t$ be given by:
-\begin{equation}
-  \label{eq:ground-truth}
-  \{c_i \mid c_i \in C\ ;\ c_i \subseteq c_{i+1}\ ;\ t \in \Sigma_{c_1}\ ;\ 1 \leq i \leq d \}
-\end{equation}
-where $d$ is the depth of the directly-asserted concept $c_1$ and $d \leq D$ \\
-Let $\{y_i\}_{i=1}^{d}$ be the predicted hierarchy for $t$ \\
-The mAP at a sequence length of $K$ is given by:
-\begin{equation}
-  \label{eq:map}
-  \text{mAP@K} = \frac{1}{\big|T\big|} \sum_{t \in T} \text{AP@K}_t
-\end{equation}
-where, \\
-$T$ is the set of individuals; \\
-$| \cdot |$ is set cardinality and; \\
-$\text{AP@K}_t$ is the average precision for $t$ at a sequence length $K$,
-given by:
-\begin{equation}
-  \label{eq:ap}
-  \text{AP@K}_t = \frac{1}{K} \sum_{x=1}^{K} \frac{\Big|\{y_i\}_{i=1}^{x} \cap \{c_j\}_{j=1}^{x}\Big|}{\Big|\{y_k\}_{k=1}^{x}\Big|} 
-\end{equation}
-The numerator in Equation \ref{eq:ap} is the cardinality of the set of
-\textit{true positives} and the denominator is the cardinality of the set of
-\textit{predictions} for a single indvidual $t$.
 
 \section{Results and Discussion}
 \label{sec:results}
