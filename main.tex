@@ -678,20 +678,6 @@ We supplement the analysis of entity labels by investigating the lexical
 matching between concept and individuals. This supplementary analysis aims to
 assess whether LLMs resort to simpler string-based 
 
-
-
-The choice of the three ontologies is additionally driven by the differences
-in corresponding semantics of labels of their individuals and concepts. As
-discussed in Section \ref{subsec:framework-data-variability}, semantic
-similarity between the embeddings of individuals and concepts highlights the
-compatibility between an LLM's interpretation of the entities with that
-present in the ontology. We generate 3072-dimensional embeddings of each
-individual and concept label for all three ontologies using OpenAI's
-\verb|text-embedding-3-large| \cite{openai2024EmbeddingModels} model.  Despite
-the embeddings being primarily representative of the OpenAI models, the
-observed performance trends are similar across all tested models (Section
-\ref{sec:results}), which lead us to believe that the results can be
-generalized beyond the GPT family.
 \begin{figure}[H]
   \centering
   \caption{TSNE projection of concepts and individual label embeddings of
