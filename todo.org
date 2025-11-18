@@ -169,3 +169,21 @@ Needs a re-write.
 :CREATED:  [2025-11-17 Mon 13:50]
 :ID:       ec546001-ea31-4233-832c-7ef9cbe16ee3
 :END:
+
+* TODO Word Choice Disambiguation
+:PROPERTIES:
+:CREATED:  [2025-11-18 Tue 11:12]
+:ID:       d8c6e071-a9a4-45a5-90d6-3b5694cded7a
+:END:
+
+** TODO Topic vs. domain. vs. area
+:PROPERTIES:
+:CREATED:  [2025-11-18 Tue 11:12]
+:ID:       f4504e7d-1d6f-4107-a1c0-99615b1c69f0
+:END:
+
+** TODO Concept vs. Class
+:PROPERTIES:
+:CREATED:  [2025-11-18 Tue 11:12]
+:ID:       9696caef-6e41-4d92-8361-8c239718d97f
+:END:
