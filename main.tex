@@ -684,11 +684,11 @@ assess whether LLMs can resort to simpler string similarity-based ontology
 population. The naming conventions of entities in ontologies can lead to
 similar but distinct concepts possessing lexically similar labels. This can
 cause confusion for LLMs if they resort to string matching for ontology
-population. We evaluate the string edit-distance between individual
-labels and two groups: 1) the directly-asserted concept of the individual and,
-2) all other ancestor concepts of the individual (averaged). The combination
-of the two highlights the ability of an LLM to identify a concept assertion
-from the directly-asserted concept and individual labels versus its ability to
+population. We evaluate the string edit-distance between individual labels and
+two groups: 1) the directly-asserted concept of the individual and, 2) all
+other ancestor concepts of the individual (averaged). The combination of the
+two highlights the ability of an LLM to identify a concept assertion from the
+directly-asserted concept and individual labels versus its ability to
 additionally predict other ancestors using lexical matching. Based on our
 formulation of the modelling objective (Section
 \ref{subsec:experiment-llm-factors}), the second distance provides an
