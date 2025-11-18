@@ -663,11 +663,7 @@ perform ontology population.
 The domain differences between the three ontologies introduce entity labelling
 differences. We investigate the parity between ontological label semantics and
 LLM lexical understanding using similarity measurement between LLM embeddings
-of individuals and concepts. LLM embeddings are indicators of the semantic
-`understanding' LLMs develop of words. We employ these embeddings to assess if
-base LLM embeddings: 1) associate related concepts of different ontologies
-together and, 2) if their representations can associate individuals of an
-ontology closely with its concepts.
+of individuals and concepts. 
 
 We generate 3072-dimensional embeddings of each individual and concept label
 for all three ontologies using OpenAI's \verb|text-embedding-3-large|
@@ -676,8 +672,12 @@ representative of the OpenAI models, the observed performance trends are
 similar across all tested models (Section \ref{sec:results}), which lead us to
 believe that the results can be generalized beyond the GPT family. Utilizing
 these embeddings we analyze cluster separation performance of the two types of
-entities. 
-
+entities.
+Through cluster separation analysis of the embeddings, we analyze if the LLM representations: 1) associate related concepts of different ontologies
+together and, 2) if their representations can associate individuals of an
+ontology closely with its concepts.
+LLM embeddings are indicators of the semantic
+`understanding' LLMs develop of words. 
 We supplement the analysis of entity labels by investigating the lexical
 matching between concept and individuals. This supplementary analysis aims to
 assess whether LLMs resort to simpler string-based 
