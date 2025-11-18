@@ -881,10 +881,10 @@ variable to be as general as possible.
 
 % Macro performance
 A macroscopic overview of performance shows that LLMs are quite capable of
-performing ontology population when provided with simple labels. Performance
-drops significantly for the CASE and Astronomy ontologies in the zero-shot
-setting compared to $\text{mAP@1}$ but few-shot context examples largely help
-alleviate the issue.
+performing ontology population when provided with simple labels. LLMs struggle
+with zero-shot hierarchy retrieval-based ontology population ($\text{mAP@D}$)
+for the CASE and Astronomy ontologies but few-shot context examples largely
+help alleviate the issue.
 
 \begin{table}
   \centering
