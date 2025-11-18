@@ -876,6 +876,96 @@ variable to be as general as possible.
 
 \subsection{Ontology Population Performance}
 
+\begin{table}
+  \centering
+  \caption{Ontology domain contextualization prediction results at zero-shot,
+    1-shot, 3-shot and 10-shot for all ontologies and LLMs
+    (DeepSeek-R1-Distil-Llama-8B abbreviated to DeepSeek-R1* to save
+    space)}\label{tab:results}
+  \begin{tabular}{|c|c|c|r|r|}
+    \hline
+    \hcalignbf{N-Shot} & \hcalignbf{Ontology} & \hcalignbf{LLM} & \hcalignbf{mAP@1}  & \hcalignbf{mAP@D} \\
+    \hline
+    \multirow{12}{*}{0}
+                       & \multirow{4}{*}{Wines}
+                                              & o1-preview & 0.826 & 0.871 \\
+    \cline{3-5}
+                       & & GPT-4o & 0.733 & 0.785 \\
+    \cline{3-5}
+                       & & Llama3-8B & 0.484 & 0.571 \\
+    \cline{3-5}
+                       & & DeepSeek-R1* & 0.472 & 0.542 \\
+    \cline{2-5}
+                       & \multirow{4}{*}{CASE}
+                                              & o1-preview & 0.878 & 0.578 \\
+    \cline{3-5}
+                       & & GPT-4o & 0.779 & 0.316 \\
+    \cline{3-5}
+                       & & Llama3-8B & 0.626 & 0.270 \\
+    \cline{3-5}
+                       & & DeepSeek-R1* & 0.557 & 0.196 \\
+    \cline{2-5}
+                       & \multirow{4}{*}{Astronomy}
+                                              & o1-preview & 0.956 & 0.870 \\
+    \cline{3-5}
+                       & & GPT-4o & 0.926 & 0.750 \\
+    \cline{3-5}
+                       & & Llama3-8B & 0.544 & 0.420 \\
+    \cline{3-5}
+                       & & DeepSeek-R1* & 0.618 & 0.387 \\
+    \hline
+    \multirow{6}{*}{1}
+                       & \multirow{2}{*}{Wines}
+                                              & GPT-4o & 0.800 & 0.868 \\
+    \cline{3-5}
+                       & & Llama3-8B & 0.500 &	0.536 \\
+    \cline{2-5}
+                       & \multirow{2}{*}{CASE}
+                                              & GPT-4o & 0.823 & 0.608 \\
+    \cline{3-5}
+                       & & Llama3-8B & 0.700 & 0.372 \\
+    \cline{2-5}
+                       & \multirow{2}{*}{Astronomy}
+                                              & GPT-4o & 0.940 & 0.830 \\
+    \cline{3-5}
+                       & & Llama3-8B & 0.776 & 0.627 \\
+    \hline
+    \multirow{6}{*}{3}
+                       & \multirow{2}{*}{Wines}
+                                              & GPT-4o & 0.873 & 0.889 \\
+    \cline{3-5}
+                       & & Llama3-8B & 0.690 & 0.720 \\
+    \cline{2-5}
+                       & \multirow{2}{*}{CASE}
+                                              & GPT-4o & 0.836 & 0.772 \\
+    \cline{3-5}
+                       & & Llama3-8B & 0.711 & 0.552 \\
+    \cline{2-5}
+                       & \multirow{2}{*}{Astronomy}
+                                              & GPT-4o & 0.954 & 0.807 \\
+    \cline{3-5}
+                       & & Llama3-8B & 0.769 & 0.648 \\
+    \hline
+    \multirow{6}{*}{10}
+                       & \multirow{2}{*}{Wines}
+                                              & GPT-4o & 0.894 & 0.901 \\
+    \cline{3-5}
+                       & & Llama3-8B & 0.603 & 0.630 \\
+    \cline{2-5}
+                       & \multirow{2}{*}{CASE}
+                                              & GPT-4o & 0.851 & 0.829 \\
+    \cline{3-5}
+                       & & Llama3-8B & 0.785 & 0.673 \\
+    \cline{2-5}
+                       & \multirow{2}{*}{Astronomy}
+                                              & GPT-4o & 0.914 & 0.778 \\
+    \cline{3-5}
+                       & & Llama3-8B & 0.810 & 0.670 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+
 \subsection{Analysis of Ontology Factors}
 \label{subsec:results-ontology-variability}
 
@@ -980,95 +1070,6 @@ difficulty of performing ontology population for the CASE ontology. However,
 performance is significantly improved when examples are provided highlighting
 the ability of LLMs to quickly grasp the correct taxonomy hierarchy context
 required of them.
-
-\begin{table}
-  \centering
-  \caption{Ontology domain contextualization prediction results at zero-shot,
-    1-shot, 3-shot and 10-shot for all ontologies and LLMs
-    (DeepSeek-R1-Distil-Llama-8B abbreviated to DeepSeek-R1* to save
-    space)}\label{tab:results}
-  \begin{tabular}{|c|c|c|r|r|}
-    \hline
-    \hcalignbf{N-Shot} & \hcalignbf{Ontology} & \hcalignbf{LLM} & \hcalignbf{mAP@1}  & \hcalignbf{mAP@D} \\
-    \hline
-    \multirow{12}{*}{0}
-                       & \multirow{4}{*}{Wines}
-                                              & o1-preview & 0.826 & 0.871 \\
-    \cline{3-5}
-                       & & GPT-4o & 0.733 & 0.785 \\
-    \cline{3-5}
-                       & & Llama3-8B & 0.484 & 0.571 \\
-    \cline{3-5}
-                       & & DeepSeek-R1* & 0.472 & 0.542 \\
-    \cline{2-5}
-                       & \multirow{4}{*}{CASE}
-                                              & o1-preview & 0.878 & 0.578 \\
-    \cline{3-5}
-                       & & GPT-4o & 0.779 & 0.316 \\
-    \cline{3-5}
-                       & & Llama3-8B & 0.626 & 0.270 \\
-    \cline{3-5}
-                       & & DeepSeek-R1* & 0.557 & 0.196 \\
-    \cline{2-5}
-                       & \multirow{4}{*}{Astronomy}
-                                              & o1-preview & 0.956 & 0.870 \\
-    \cline{3-5}
-                       & & GPT-4o & 0.926 & 0.750 \\
-    \cline{3-5}
-                       & & Llama3-8B & 0.544 & 0.420 \\
-    \cline{3-5}
-                       & & DeepSeek-R1* & 0.618 & 0.387 \\
-    \hline
-    \multirow{6}{*}{1}
-                       & \multirow{2}{*}{Wines}
-                                              & GPT-4o & 0.800 & 0.868 \\
-    \cline{3-5}
-                       & & Llama3-8B & 0.500 &	0.536 \\
-    \cline{2-5}
-                       & \multirow{2}{*}{CASE}
-                                              & GPT-4o & 0.823 & 0.608 \\
-    \cline{3-5}
-                       & & Llama3-8B & 0.700 & 0.372 \\
-    \cline{2-5}
-                       & \multirow{2}{*}{Astronomy}
-                                              & GPT-4o & 0.940 & 0.830 \\
-    \cline{3-5}
-                       & & Llama3-8B & 0.776 & 0.627 \\
-    \hline
-    \multirow{6}{*}{3}
-                       & \multirow{2}{*}{Wines}
-                                              & GPT-4o & 0.873 & 0.889 \\
-    \cline{3-5}
-                       & & Llama3-8B & 0.690 & 0.720 \\
-    \cline{2-5}
-                       & \multirow{2}{*}{CASE}
-                                              & GPT-4o & 0.836 & 0.772 \\
-    \cline{3-5}
-                       & & Llama3-8B & 0.711 & 0.552 \\
-    \cline{2-5}
-                       & \multirow{2}{*}{Astronomy}
-                                              & GPT-4o & 0.954 & 0.807 \\
-    \cline{3-5}
-                       & & Llama3-8B & 0.769 & 0.648 \\
-    \hline
-    \multirow{6}{*}{10}
-                       & \multirow{2}{*}{Wines}
-                                              & GPT-4o & 0.894 & 0.901 \\
-    \cline{3-5}
-                       & & Llama3-8B & 0.603 & 0.630 \\
-    \cline{2-5}
-                       & \multirow{2}{*}{CASE}
-                                              & GPT-4o & 0.851 & 0.829 \\
-    \cline{3-5}
-                       & & Llama3-8B & 0.785 & 0.673 \\
-    \cline{2-5}
-                       & \multirow{2}{*}{Astronomy}
-                                              & GPT-4o & 0.914 & 0.778 \\
-    \cline{3-5}
-                       & & Llama3-8B & 0.810 & 0.670 \\
-    \hline
-  \end{tabular}
-\end{table}
 
 %%% The other two ontologies
 LLMs perform much better on the Wines and Astronomy ontologies.  We observe
