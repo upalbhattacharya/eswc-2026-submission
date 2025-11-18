@@ -703,74 +703,6 @@ employ in order to be robust.
   \includegraphics[scale=0.26]{assets/all_entity_semantic_similarity.pdf}
 \end{figure}
 
-For each ontology, measuring the centroid distance between the embeddings of
-its concepts and individuals provides the first indication of semantic
-separation between the two types of entities. Table \ref{tab:ontology-metrics}
-reports the centroid distances (scaled to $[0, 1]$). We observe the distance
-between the entity centroids for the CASE ontology to be twice that of the
-other two ontologies.  Davies-Bouldin Index (DBI)
-\cite{davies1979ClusterSeparationMeasure} is an internal clustering evaluation
-metric to measure how well-separated clusters are. A smaller value indicates
-better clustering separability with the lowest value being 0. Lower
-separability between the cluster of concepts and the cluster of individuals
-for an ontology indicates greater disparity between an LLM's semantic
-understanding of the entities thereby making them a more difficult scenario
-for LLMs.  Table \ref{tab:commands} reports the DBI scores for all three
-ontologies. Although the DBI values are not very low, the DBI for the CASE
-ontology is significantly lower than the other two ontologies. Combining the
-two metrics, the CASE ontology has much larger semantic separability between
-the two relevant entity types.  Figure \ref{fig:entity-semantic-separation}
-highlights the entities of all three ontologies projected using t-SNE
-\cite{van2008VisualizingData} to a two-dimensional space. Visual inspection
-shows the individuals of the CASE ontology are separated from most of its
-concepts (bottom right of figure). In contrast, the individuals of the other
-two ontologies are well contained within the bounds of the concepts.
-
-We measure the lexical similarity between individual and concept labels to
-assess whether LLMs can resort to lexical matching to perform ontology
-population.  We compute the Levenshtein distance
-\cite{levenshtein1965BinaryCodesCapable} between the labels of individuals and
-two groups: .  Table
-\ref{tab:semantic-lexical-measures} provides the two scores for the three
-ontologies. Group 1 disparity is highest for the Wines ontology and lowest for
-the CASE ontology. LLMs cannot resort to lexical matching to find the
-directly-asserted concept for the Wines ontology but might be able to do so
-for the CASE ontology.  In fact, we find that $83$ out of the $161$
-individuals ($51.5\%$) for the Wines Ontology, $94$ of the $131$ individuals
-($71.7\%$) in the CASE Ontology and, $17$ out of the $68$ individuals ($25\%$)
-for the Astronomy Ontology utilize the name of their directly-asserted concept
-in their labels. Thus, a great deal of lexical matching can be utilized to
-identify the directly-asserted concept across the ontologies.  Group 2
-disparity clearly highlights that lexical matching is insufficient for LLMs to
-infer concept hierarchies.
-The combination of the two disparities highlight that LLMs might be able to infer the directly-asserted concepts from lexical matching but cannot infer hierarchies. This plays a crucial role in our decision to formulate the ontology population task as a retrieval task focusing on hierarchies and not just the directly-asserted concept. \\
-%
-The semantic separation and lexical disparty between the two entity types
-indicate that the CASE ontology may pose a harder challenge for LLMs. Semantic
-similarity between the entity types for the other two ontologies suggests they
-might be easier for LLMs to perform ontology population, even without lexical
-similarity.
-
-\begin{table}
-  \centering
-  \caption{Entity label semantic and lexical metrics for Wines, CASE and
-    Astronomy ontologies (Levenshtein shortened to L. for readability)}
-  \label{tab:semantic-lexical-measures}
-  \begin{tabular}{|l|r|r|r|}
-    \hline
-    \textbf{Metric}                                                                & \textbf{Wines} & \textbf{CASE} & \textbf{Astronomy} \\
-    \hline
-    \textbf{DBI} \cite{davies1979ClusterSeparationMeasure}                    & 5.995                   & 2.891                 & 6.362
-    \\
-    \textbf{Centroid Distance}                                                & 0.259                   & 0.540                  & 0.261
-    \\
-    \textbf{Direct L. Distance (1)}                                             & 10.285                  & 4.137                  & 5.167
-    \\
-    \textbf{Ancestor L. Distance (2)}                                   & 12.191                   & 14.092                 & 15.381
-    \\
-    \hline
-  \end{tabular}
-\end{table}
 
 \subsection{LLM Factors}
 \label{subsec:method-llm-variability}
@@ -908,6 +840,75 @@ provides greater insight into their understanding of concept hierarchies.
 
 \subsection{Analysis of Ontology Factors}
 \label{subsec:results-ontology-variability}
+
+For each ontology, measuring the centroid distance between the embeddings of
+its concepts and individuals provides the first indication of semantic
+separation between the two types of entities. Table \ref{tab:ontology-metrics}
+reports the centroid distances (scaled to $[0, 1]$). We observe the distance
+between the entity centroids for the CASE ontology to be twice that of the
+other two ontologies.  Davies-Bouldin Index (DBI)
+\cite{davies1979ClusterSeparationMeasure} is an internal clustering evaluation
+metric to measure how well-separated clusters are. A smaller value indicates
+better clustering separability with the lowest value being 0. Lower
+separability between the cluster of concepts and the cluster of individuals
+for an ontology indicates greater disparity between an LLM's semantic
+understanding of the entities thereby making them a more difficult scenario
+for LLMs.  Table \ref{tab:commands} reports the DBI scores for all three
+ontologies. Although the DBI values are not very low, the DBI for the CASE
+ontology is significantly lower than the other two ontologies. Combining the
+two metrics, the CASE ontology has much larger semantic separability between
+the two relevant entity types.  Figure \ref{fig:entity-semantic-separation}
+highlights the entities of all three ontologies projected using t-SNE
+\cite{van2008VisualizingData} to a two-dimensional space. Visual inspection
+shows the individuals of the CASE ontology are separated from most of its
+concepts (bottom right of figure). In contrast, the individuals of the other
+two ontologies are well contained within the bounds of the concepts.
+
+We measure the lexical similarity between individual and concept labels to
+assess whether LLMs can resort to lexical matching to perform ontology
+population.  We compute the Levenshtein distance
+\cite{levenshtein1965BinaryCodesCapable} between the labels of individuals and
+two groups: .  Table
+\ref{tab:semantic-lexical-measures} provides the two scores for the three
+ontologies. Group 1 disparity is highest for the Wines ontology and lowest for
+the CASE ontology. LLMs cannot resort to lexical matching to find the
+directly-asserted concept for the Wines ontology but might be able to do so
+for the CASE ontology.  In fact, we find that $83$ out of the $161$
+individuals ($51.5\%$) for the Wines Ontology, $94$ of the $131$ individuals
+($71.7\%$) in the CASE Ontology and, $17$ out of the $68$ individuals ($25\%$)
+for the Astronomy Ontology utilize the name of their directly-asserted concept
+in their labels. Thus, a great deal of lexical matching can be utilized to
+identify the directly-asserted concept across the ontologies.  Group 2
+disparity clearly highlights that lexical matching is insufficient for LLMs to
+infer concept hierarchies.
+The combination of the two disparities highlight that LLMs might be able to infer the directly-asserted concepts from lexical matching but cannot infer hierarchies. This plays a crucial role in our decision to formulate the ontology population task as a retrieval task focusing on hierarchies and not just the directly-asserted concept. \\
+%
+The semantic separation and lexical disparty between the two entity types
+indicate that the CASE ontology may pose a harder challenge for LLMs. Semantic
+similarity between the entity types for the other two ontologies suggests they
+might be easier for LLMs to perform ontology population, even without lexical
+similarity.
+
+\begin{table}
+  \centering
+  \caption{Entity label semantic and lexical metrics for Wines, CASE and
+    Astronomy ontologies (Levenshtein shortened to L. for readability)}
+  \label{tab:semantic-lexical-measures}
+  \begin{tabular}{|l|r|r|r|}
+    \hline
+    \textbf{Metric}                                                                & \textbf{Wines} & \textbf{CASE} & \textbf{Astronomy} \\
+    \hline
+    \textbf{DBI} \cite{davies1979ClusterSeparationMeasure}                    & 5.995                   & 2.891                 & 6.362
+    \\
+    \textbf{Centroid Distance}                                                & 0.259                   & 0.540                  & 0.261
+    \\
+    \textbf{Direct L. Distance (1)}                                             & 10.285                  & 4.137                  & 5.167
+    \\
+    \textbf{Ancestor L. Distance (2)}                                   & 12.191                   & 14.092                 & 15.381
+    \\
+    \hline
+  \end{tabular}
+\end{table}
 
 %% Observation about ontology population over different ontologies
 All experimental variants perform better on the Wines and Astronomy ontologies
