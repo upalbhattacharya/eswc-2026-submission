@@ -818,19 +818,18 @@ temperature value. Lower temperature values (< 0.5) highlight performance
 variation at low response variability while higher values illustrate
 performance variation when response variation is encouraged.
 
-
-Due to resource restrictions, we were unable to perform similar experiments
-with o1-preview and DeepSeek R1-Distil-Llama-8B and leave it for future
-work. Our choice of the two ontologies is based on the entity label semantics
-of ontologies that we discuss in Section
-\ref{subsec:method-ontology-variability}. The choice of 3-shot prompting is
-based on performance stabilization that we observe from our experiments
-further discussed in Section \ref{sec:results}. We choose to explore
-consistency at the default temperature of each LLM, at a high value and at a
-low value.  The default value for both LLMs is approximately midway in their
-respective ranges. The high and low values are selected by scaling both LLMs'
-ranges to $[0, 1]$ and choosing the equivalent values of $0.2$ (low) and $0.8$
-(high).
+% Due to resource restrictions, we were unable to perform similar experiments
+% with o1-preview and DeepSeek R1-Distil-Llama-8B and leave it for future
+% work. Our choice of the two ontologies is based on the entity label semantics
+% of ontologies that we discuss in Section
+% \ref{subsec:method-ontology-variability}. The choice of 3-shot prompting is
+% based on performance stabilization that we observe from our experiments
+% further discussed in Section \ref{sec:results}. We choose to explore
+% consistency at the default temperature of each LLM, at a high value and at a
+% low value.  The default value for both LLMs is approximately midway in their
+% respective ranges. The high and low values are selected by scaling both LLMs'
+% ranges to $[0, 1]$ and choosing the equivalent values of $0.2$ (low) and $0.8$
+% (high).
 
 % The temperature scales for both the LLMs are different but the default
 % values are approximately midway in their respective ranges. For the high and
