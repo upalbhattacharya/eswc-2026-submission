@@ -289,16 +289,19 @@ language understanding and generation capabilities. The lexical semantics
 learnt by LLMs are known to exhibit impressive performance on tasks of sense
 distinction and semantic equivalence
 \citep{hayashi2025EvaluatingLlmsCapability,petersen2023LexicalSemanticsWith}.
-In terms of ontology population, LLMs are required to apply their lexical
-sense of concept and individual labels to effectively identify
-assertions. Variation in entity label naming highlights the parity between the
-ontological semantics of the entities and the learnt lexical semantics of LLMs
-for their labels. This parity is crucial for effective ontology population. As
-most LLMs employ subword tokenization like Byte Pair Encoding (BPE)
-\citep{sennrich2016NeuralMachineTranslation} for understanding prompts and
-generating texts, evaluation over entity labels highlights whether LLMs are
-able to effectively utilize lexical semantics or resort to more conventional
-string edit-distance-based senses for performing ontology population.
+However, the ``understanding'' LLMs develop of words is dependent on the
+amount of their pre-training that relates to it
+\cite{kandpal2023LargeLanguageModels}.  In terms of ontology population, LLMs
+are required to apply their lexical sense of concept and individual labels to
+effectively identify assertions. Variation in entity label naming highlights
+the parity between the ontological semantics of the entities and the learnt
+lexical semantics of LLMs for their labels. This parity is crucial for
+effective ontology population. As most LLMs employ subword tokenization like
+Byte Pair Encoding (BPE) \citep{sennrich2016NeuralMachineTranslation} for
+understanding prompts and generating texts, evaluation over entity labels
+highlights whether LLMs are able to effectively utilize lexical semantics or
+resort to more conventional string edit-distance-based senses for performing
+ontology population.
 
 \subsubsection{Taxonomy:}
 \label{subsubsec:ont-factor-taxonomy}
@@ -576,6 +579,8 @@ entities themselves.
 }
 \subsection{Ontology Factors}
 \label{subsec:method-ontology-variability}
+
+For investigation of the influence of 
 % Dataset Choice
 We conduct experiments over three ontologies of varying size and complexity.
 The Wines Ontology \cite{noy2001OntologyDevelopment101} is a well-known
