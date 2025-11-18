@@ -684,7 +684,9 @@ assess whether LLMs can resort to simpler string similarity-based ontology
 population. The naming conventions of entities in ontologies can lead to
 similar but distinct concepts possessing lexically similar labels. This can
 cause confusion for LLMs if they resort to string matching for ontology
-population.
+population. We evaluate the string edit-based distance between individual
+labels and 1) the directly-asserted concept of the individual and, 2) all
+other ancestor concepts of the individual (averaged)
 
 \begin{figure}[H]
   \centering
@@ -721,8 +723,7 @@ We measure the lexical similarity between individual and concept labels to
 assess whether LLMs can resort to lexical matching to perform ontology
 population.  We compute the Levenshtein distance
 \cite{levenshtein1965BinaryCodesCapable} between the labels of individuals and
-two groups: 1) the directly-asserted concept of the individual and, 2) all
-other ancestor concepts of the individual (averaged).  Table
+two groups: .  Table
 \ref{tab:semantic-lexical-measures} provides the two scores for the three
 ontologies. Group 1 disparity is highest for the Wines ontology and lowest for
 the CASE ontology. LLMs cannot resort to lexical matching to find the
