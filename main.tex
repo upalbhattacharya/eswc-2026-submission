@@ -577,7 +577,7 @@ entities themselves.
   asserted individuals)
 }
 \subsection{Ontology Factors}
-\label{subsec:method-ontology-variability}
+\label{subsec:experiment-ontology-factors}
 
 We select three domain-specific ontologies characterized by varying structural
 complexity and, (by virtue of their differing domains) distinct entity labels.
@@ -686,7 +686,14 @@ similar but distinct concepts possessing lexically similar labels. This can
 cause confusion for LLMs if they resort to string matching for ontology
 population. We evaluate the string edit-based distance between individual
 labels and 1) the directly-asserted concept of the individual and, 2) all
-other ancestor concepts of the individual (averaged)
+other ancestor concepts of the individual (averaged). The combination of the
+two highlights the ability of an LLM to identify a concept assertion from the
+directly-asserted concept and individual labels versus its ability to
+additionally predict other ancestors using the same ability. Based on our
+formulation of the modelling objective (Section
+\ref{subsec:experiment-llm-factors}), the second distance provides an
+indicator of the semantics-based ontology population that are required to LLMs
+employ in order to be robust.
 
 \begin{figure}[H]
   \centering
