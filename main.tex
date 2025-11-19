@@ -1381,23 +1381,10 @@ default value of $0.6$, we find performance differences observed by GPT-4o to
 be statistically significant for the Wines Ontology at temperatures of 0.0,
 0.8 and 1.0 and, for the CASE Ontology at all temperatures. The same test were
 found to be statistically insignificant in all scenarios for Llama3-8B except
-on the Wines Ontology at temperature 0.0. 
+on the Wines Ontology at temperature 0.0.
 
-% Looking at the
-% average scores and the influence of temperature on them, we observed no
-% difference in performance at the low temperature setting. Results of the four
-% Welch's T-tests carried out to compare the average $mAP@D$ scores produced by
-% the same model over the same ontology at the low and default temperature
-% conditions are non-significant. Raising the temperature seems to have a
-% detrimental effect. For the Wines ontology, GPT-4o produces a significantly
-% higher average $mAP@D$ score under default temperature conditions (M = 0.88,
-% SD = 0.01) than under the high temperature setting (M = 0.85, SD = 0.01),
-% t(18) = 6.6, p < .001. In a similar fashion, for the CASE ontology, the
-% default temperature resulted in a significantly higher average $mAP@D$ score
-% as well (M = 0.76, SD = 0.01) compared to the higher temperature (M = 0.71, SD
-% = 0.01), t(18) = 9.8,p < .001. Although the same trend is observable for
-% Llama3-8B, the much higher variance of the smaller LLM's results renders the
-% test non-significant.
+Our response variation analysis shows a reduction in average performance with
+increase in temperature for GPT-4o. The same trend is not observed for Llama3-8B.
 
 For both ontologies, we observe a reduction in average performance with
 increase in temperature with GPT-4o. A similar trend is not observed for
