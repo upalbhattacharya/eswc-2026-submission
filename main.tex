@@ -90,13 +90,13 @@
   embedding representations deviate from their ontological nature, LLMs can
   struggle to predict concept hierarchies and may resort to string-based
   matching. However, few-shot prompting is effective at alleviating these
-  issues.  LLMs are fairly insensitive to temperature
+  issues. Our experimentation finds reasoning LLMs perform better than their
+  conventional LLM counterparts under zero-shot conditions but few-shot
+  prompting with conventional LLMs can achieve similar performance.
+  LLMs are fairly insensitive to temperature
   variation. Higher temperatures tend to lower their performances, but further
   exploration is required. Larger LLMs enjoy good response consistency,
-  whereas the results of smaller LLMs have much larger variability. Reasoning
-  LLMs perform better than their conventional LLM counterparts under zero-shot
-  conditions but few-shot prompting strategies on conventional LLMs with even
-  a few examples can provide similar or better performance.  Our study over
+  whereas the results of smaller LLMs have much larger variability. Our study over
   three ontologies suggests that higher semantic similarity between concept
   and instance labels can be a key factor governing an LLM's ability to
   perform ontology population.  Future work will focus on the effects of
