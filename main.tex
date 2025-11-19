@@ -1138,21 +1138,6 @@ from lexical matching but cannot infer hierarchies.
     \end{subfigure}
     \begin{subfigure}[b]{0.4\textwidth}
     \begin{minipage}{\textwidth}
-    \mydirtree{%
-    .1 \hlorange{DeviceFacet}.
-        .2 \hlorange{MobileAccountFacet}.
-            .3 ApplicationAccountFacet.
-                .4 \hlorange{BuildFacet}.
-                    .5 \hlorange{ProfileFacet}.
-                        .6 AddressFacet.
-                            .7 \hlorange{ContactFacet}.
-                                .8 \textbf{AccountFacet}.
-    }
-    \end{minipage}
-    \caption{Embedding similarity-based Hierarchy. Concepts in \hlorange{orange} are siblings of `AccountFacet'}
-    \end{subfigure}
-    \begin{subfigure}[t]{0.5\textwidth}
-    \begin{minipage}{8cm}
     \dirtree{%
     .1 \hlorange{MobileDeviceFacet}.
         .2 \hlorange{AccountAuthenticationFacet}.
