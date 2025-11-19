@@ -1120,7 +1120,12 @@ clearly highlights that lexical matching is insufficient for LLMs to infer
 concept hierarchies.
 Combining insights from the two disparities and the fact that several
 individual labels utilize names of the directly-asserted concepts in their
-label suggests that LLMs might be able to infer the directly-asserted concepts from lexical matching but cannot infer hierarchies.The semantic separation and lexical disparty between the two entity types
+label suggests that LLMs might be able to infer the directly-asserted concepts
+from lexical matching but cannot infer hierarchies.
+Observations from our experimentation suggest that LLMs are prone to utilizing
+lexical matching for inferring concept hierarchies in the zero-shot approach
+but quickly adapt when provided illustrative examples. 
+The semantic separation and lexical disparty between the two entity types
 indicate that the CASE ontology may pose a harder challenge for LLMs. Semantic
 similarity between the entity types for the other two ontologies suggests they
 might be easier for LLMs to perform ontology population, even without lexical
