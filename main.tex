@@ -1443,7 +1443,9 @@ A detailed analysis of the explored factors highlights the following:
   perform ontology population better, but conventional LLMs can perform
   equally well in few-shot settings. A smaller reasoning model reported the
   worst overall performance, which requires further investigation.
-    \item LLMs are capable of performing ontology population under zero-shot prompting. Adding examples with few-shot prompting significantly improves performance with the largest benefits obtained with three or four examples.
+\item LLMs are capable of performing ontology population under zero-shot
+  prompting. Adding examples with few-shot prompting significantly improves
+  performance with the largest benefits obtained with three or four examples.
     % \item LLMs are capable of performing ontology population under zero-shot prompting when their semantic understanding of the entities matches those of the ontology. In situations when these two diverge, including illustrative examples allows LLMs to quickly adapt.
     \item When an LLM's semantic interpretation of an ontology's entities diverges from their ontological nature \chadded[id=UB, comment={Small addition about lexical similarity}]{and lexical similarity cannot be used to infer hierarchies}, few-shot prompting is an effective tool to mitigate these differences and improve performance.
     % \item Few-shot prompting can provide significant performance improvements over zero-shot strategies, particularly when the LLM's semantic understanding of an ontology's entities diverges from the ontological nature of the entities. Addition of even a single example considerably improves performance. The greatest benefits are observed using up to 3 or 4 examples beyond which performance improvements are more gradual with smaller LLMs benefiting more than their larger counterparts.
