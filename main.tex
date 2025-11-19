@@ -1051,7 +1051,14 @@ ontology population scenario. In such circumstances, lexical matching is
 sufficient for direct assertion. Thus, $\text{mAP@1}$ provides an inflated
 view of the capabilities of LLMs to infer concept assertions whereas
 $\text{mAP@D}$ provides a more comprehensive view of their performance
-reliability. While ontology population does not concern itself directly with
+reliability.
+We observe
+higher $map@D$ scores compared to $map@1$ for all experiments on the Wines
+ontology. 111 of the 161 individuals in the ontology belong to concepts
+without descendants, thus having no hierarchy to predict. Thus, when an LLM is
+unable to retrieve the directly asserted concept at the first rank, it is
+usually able to retrieve it within the top 4 ranks.
+ur analysis also found that While ontology population does not concern itself directly with
 taxonomies, analysis using $\text{mAP@D}$ provides a more ontologically
 grounded evaluation approach. It highlights that LLMs on their own may not
 possess good taxonomical sense but in-context learning with few-shot prompting
@@ -1166,12 +1173,7 @@ the ability of LLMs to quickly grasp the correct taxonomy hierarchy context
 required of them.
 
 %%% The other two ontologies
-LLMs perform much better on the Wines and Astronomy ontologies.  We observe
-higher $map@D$ scores compared to $map@1$ for all experiments on the Wines
-ontology.  111 of the 161 individuals in the ontology belong to concepts
-without descendants, thus having no hierarchy to predict. Thus, when an LLM is
-unable to retrieve the directly asserted concept at the first rank, it is
-usually able to retrieve it within the top 4 ranks.  The $map@1$ scores on the
+LLMs perform much better on the Wines and Astronomy ontologies.   The $map@1$ scores on the
 Astronomy ontology are much higher than the rest despite $mAP@D$ being mostly
 similar to that of the Wines ontology. As it is a much larger ontology (Table
 \ref{tab:ontology-metrics}), we hypothesize that LLMs are able to retrieve the
