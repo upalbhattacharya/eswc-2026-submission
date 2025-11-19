@@ -1413,6 +1413,40 @@ experiments with Llama3-8B.
 \section{Conclusion}
 \label{sec:conclusion}
 
+This paper presented an analysis of a wide range of LLM-specific and
+ontology-specific factors that could have an effect on the results of LLMs
+performing an ontology learning task, specifically ontology population. As
+LLM-specific variables, we investigated prompting strategy, domain
+contextualization, and type of LLM on ontology population using three distinct
+ontologies, characterized by differing structural complexity and ontology
+entity label semantics. We have also investigated how temperature variability
+can influence LLMs' response consistency'.  From the results obtained over an
+extensive experimentation (288 experiments overall) it is clear that LLMs are
+capable of performing ontology population reasonably well, even without
+fine-tuning. More detailed analysis of individual Ontology-based and LLM-based
+factors and their interactions highlights the following:
+\begin{itemize}
+\item Structural complexity of ontologies does not
+    seem to affect an LLM's ability to perform ontology population. Ontologies
+    of greater depth may be harder to predict hierarchies for. However, we
+    acknowledge that despite their differences, all three analyzed ontologies
+    can be categorized as structurally simple.}
+    \item \chreplaced[id=UB, comment={Including lexical similarity}]{LLMs are susceptible to resorting to lexical matching when they cannot rely on their interpretation of entity labels.}{Disparity between an LLM's interpretation of concepts and instances has a detrimental effect on the performance of LLM-driven ontology population.}
+    \item Larger LLMs outperform smaller LLMs. Reasoning LLMs can potentially perform ontology population better, but conventional LLMs can perform equally well in few-shot settings. A smaller reasoning model reported the worst overall performance, which requires further investigation.
+    %indicates either a strong negative interaction between the reasoning type and the size of the model or the need for alternative prompting strategy to utilize such LLMs to their full potential.
+    \item LLMs are capable of performing ontology population under zero-shot prompting. Adding examples with few-shot prompting significantly improves performance with the largest benefits obtained with three or four examples.
+    % \item LLMs are capable of performing ontology population under zero-shot prompting when their semantic understanding of the entities matches those of the ontology. In situations when these two diverge, including illustrative examples allows LLMs to quickly adapt.
+    \item When an LLM's semantic interpretation of an ontology's entities diverges from their ontological nature \chadded[id=UB, comment={Small addition about lexical similarity}]{and lexical similarity cannot be used to infer hierarchies}, few-shot prompting is an effective tool to mitigate these differences and improve performance.
+    % \item Few-shot prompting can provide significant performance improvements over zero-shot strategies, particularly when the LLM's semantic understanding of an ontology's entities diverges from the ontological nature of the entities. Addition of even a single example considerably improves performance. The greatest benefits are observed using up to 3 or 4 examples beyond which performance improvements are more gradual with smaller LLMs benefiting more than their larger counterparts.
+    % \item Domain contextualization variants favoring ontological structure perform better than other variants.
+    % \item We have not been able to determine a domain contextualization strategy that consistently outperforms other strategies. On aggregate, our experimentation highlights domain contextualization as providing better results. However, more experimentation is required to establish stronger trends.
+    \item Our experimentation with domain contextualization strategies shows stronger benefits of the ontology domain contextualization in most scenarios. However, the observed differences in performance are fairly marginal.
+    % \item Ontology-centric domain contextualization outperforms other strategies however the differences in perfor
+    % \item Larger LLMs are fairly robust to temperature variation and provide consistent results with very little variability. Smaller LLMs exhibit high degree of variability. Lower temperature values do not result in lower $mAP@D$ variability.
+    \item LLMs are relatively insensitive to temperature variation. Higher temperature does not cause higher variance, but does result in a reduced average performance. Lowering temperature from the default has no effect on results.
+    \item Larger LLMs are consistent across several repetitions. Smaller LLMs exhibit much larger variability in this regard.
+
+\end{itemize}
 
 \bibliography{bibliography}
 \end{document}
