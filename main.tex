@@ -1043,17 +1043,18 @@ through few-shot prompting greatly reduces the divide and inclusion of even a
 few examples significantly improves ontology population taxonomy retrieval
 (Figure \ref{fig:few-shot}). Providing examples leads to the larger
 improvements in taxonomy retrieval than for finding directly-asserted
-concepts. $\text{mAP@1}$ provides an inflated view of the capabilities of LLMs
-to infer concept assertions whereas $\text{mAP@D}$ provides a more
-comprehensive view of their performance reliability. We observed that $83$
-out of the $161$ individuals ($51.5\%$) for the Wines Ontology, $94$ of the
-$131$ individuals ($71.7\%$) in the CASE Ontology and, $17$ out of the $68$
-individuals ($25\%$) for the Astronomy Ontology utilize the name of their
-directly-asserted concept in their labels.  While ontology population does not
-concern itself directly with taxonomies, analysis using $\text{mAP@D}$
-provides a more ontologically grounded evaluation approach. It highlights that
-LLMs on their own, may not possess good taxonomical sense but in-context
-learning with few-shot prompting can largely address this problem.
+concepts.  We observed that $83$ out of the $161$ individuals ($51.5\%$) for
+the Wines Ontology, $94$ of the $131$ individuals ($71.7\%$) in the CASE
+Ontology and, $17$ out of the $68$ individuals ($25\%$) for the Astronomy
+Ontology utilize the name of their directly-asserted concept in their
+labels. In such situations, lexical matching is sufficient for direct
+assertion. Thus, $\text{mAP@1}$ provides an inflated view of the capabilities
+of LLMs to infer concept assertions whereas $\text{mAP@D}$ provides a more
+comprehensive view of their performance reliability.such While ontology
+population does not concern itself directly with taxonomies, analysis using
+$\text{mAP@D}$ provides a more ontologically grounded evaluation approach. It
+highlights that LLMs on their own, may not possess good taxonomical sense but
+in-context learning with few-shot prompting can largely address this problem.
 
 % Entity Labels
 For each ontology, measuring the centroid distance between the embeddings of
