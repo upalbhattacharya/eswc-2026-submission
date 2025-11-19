@@ -1129,7 +1129,11 @@ large tendency to predict hierarchies based on string similarity. Figure
 \ref{fig:lexical-prediction-hierarchy} showcases the preference for string
 similarity when predicting hierarchies for an individual of the CASE
 ontology. The influence of string similarity is reduced in the few-shot
-experiments. 
+experiments.
+
+Entity labels greatly influence the ability of LLMs to perform ontology
+population. When the semantic separation between the two types of entities is
+pronounced, LLMs resort to using string matching to predict hierarchies.
 
 \begin{figure}
     \centering
