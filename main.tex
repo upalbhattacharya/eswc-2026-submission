@@ -47,7 +47,7 @@
   breakindent=0pt,
   numbers=none
 }
-
+\newcommand\mydirtree[1]{{\small\dirtree{#1}\par}}
 \begin{document}
 %
 \title{Ontology Population Using LLMs: Which Factors Matter?}
@@ -1127,14 +1127,12 @@ from lexical matching but cannot infer hierarchies.
     \centering
     \begin{subfigure}[t]{0.3\textwidth}
       \begin{minipage}{8cm}
-    \begin{tiny}
-    \dirtree{%
+    \mydirtree{%
     .1 UcoThing.
         .2 UcoInherentCharacterizationThing.
             .3 Facet.
                 .4 \textbf{AccountFacet}.
-              }
-              \end{tiny}
+    }
     \end{minipage}
     \caption{Ground Truth Hierarchy for `AccountFacet'}
     \end{subfigure}
