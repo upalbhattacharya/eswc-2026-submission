@@ -1362,15 +1362,6 @@ and second-best strategies to be marginal ($< 0.017$) in several groups.
 \end{figure}
 
 \subsubsection{Response Variation:}
-LLMs are inherently non-deterministic tools. The results they produce are not
-guaranteed to be 100\% replicable even from identical prompts. Hence, when
-investigating the applicability of LLMs for the task of determining semantic
-relations between entities, it is important to examine the potential variance
-in their performance under fixed conditions. A relevant question is whether
-calibration of the LLM temperature parameter can improve the mean performance
-or reduce its variance.
-
-% 
 Figure \ref{fig:temp-variation} presents $mAP@D$ variability exhibited by
 GPT-4o and Llama3-8B models run 10 times over Wines and CASE ontologies under
 three different temperature settings and with all other parameters fixed.
