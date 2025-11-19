@@ -1429,9 +1429,20 @@ A detailed analysis of the explored factors highlights the following:
 \item LLMs are capable of identifying directly-asserted concepts but often
  struggle with predicting correct hierarchies. Addition of contextual examples
  overcomes this shortcoming.
-\item \chreplaced[id=UB, comment={Including lexical similarity}]{LLMs are susceptible to resorting to lexical matching when they cannot rely on their interpretation of entity labels.}{Disparity between an LLM's interpretation of concepts and instances has a detrimental effect on the performance of LLM-driven ontology population.}
-    \item Larger LLMs outperform smaller LLMs. Reasoning LLMs can potentially perform ontology population better, but conventional LLMs can perform equally well in few-shot settings. A smaller reasoning model reported the worst overall performance, which requires further investigation.
-    %indicates either a strong negative interaction between the reasoning type and the size of the model or the need for alternative prompting strategy to utilize such LLMs to their full potential.
+\item \chreplaced[id=UB, comment={Including lexical similarity}]{LLMs are
+    susceptible to resorting to lexical matching when they cannot rely on
+    their interpretation of entity labels.}{Disparity between an LLM's
+    interpretation of concepts and instances has a detrimental effect on the
+    performance of LLM-driven ontology population.}
+\item In some situations, an LLM's semantic understanding of ontology concepts
+  and individuals from their labels does not align with their ontological
+  nature. In such situations, LLMs struggle to predict ontologically
+  meaningful hierarchies and are prone to resorting to simplistic string-based
+  matching.
+\item Larger LLMs outperform smaller LLMs. Reasoning LLMs can potentially
+  perform ontology population better, but conventional LLMs can perform
+  equally well in few-shot settings. A smaller reasoning model reported the
+  worst overall performance, which requires further investigation.
     \item LLMs are capable of performing ontology population under zero-shot prompting. Adding examples with few-shot prompting significantly improves performance with the largest benefits obtained with three or four examples.
     % \item LLMs are capable of performing ontology population under zero-shot prompting when their semantic understanding of the entities matches those of the ontology. In situations when these two diverge, including illustrative examples allows LLMs to quickly adapt.
     \item When an LLM's semantic interpretation of an ontology's entities diverges from their ontological nature \chadded[id=UB, comment={Small addition about lexical similarity}]{and lexical similarity cannot be used to infer hierarchies}, few-shot prompting is an effective tool to mitigate these differences and improve performance.
