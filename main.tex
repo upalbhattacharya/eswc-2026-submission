@@ -1079,7 +1079,18 @@ significantly lower than the other two ontologies in the zero-shot scenario
 and when using one or two examples for few-shot prompting. Beyond that, the
 provision of more examples in few-shot counters the effects of this entity
 semantic separation. The semantic separation of the entities of the CASE
-Ontology is visually confirmed through a two
+Ontology is visually confirmed through a two-dimensional t-SNE
+\cite{van2008VisualizingData} projection of the entities of the three
+ontologies in Figure \ref{fig:entity-semantic-separation} 
+
+
+\begin{figure}[H]
+  \centering
+  \caption{TSNE projection of concepts and individual label embeddings of
+    ontologies on 2 components}
+  \label{fig:entity-semantic-separation}
+  \includegraphics[scale=0.26]{assets/all_entity_semantic_similarity.pdf}
+\end{figure}
 
 We measure the lexical similarity between individual and concept labels to
 assess whether LLMs can resort to lexical matching to perform ontology
@@ -1123,13 +1134,6 @@ similarity.
   \end{tabular}
 \end{table}
 
-\begin{figure}[H]
-  \centering
-  \caption{TSNE projection of concepts and individual label embeddings of
-    ontologies on 2 components}
-  \label{fig:entity-semantic-separation}
-  \includegraphics[scale=0.26]{assets/all_entity_semantic_similarity.pdf}
-\end{figure}
 
 
 %% Observation about ontology population over different ontologies
