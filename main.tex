@@ -1366,9 +1366,7 @@ Figure \ref{fig:temp-variation} presents $\text{mAP@D}$ variability exhibited
 by GPT-4o and Llama3-8B models run 10 times over Wines and CASE ontologies
 under different temperature settings and with all other parameters fixed.
 
-For both ontologies, we observe a reduction in average performance with
-increase in temperature with GPT-4o. A similar trend is not observed for
-experiments with Llama3-8B. GPT-4o's results are fairly consistent across all
+GPT-4o's results are fairly consistent across all
 runs, which is observable as fairly small spreads in $mAP@D$ values across all
 temperature values and both ontologies. In contrast, there is more variability
 in the $mAP@D$ scores for Llama3-8B. Surprisingly enough, neither higher
@@ -1388,6 +1386,10 @@ as well (M = 0.76, SD = 0.01) compared to the higher temperature (M = 0.71, SD
 = 0.01), t(18) = 9.8,p < .001. Although the same trend is observable for
 Llama3-8B, the much higher variance of the smaller LLM's results renders the
 test non-significant.
+
+For both ontologies, we observe a reduction in average performance with
+increase in temperature with GPT-4o. A similar trend is not observed for
+experiments with Llama3-8B. 
 
 \section{Conclusion}
 \label{sec:conclusion}
