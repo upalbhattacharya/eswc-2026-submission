@@ -1133,7 +1133,10 @@ experiments.
 
 Entity labels greatly influence the ability of LLMs to perform ontology
 population. When the semantic separation between the two types of entities is
-pronounced, LLMs resort to using string matching to predict hierarchies.
+pronounced, LLMs resort to using string matching to predict hierarchies. The
+inclusion of examples during prompting robustly counters the effects of entity
+embedding separation and reduces susceptibility to resorting to string
+matching for making predictions.
 
 \begin{figure}
     \centering
