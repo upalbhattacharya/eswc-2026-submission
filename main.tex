@@ -1413,18 +1413,15 @@ experiments with Llama3-8B.
 \section{Conclusion}
 \label{sec:conclusion}
 
-This paper presented an analysis of a wide range of LLM-specific and
-ontology-specific factors that could have an effect on the results of LLMs
-performing an ontology learning task, specifically ontology population. As
-LLM-specific variables, we investigated prompting strategy, domain
-contextualization, and type of LLM on ontology population using three distinct
-ontologies, characterized by differing structural complexity and ontology
-entity label semantics. We have also investigated how temperature variability
-can influence LLMs' response consistency'.  From the results obtained over an
-extensive experimentation (288 experiments overall) it is clear that LLMs are
-capable of performing ontology population reasonably well, even without
-fine-tuning. More detailed analysis of individual Ontology-based and LLM-based
-factors and their interactions highlights the following:
+We present an analysis of the ontology and LLM factors influencing
+LLM-supported ontology population. Through the simple ontology learning task
+of ontology population, we investigate the ontology factors: structure,
+taxonomy and entity labels and, the LLM factors: choice of LLM, modelling
+objective, prompting approach, domain context and response variation over
+three domain ontologies and several LLMs. Through extensive experimentation
+(288), we find that LLMs are capable of performing ontology population well,
+utilizing only their own pre-learnt knowledge and in-context learning.
+A detailed analysis of the explored factors highlights the following:
 \begin{itemize}
 \item Structural complexity of ontologies in terms of size and, depth and
   dispersion of concepts does not seem to affect an LLM's ability to perform
