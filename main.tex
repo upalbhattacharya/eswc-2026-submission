@@ -1074,6 +1074,28 @@ homegeneity using the Davies-Bouldin Index (DBI)
 \cite{davies1979ClusterSeparationMeasure} (Table
 \ref{tab:entity-label-separation}).
 
+\begin{table}
+  \centering
+  \caption{Entity label semantic and lexical metrics for Wines, CASE and
+    Astronomy ontologies (Levenshtein shortened to L. for readability)}
+  \label{tab:entity-label-separation}
+  \begin{tabular}{|l|r|r|r|}
+    \hline
+    \textbf{Metric}                                                                & \textbf{Wines} & \textbf{CASE} & \textbf{Astronomy} \\
+    \hline
+    \textbf{DBI} \cite{davies1979ClusterSeparationMeasure}                    & 5.995                   & 2.891                 & 6.362
+    \\
+    \textbf{Centroid Distance}                                               & 0.259                   & 0.540                  & 0.261
+    \\
+    \textbf{Direct L. Distance (G1)}                                         & 10.285                  & 4.137                  & 5.167
+    \\
+    \textbf{Ancestor L. Distance (G2)}                                       & 12.191                   & 14.092                 & 15.381
+    \\
+    \hline
+  \end{tabular}
+\end{table}
+
+
 We hypothesize that, for LLMs to perform ontology population effectively,
 cluster separability between the two types of entities should be low (i.e a
 lower centroid distance and a higher DBI is better). We observe that the
@@ -1175,27 +1197,6 @@ matching for making predictions.
     \label{fig:lexical-prediction-hierarchy}
   \end{figure}
   
-\begin{table}
-  \centering
-  \caption{Entity label semantic and lexical metrics for Wines, CASE and
-    Astronomy ontologies (Levenshtein shortened to L. for readability)}
-  \label{tab:entity-label-separation}
-  \begin{tabular}{|l|r|r|r|}
-    \hline
-    \textbf{Metric}                                                                & \textbf{Wines} & \textbf{CASE} & \textbf{Astronomy} \\
-    \hline
-    \textbf{DBI} \cite{davies1979ClusterSeparationMeasure}                    & 5.995                   & 2.891                 & 6.362
-    \\
-    \textbf{Centroid Distance}                                               & 0.259                   & 0.540                  & 0.261
-    \\
-    \textbf{Direct L. Distance (G1)}                                         & 10.285                  & 4.137                  & 5.167
-    \\
-    \textbf{Ancestor L. Distance (G2)}                                       & 12.191                   & 14.092                 & 15.381
-    \\
-    \hline
-  \end{tabular}
-\end{table}
-
 
 
 %% Observation about ontology population over different ontologies
