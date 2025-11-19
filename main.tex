@@ -1122,6 +1122,82 @@ Combining insights from the two disparities and the fact that several
 individual labels utilize names of the directly-asserted concepts in their
 label suggests that LLMs might be able to infer the directly-asserted concepts
 from lexical matching but cannot infer hierarchies.
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{0.5\textwidth}
+    \begin{minipage}{8cm}
+    \dirtree{%
+    .1 UcoThing.
+        .2 UcoInherentCharacterizationThing.
+            .3 Facet.
+                .4 \textbf{AccountFacet}.
+    }
+    \end{minipage}
+    \caption{Ground Truth Hierarchy for `AccountFacet'}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.5\textwidth}
+    \begin{minipage}{8cm}
+    \dirtree{%
+    .1 \hlorange{DeviceFacet}.
+        .2 \hlorange{MobileAccountFacet}.
+            .3 ApplicationAccountFacet.
+                .4 \hlorange{BuildFacet}.
+                    .5 \hlorange{ProfileFacet}.
+                        .6 AddressFacet.
+                            .7 \hlorange{ContactFacet}.
+                                .8 \textbf{AccountFacet}.
+    }
+    \end{minipage}
+    \caption{Embedding similarity-based Hierarchy. Concepts in \hlorange{orange} are siblings of `AccountFacet'}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.5\textwidth}
+    \begin{minipage}{8cm}
+    \dirtree{%
+    .1 \hlorange{MobileDeviceFacet}.
+        .2 \hlorange{AccountAuthenticationFacet}.
+            .3 \hlorange{SIMCardFacet}.
+                .4 \hlorange{PhoneAccountFacet}.
+                    .5 \hlorange{EmailAccountFacet}.
+                      .6 \hlorange{MobileAccountFacet}.
+                        .7 \hlorange{DigitalAccountFacet}.
+                            .8 \textbf{AccountFacet}.
+    }
+    \end{minipage}
+    \caption{GPT-4o, zero-shot, generic contextualization prediction hierarchy for `AccountFacet' taken from individual correctly identified as instance of `AccountFacet'. Concepts in \hlorange{orange} are siblings of `AccountFacet'}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.5\textwidth}
+    \begin{minipage}{8cm}
+    \dirtree{%
+    .1 ObservableObject*.
+        .2 Identity.
+            .3 \hlgreen{Facet}.
+                .4 \hlorange{IdentityFacet}.
+                    .5 DigitalAccount*.
+                        .6 Account*.
+                            .7 \hlorange{DigitalAccountFacet}.
+                                .8 \textbf{AccountFacet}.
+    }
+    \end{minipage}
+    \caption{GPT-4o, 1-shot, generic contextualization prediction hierarchy for `AccountFacet' taken from individual correctly identified as instance of `AccountFacet'. Concepts in \hlorange{orange} are siblings of `AccountFacet'. Concepts in \hlgreen{green} are correctly identified ancestors. * are incorrect ancestors but belonging to a hierarchy.}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.5\textwidth}
+    \begin{minipage}{8cm}
+    \dirtree{%
+    .1 Account.
+        .2 \hlorange{DigitalAccountFacet}.
+            .3 Observable.
+                .4 UcoObject.
+                    .5 \hlgreen{UcoThing}.
+                        .6 \hlgreen{UcoInherentCharacterizationThing}.
+                            .7 \hlgreen{Facet}.
+                                .8 \textbf{AccountFacet}.
+    }
+    \end{minipage}
+    \caption{GPT-4o, 5-shot, generic contextualization prediction hierarchy for `AccountFacet' taken from individual correctly identified as instance of `AccountFacet'. Concepts in \hlorange{orange} are siblings of `AccountFacet'. Concepts in \hlgreen{green} are correctly identified ancestors.}
+    \end{subfigure}
+    \caption{Predicted Hierarchies}
+    \label{fig:case-prediction-hierarchy}
+\end{figure}
 Observations from our experimentation suggest that LLMs are prone to utilizing
 lexical matching for inferring concept hierarchies in the zero-shot approach
 but quickly adapt when provided illustrative examples. 
