@@ -1033,7 +1033,14 @@ perform ontology population.
 % t(94) = -0.13, p = 0.21
 
 % Entity Labels
-\subsubsection{Taxonomy:}
+\subsubsection{Taxonomy:} Comparing $\text{mAP@1}$ and $\mAP@D$ in Table
+\ref{tab:results}, we observe that LLMs are adept at inferring direct
+assertions during ontology population but can struggle with predicting
+hierarchies. This is especially evident for the zero-shot experiments on the
+CASE ontology where $\text{mAP@1}$ is comparable to that of the other two
+ontologies but $mAP@D$ is significantly lower. Addition of examples through
+few-shot prompting greatly reduces the divide and inclusion of even a few
+examples significantly improves ontology population taxonomy retrieval (Figure \ref{fig:few-shot})
 % Taxonomy
 For each ontology, measuring the centroid distance between the embeddings of
 its concepts and individuals provides the first indication of semantic
