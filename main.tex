@@ -1447,8 +1447,10 @@ A detailed analysis of the explored factors highlights the following:
   zero-shot settings but struggle with taxonomy prediction. Adding examples
   with few-shot prompting significantly improves performance with the largest
   benefits obtained with three or four examples.
-    \item When an LLM's semantic interpretation of an ontology's entities diverges from their ontological nature \chadded[id=UB, comment={Small addition about lexical similarity}]{and lexical similarity cannot be used to infer hierarchies}, few-shot prompting is an effective tool to mitigate these differences and improve performance.
-    % \item Few-shot prompting can provide significant performance improvements over zero-shot strategies, particularly when the LLM's semantic understanding of an ontology's entities diverges from the ontological nature of the entities. Addition of even a single example considerably improves performance. The greatest benefits are observed using up to 3 or 4 examples beyond which performance improvements are more gradual with smaller LLMs benefiting more than their larger counterparts.
+\item When an LLM's lexical understanding of an ontology's entities diverges
+  from their ontological nature and string-based similarity cannot be used to
+  infer hierarchies, few-shot prompting is an effective tool to mitigate
+these differences and improve performance.
     % \item Domain contextualization variants favoring ontological structure perform better than other variants.
     % \item We have not been able to determine a domain contextualization strategy that consistently outperforms other strategies. On aggregate, our experimentation highlights domain contextualization as providing better results. However, more experimentation is required to establish stronger trends.
     \item Our experimentation with domain contextualization strategies shows stronger benefits of the ontology domain contextualization in most scenarios. However, the observed differences in performance are fairly marginal.
