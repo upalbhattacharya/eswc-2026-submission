@@ -1094,13 +1094,17 @@ other two ontologies.
   \includegraphics[scale=0.26]{assets/all_entity_semantic_similarity.pdf}
 \end{figure}
 
-Our supplementary analysis of the extent 
+To investigate the extent string similarity can be leveraged by LLM for
+ontology population, we compute the compute the Levenshtein distance
+\cite{levenshtein1966BinaryCodesCapable} between the labels of individuals and
+the two groups outlined previously in \Section \ref{subsec:experiment-ontology-factors}
+
+Our supplementary analysis of the extent string similarity can be leveraged to
+perform ontology population  
 
 We measure the lexical similarity between individual and concept labels to
 assess whether LLMs can resort to lexical matching to perform ontology
-population.  We compute the Levenshtein distance
-\cite{levenshtein1966BinaryCodesCapable} between the labels of individuals and
-two groups: .  Table
+population.  We : .  Table
 \ref{tab:semantic-lexical-measures} provides the two scores for the three
 ontologies. Group 1 disparity is highest for the Wines ontology and lowest for
 the CASE ontology. LLMs cannot resort to lexical matching to find the
