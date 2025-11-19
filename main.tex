@@ -1455,6 +1455,12 @@ A detailed analysis of the explored factors highlights the following:
   stronger benefits of the ontology domain contextualization in most
   scenarios. However, the observed differences in performance are fairly
   marginal.
+\item Larger LLMs exhibit less response variation over repetitions but smaller
+  LLMs show significant variability.
+\item In larger LLMs, increase in temperature leads to a decline in ontology
+  population performance. Mild variation is observed even under deterministic
+  temperature conditions. Significant variation in responses from small LLMs
+  renders temperature-based performance variation inconclusive.
     \item LLMs are relatively insensitive to temperature variation. Higher temperature does not cause higher variance, but does result in a reduced average performance. Lowering temperature from the default has no effect on results.
     \item Larger LLMs are consistent across several repetitions. Smaller LLMs exhibit much larger variability in this regard.
 
