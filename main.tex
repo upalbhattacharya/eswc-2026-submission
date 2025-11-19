@@ -994,8 +994,7 @@ hierarchy during retrieval and ontology population performance.
 
 For any concept $c$ of depth $d$, we compute the Correct Retrieval (CR) as the
 percentage of retrievals at the correct hierarchy position across all
-individual terms $t \in T$ associated with that concept.
-
+individual terms $t \in T$ where the concept was retrieved.
 \begin{equation}
   CR(c) = \frac{\big|\{t \in T; c \in \{y_i\}_{t}; y_{D-d+1} = c\}\big|}{\big|\{t \in T; c \in \{y_i\}_t\}\big|}
 \end{equation}
