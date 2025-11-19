@@ -1070,27 +1070,29 @@ separation. We measure entity semantic separation through centroid distance of
 embedding cluster of concepts and labels and overall entity semantic
 homegeneity using the Davies-Bouldin Index (DBI)
 \cite{davies1979ClusterSeparationMeasure} (Table
-\ref{tab:entity-label-separation}). We hypothesize that, for LLMs to perform
-ontology population effectively, cluster separability between the two types of
-entities should be low (i.e a lower centroid distance and a higher DBI is
-better). We observe that the normalized centroid distance between concept and
-individual clusters for the CASE Ontology to be twice as large as the other
-two ontologies (larger values indicate greater inter cluster separation). The
-DBI for the CASE Ontology is much lower than the other two ontologies. These
-two entity label metrics (Table \ref{tab:entity-label-separation}) together
-suggest that the entity labels of the CASE Ontology might make ontology
-population difficult for LLMs. The performance in Table \ref{tab:results}
-supports our hypothesis with performanve on the the CASE Ontology being
-significantly lower than the other two ontologies in the zero-shot scenario
-and when using one or two examples for few-shot prompting. Beyond that, the
-provision of more examples in few-shot counters the effects of this entity
-semantic separation. The semantic separation of the entities of the CASE
-Ontology is visually confirmed through a two-dimensional t-SNE
-\cite{van2008VisualizingData} projection of the entities of the three
-ontologies in Figure \ref{fig:entity-semantic-separation}. The individuals of
-the CASE Ontology are well-separated from its concepts in the lower right-hand
-corner of the Figure. No such separation is observable for the entities of the
-other two ontologies. 
+\ref{tab:entity-label-separation}).
+
+We hypothesize that, for LLMs to perform ontology population effectively,
+cluster separability between the two types of entities should be low (i.e a
+lower centroid distance and a higher DBI is better). We observe that the
+normalized centroid distance between concept and individual clusters for the
+CASE Ontology to be twice as large as the other two ontologies (larger values
+indicate greater inter cluster separation). The DBI for the CASE Ontology is
+much lower than the other two ontologies. These two entity label metrics
+(Table \ref{tab:entity-label-separation}) together suggest that the entity
+labels of the CASE Ontology might make ontology population difficult for
+LLMs. The performance in Table \ref{tab:results} supports our hypothesis with
+performanve on the the CASE Ontology being significantly lower than the other
+two ontologies in the zero-shot scenario and when using one or two examples
+for few-shot prompting. Beyond that, the provision of more examples in
+few-shot counters the effects of this entity semantic separation. The semantic
+separation of the entities of the CASE Ontology is visually confirmed through
+a two-dimensional t-SNE \cite{van2008VisualizingData} projection of the
+entities of the three ontologies in Figure
+\ref{fig:entity-semantic-separation}. The individuals of the CASE Ontology are
+well-separated from its concepts in the lower right-hand corner of the
+Figure. No such separation is observable for the entities of the other two
+ontologies.
 
 \begin{figure}[H]
   \centering
