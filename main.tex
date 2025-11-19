@@ -757,7 +757,7 @@ Let the ground truth hierarchy for an individual $t$ be given by:
 \end{equation}
 where $d$ is the depth of the directly-asserted concept $c_1$ and $d \leq D$ \\
 Let $\{y_i\}_{i=1}^{D-d+1}$ be the predicted hierarchy for $t$ \\
-The mAP at a sequence length of $K$ is given by:
+The mAP at a sequence length of $K (\leq D-d+1)$ is given by:
 \begin{equation}
   \label{eq:map}
   \text{mAP@K} = \frac{1}{\big|T\big|} \sum_{t \in T} \text{AP@K}_t
