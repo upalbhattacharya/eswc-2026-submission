@@ -866,9 +866,10 @@ representing a small portion of the total experiments performed, it still
 highlights the nature of the observed trends that we observe across all
 variables.
 % and the observed trends across all other variables also being evident.
-However, when analyzing any factor, we draw conclusions with respect to
-$\text{mAP@D}$ and do not confine ourselves to a single value for any other
-variable to be as general as possible.
+However, when analyzing any factor, we draw our conclusions from all
+experiments performed. When analyzing the effects of different factors, we
+draw our conclusions with an emphasis on $\text{mAP@D}$ as it better
+highlights ontological awareness with the inclusion of taxonomies.
 
 % When analyzing the effect of different variables, we draw our conclusions with
 % an emphasis on $\text{mAP@D}$ rather than $\text{mAP@1}$. $\text{mAP@1}$
@@ -1003,9 +1004,14 @@ CR highlights the ability of LLMs to place concepts at the correct taxonomical
 position during ontology population. We compute the Pearson correlation
 between CR and two structural metrics: depth and dispersion of concepts. It
 highlights whether LLMs struggle with correctly retrieving concepts of greater
-depth or dispersion. We
-compute the average correlation \cite{corey1998AveragingCorrelationsExpected}
-across all 96 experiments conducted for each ontology. 
+depth or dispersion. We compute the average correlation
+\cite{corey1998AveragingCorrelationsExpected} across all 96 experiments
+conducted for each ontology. For all three ontologies, we did not observe a
+statistically significant correlation between either depth or dispersion of a
+concept with their CR. This highlights that structural metrics of concepts do
+not influence the ability of LLMs to perform ontology population. This is
+further reinforced by comparing the size of the ontologies and their exhibited
+performance. The largest Astronom
 
 % Strucure
 Depth
