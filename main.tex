@@ -1371,11 +1371,16 @@ fairly small spreads in $mAP@D$ values across all temperature values and both
 ontologies. In contrast, there is more variability in the $mAP@D$ scores for
 Llama3-8B.
 
-GPT-4o is fairly consistent across all temperature settings on both
-ontologies. In contrast, Llama3-8B exhibits a great deal of variation at each
-temperature value. $\text{mAP@D}$ performance variation marginally increases
-with temperature in GPT-4o but performance on Llama3-8B is equally variable at
-all temperatures.
+GPT-4o is fairly consistent across all temperature settings on both ontologies
+with variability increasing with temperature although it is marginal. Despite
+the fact that setting a temperature value of $0.0$ should result in a
+deterministic output, both LLMs exhibit response variation at the temperature
+although it is quite small for GPT-4o. In contrast, Llama3-8B exhibits a great
+deal of variation at each temperature value. $\text{mAP@D}$ performance
+variation marginally increases with temperature in GPT-4o but performance on
+Llama3-8B is equally variable at all temperatures. There is an observed
+degradation in performance with increase in temperature in GPT-4o, with the
+highest performance observed at the lowest temperature
 
 Looking at the
 average scores and the influence of temperature on them, we observed no
