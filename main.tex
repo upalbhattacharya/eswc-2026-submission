@@ -1200,46 +1200,46 @@ matching for making predictions.
 
 
 %% Observation about ontology population over different ontologies
-All experimental variants perform better on the Wines and Astronomy ontologies
-compared to the CASE ontology (for mAP@D). This performance disparity is
-particularly pronounced in our zero-shot experiments and is significantly
-reduced even with the inclusion of a single illustrative example (Table
-\ref{tab:results}).
+% All experimental variants perform better on the Wines and Astronomy ontologies
+% compared to the CASE ontology (for mAP@D). This performance disparity is
+% particularly pronounced in our zero-shot experiments and is significantly
+% reduced even with the inclusion of a single illustrative example (Table
+% \ref{tab:results}).
 
-Except DeepSeek's R1-Distil-Llama-8B, all other LLMs report much higher
-$mAP@1$ scores than $mAP@D$.  This reinforces the idea that LLMs are unable to
-infer the correct concept hierarchies when their semantic understanding of the
-entities deviates from that of the ontology. $\text{mAP@1}$ scores for the
-CASE ontology are often higher than the other two ontologies. As discussed in
-Section \ref{subsec:method-ontology-variability}, a large portion of its
-individuals ($71.7\%$) utilize the name of their directly-asserted
-concepts. Lower $\text{mAP@D}$ scores for the CASE ontology reinforce the idea
-that LLMs resort to lexical matching in identifying directly-asserted concepts
-but are unable to correctly infer the concept hierarchies. The semantic
-separability of entity types and lack of lexical parity with ancestor concept
-labels in conjunction with the poor $\text{mAP@D}$ scores highlight the
-difficulty of performing ontology population for the CASE ontology. However,
-performance is significantly improved when examples are provided highlighting
-the ability of LLMs to quickly grasp the correct taxonomy hierarchy context
-required of them.
+% Except DeepSeek's R1-Distil-Llama-8B, all other LLMs report much higher
+% $mAP@1$ scores than $mAP@D$.  This reinforces the idea that LLMs are unable to
+% infer the correct concept hierarchies when their semantic understanding of the
+% entities deviates from that of the ontology. $\text{mAP@1}$ scores for the
+% CASE ontology are often higher than the other two ontologies. As discussed in
+% Section \ref{subsec:method-ontology-variability}, a large portion of its
+% individuals ($71.7\%$) utilize the name of their directly-asserted
+% concepts. Lower $\text{mAP@D}$ scores for the CASE ontology reinforce the idea
+% that LLMs resort to lexical matching in identifying directly-asserted concepts
+% but are unable to correctly infer the concept hierarchies. The semantic
+% separability of entity types and lack of lexical parity with ancestor concept
+% labels in conjunction with the poor $\text{mAP@D}$ scores highlight the
+% difficulty of performing ontology population for the CASE ontology. However,
+% performance is significantly improved when examples are provided highlighting
+% the ability of LLMs to quickly grasp the correct taxonomy hierarchy context
+% required of them.
 
-%%% The other two ontologies
-LLMs perform much better on the Wines and Astronomy ontologies.   The $map@1$ scores on the
-Astronomy ontology are much higher than the rest despite $mAP@D$ being mostly
-similar to that of the Wines ontology. As it is a much larger ontology (Table
-\ref{tab:ontology-metrics}), we hypothesize that LLMs are able to retrieve the
-directly asserted concept but the greater depth of the ontology makes it
-slightly difficult to predict its ancestors. However, the $map@D$ scores still
-show reasonably accurate results for ontology population and hierarchy
-inference. Performance improves further when examples are included. The
-similarity in performance between the Wines and Astronomy ontologies despite
-their size and structural complexity differences suggests that ontology
-structure does not play a major role in ontology learning tasks. However, more
-experimentation is required before any definitive conclusion can be
-drawn. Agreement between an LLM's semantic interpretation of entity labels and
-their ontological nature can be the governing factor. Similar centroid
-distance and DBI scores for the Wines and Astronomy ontologies compared to the
-CASE ontology support this assumption (Table \ref{tab:ontology-metrics}).
+% %%% The other two ontologies
+% LLMs perform much better on the Wines and Astronomy ontologies.   The $map@1$ scores on the
+% Astronomy ontology are much higher than the rest despite $mAP@D$ being mostly
+% similar to that of the Wines ontology. As it is a much larger ontology (Table
+% \ref{tab:ontology-metrics}), we hypothesize that LLMs are able to retrieve the
+% directly asserted concept but the greater depth of the ontology makes it
+% slightly difficult to predict its ancestors. However, the $map@D$ scores still
+% show reasonably accurate results for ontology population and hierarchy
+% inference. Performance improves further when examples are included. The
+% similarity in performance between the Wines and Astronomy ontologies despite
+% their size and structural complexity differences suggests that ontology
+% structure does not play a major role in ontology learning tasks. However, more
+% experimentation is required before any definitive conclusion can be
+% drawn. Agreement between an LLM's semantic interpretation of entity labels and
+% their ontological nature can be the governing factor. Similar centroid
+% distance and DBI scores for the Wines and Astronomy ontologies compared to the
+% CASE ontology support this assumption (Table \ref{tab:ontology-metrics}).
 
 % \subsection{Choice of LLM}
 \subsection{Analysis of LLM Factors}
