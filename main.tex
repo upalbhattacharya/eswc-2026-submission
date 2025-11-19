@@ -1073,26 +1073,8 @@ two ontologies (larger values indicate greater inter cluster separation). The
 DBI for the CASE Ontology is much lower than the other two ontologies. These
 two entity label metrics (Table \ref{tab:entity-label-separation}) together
 suggest that the entity labels of the CASE Ontology might make ontology
-population difficult for LLMs. 
-
- We observe the distance
-between the entity centroids for the CASE ontology to be twice that of the
-other two ontologies.   is an internal clustering evaluation
-metric to measure how well-separated clusters are. A smaller value indicates
-better clustering separability with the lowest value being 0. Lower
-separability between the cluster of concepts and the cluster of individuals
-for an ontology indicates greater disparity between an LLM's semantic
-understanding of the entities thereby making them a more difficult scenario
-for LLMs.  Table \ref{tab:commands} reports the DBI scores for all three
-ontologies. Although the DBI values are not very low, the DBI for the CASE
-ontology is significantly lower than the other two ontologies. Combining the
-two metrics, the CASE ontology has much larger semantic separability between
-the two relevant entity types.  Figure \ref{fig:entity-semantic-separation}
-highlights the entities of all three ontologies projected using t-SNE
-\cite{van2008VisualizingData} to a two-dimensional space. Visual inspection
-shows the individuals of the CASE ontology are separated from most of its
-concepts (bottom right of figure). In contrast, the individuals of the other
-two ontologies are well contained within the bounds of the concepts.
+population difficult for LLMs. Looking at the performance in Table
+\ref{tab:results}, this
 
 We measure the lexical similarity between individual and concept labels to
 assess whether LLMs can resort to lexical matching to perform ontology
