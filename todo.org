@@ -174,12 +174,6 @@ CLOSED: [2025-11-20 Thu 09:40]
 - State "DONE"       from "INPROGRESS" [2025-11-20 Thu 09:40]
 :END:
 
-** Response Variation categorization inconsistent
-:PROPERTIES:
-:CREATED:  [2025-11-17 Mon 16:24]
-:ID:       b99ace50-d78a-4a6a-87a4-b26f1461dd15
-:END:
-
 * TODO Shorten Abstract
 :PROPERTIES:
 :CREATED:  [2025-11-20 Thu 09:43]
