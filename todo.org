@@ -2,13 +2,15 @@
 :ID:       d1334a06-ed7b-4e34-8522-f19b6c94cb2b
 :END:
 
-* TODO Related Work
+* DONE Related Work
+CLOSED: [2025-11-19 Wed 18:06]
 :PROPERTIES:
 :CREATED:  [2025-11-17 Mon 13:26]
 :ID:       693b7537-bf82-443e-b386-2ff9709c0016
 :END:
 
-* TODO Introduction
+* DONE Introduction
+CLOSED: [2025-11-19 Wed 18:06]
 :PROPERTIES:
 :CREATED:  [2025-11-17 Mon 13:26]
 :ID:       aded2629-977b-4920-a731-5f202ad816db
@@ -30,24 +32,34 @@ CLOSED: [2025-11-17 Mon 13:27]
 - State "DONE"       from "INPROGRESS" [2025-11-17 Mon 13:27]
 :END:
 
-** INPROGRESS LLM Factors
+** DONE LLM Factors
+CLOSED: [2025-11-19 Wed 18:07]
 :PROPERTIES:
 :CREATED:  [2025-11-17 Mon 13:27]
 :ID:       85543f93-49aa-404e-b884-6c5c4127ad5f
 :END:
+:LOGBOOK:
+- State "DONE"       from "INPROGRESS" [2025-11-19 Wed 18:07]
+:END:
 
-*** INPROGRESS  Choice of LLM
+*** DONE Choice of LLM
+CLOSED: [2025-11-19 Wed 18:07]
 :PROPERTIES:
 :CREATED:  [2025-11-17 Mon 14:22]
 :ID:       7d1c12da-f309-4f71-b930-b35f55107357
 :END:
+:LOGBOOK:
+- State "DONE"       from "INPROGRESS" [2025-11-19 Wed 18:07]
+:END:
 
-**** REVIEW Model Size
+**** DONE Model Size
+CLOSED: [2025-11-19 Wed 18:07]
 :PROPERTIES:
 :CREATED:  [2025-11-17 Mon 14:23]
 :ID:       14e3edf1-d37e-4315-aa09-c80a43dc1796
 :END:
 :LOGBOOK:
+- State "DONE"       from "REVIEW"     [2025-11-19 Wed 18:07]
 - State "REVIEW"     from "INPROGRESS" [2025-11-17 Mon 14:33]
 :END:
 
@@ -117,12 +129,14 @@ CLOSED: [2025-11-17 Mon 16:39]
 :END:
 
 
-** REVIEW Interplay of Factors
+** DONE Interplay of Factors
+CLOSED: [2025-11-19 Wed 18:07]
 :PROPERTIES:
 :CREATED:  [2025-11-14 Fri 12:30]
 :ID:       d750c277-9dc1-46da-a089-40a061c71b03
 :END:
 :LOGBOOK:
+- State "DONE"       from "REVIEW"     [2025-11-19 Wed 18:07]
 - State "REVIEW"     from "INPROGRESS" [2025-11-17 Mon 16:59]
 :END:
 
@@ -134,10 +148,14 @@ Needs a re-write.
 :ID:       a0579105-f16e-4530-88a0-6487c6ae001e
 :END:
 
-** INPROGRESS Change Task to Objective Modelling in Figure 1
+** DONE Change Task to Objective Modelling in Figure 1
+CLOSED: [2025-11-20 Thu 09:40]
 :PROPERTIES:
 :CREATED:  [2025-11-17 Mon 14:42]
 :ID:       e304e8a8-960f-4177-9439-93f31bfe1737
+:END:
+:LOGBOOK:
+- State "DONE"       from "INPROGRESS" [2025-11-20 Thu 09:40]
 :END:
 
 ** INPROGRESS Add further classification of Ontology Factors as OL Layer Cake, Metrics and Scope
@@ -146,10 +164,14 @@ Needs a re-write.
 :ID:       60b369a9-e716-4ea5-9f75-d8e9e583f40f
 :END:
 
-** INPROGRESS Change Temperature to Hyperparameters in Response Variation
+** DONE Change Temperature to Hyperparameters in Response Variation
+CLOSED: [2025-11-20 Thu 09:40]
 :PROPERTIES:
 :CREATED:  [2025-11-17 Mon 16:22]
 :ID:       629dc625-2c21-4de5-af61-946253ca3237
+:END:
+:LOGBOOK:
+- State "DONE"       from "INPROGRESS" [2025-11-20 Thu 09:40]
 :END:
 
 ** Response Variation categorization inconsistent
@@ -158,16 +180,20 @@ Needs a re-write.
 :ID:       b99ace50-d78a-4a6a-87a4-b26f1461dd15
 :END:
 
-* INPROGRESS Experimentation
+* TODO Shorten Abstract
+:PROPERTIES:
+:CREATED:  [2025-11-20 Thu 09:43]
+:ID:       aff60edd-41df-4ea1-80f0-b232256555bf
+:END:
+
+* DONE Experimentation
+CLOSED: [2025-11-19 Wed 18:07]
 :PROPERTIES:
 :CREATED:  [2025-11-17 Mon 13:49]
 :ID:       a9fc2f15-2b31-4c1c-9de4-e64530ea245c
 :END:
-
-** TODO 
-:PROPERTIES:
-:CREATED:  [2025-11-17 Mon 13:50]
-:ID:       ec546001-ea31-4233-832c-7ef9cbe16ee3
+:LOGBOOK:
+- State "DONE"       from "INPROGRESS" [2025-11-19 Wed 18:07]
 :END:
 
 * TODO Word Choice Disambiguation
