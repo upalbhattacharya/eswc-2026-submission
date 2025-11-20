@@ -158,10 +158,14 @@ CLOSED: [2025-11-20 Thu 09:40]
 - State "DONE"       from "INPROGRESS" [2025-11-20 Thu 09:40]
 :END:
 
-** INPROGRESS Add further classification of Ontology Factors as OL Layer Cake, Metrics and Scope
+** ARCHIVED Add further classification of Ontology Factors as OL Layer Cake, Metrics and Scope
+CLOSED: [2025-11-20 Thu 09:43]
 :PROPERTIES:
 :CREATED:  [2025-11-17 Mon 14:42]
 :ID:       60b369a9-e716-4ea5-9f75-d8e9e583f40f
+:END:
+:LOGBOOK:
+- State "ARCHIVED"   from "INPROGRESS" [2025-11-20 Thu 09:43]
 :END:
 
 ** DONE Change Temperature to Hyperparameters in Response Variation
