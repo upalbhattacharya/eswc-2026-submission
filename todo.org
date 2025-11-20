@@ -142,7 +142,7 @@ CLOSED: [2025-11-19 Wed 18:07]
 
 Needs a re-write.
 
-** TODO Convert Factor Explanations to Ontology Learning, not Ontology Population
+** REVIEW Convert Factor Explanations to Ontology Learning, not Ontology Population
 :PROPERTIES:
 :CREATED:  [2025-11-14 Fri 13:32]
 :ID:       a0579105-f16e-4530-88a0-6487c6ae001e
